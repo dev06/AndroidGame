@@ -24,16 +24,20 @@ public class GameController : MonoBehaviour {
 
 	// Update is called once per frame
 	float counter;
+	int index = 1;
 	void Update ()
 	{
+		Camera.main.transform.position += new Vector3(0, .005f, 0);
 		counter += Time.deltaTime;
-		if (counter > 1.0f)
+		if (counter > .05f)
 		{
 
-			//GenerateWallMap();
+
+			Destroy();
+			index++;
 			counter = 0;
 		}
-		Destroy();
+
 		if (Input.GetMouseButtonDown(0))
 		{
 			_pointerDown = Input.mousePosition;
@@ -69,9 +73,9 @@ public class GameController : MonoBehaviour {
 	float height;
 	private void GenerateMap()
 	{
-		for (int i = 0; i < 3	; i++)
+		for (int i = 0; i < index	; i++)
 		{
-			height = Random.Range(.1f, .2f);
+			height = Random.Range(.01f, .02f);
 			if (i > 0)
 			{
 				Transform _previousWall = walls[i - 1].transform;
@@ -107,13 +111,18 @@ public class GameController : MonoBehaviour {
 		}
 	}
 
-	float _rotationFreq = .5f;
+	public float _rotationFreq;
+	public float _size;
+	public float _minHeight;
+	public float _maxHeight;
+
 	private void GenerateWallMap()
 	{
-		for (int i = 0; i < 7; i++)
+		for (int i = 0; i < index; i++)
 		{
 			GameObject _currentWall = Instantiate(_wall, new Vector2(0, -.5f), Quaternion.identity) as GameObject;
-			float _height = Random.Range(.5f, 1f);
+			_currentWall.transform.parent = GameObject.Find("WallObjects").transform;
+			float _height = Random.Range(_minHeight, _maxHeight);
 			bool _rotated = false;
 			if ( i > 0)
 			{
@@ -134,7 +143,7 @@ public class GameController : MonoBehaviour {
 
 			}
 
-			_currentWall.transform.localScale = new Vector2(.2f, _height);
+			_currentWall.transform.localScale = new Vector2(_size, _height);
 
 			walls.Add(_currentWall);
 			PositionWall(_currentWall, i, _rotated);
@@ -149,6 +158,20 @@ public class GameController : MonoBehaviour {
 
 			_currentWall.transform.position = _previousWall.GetChild(0).transform.position;
 
+			if (_currentWall.transform.rotation.eulerAngles.z != 0)
+			{
+				_currentWall.transform.position = new Vector3(_currentWall.transform.position.x, _currentWall.transform.position.y + _previousWall.transform.localScale.x / 2.0f * _pixelToUnit);
+				if (_currentWall.transform.rotation.eulerAngles.z > 180) {
+					_currentWall.transform.position = new Vector3(_currentWall.transform.position.x - _currentWall.transform.localScale.x / 2.0f * _pixelToUnit, _currentWall.transform.position.y - _currentWall.transform.localScale.x / 2.0f * _pixelToUnit);
+				} else {
+					_currentWall.transform.position = new Vector3(_currentWall.transform.position.x + _currentWall.transform.localScale.x / 2.0f * _pixelToUnit, _currentWall.transform.position.y - _currentWall.transform.localScale.x / 2.0f * _pixelToUnit);
+
+				}
+
+			} else {
+				_currentWall.transform.position = new Vector3(_currentWall.transform.position.x , _currentWall.transform.position.y - _currentWall.transform.localScale.x / 2.0f * _pixelToUnit);
+			}
+
 		}
 
 	}
@@ -157,38 +180,45 @@ public class GameController : MonoBehaviour {
 	private void Destroy()
 	{
 
-		if (Input.GetMouseButtonDown(1))
-		{
-			if (walls.Count > 0)
-			{
-				GameObject[] _walls = GameObject.FindGameObjectsWithTag("Walls");
-				for (int i = 0; i < _walls.Length; i++)
-				{
-					Destroy(_walls[i]);
-				}
-
-				walls.Clear();
-
-
-			}
-
-			GenerateWallMap();
-
-
-		}
-
-		// if (walls.Count > 0)
+		// if (Input.GetMouseButtonDown(1))
 		// {
-		// 	GameObject[] _walls = GameObject.FindGameObjectsWithTag("Walls");
-		// 	for (int i = 0; i < _walls.Length; i++)
+		// 	if (walls.Count > 0)
 		// 	{
-		// 		Destroy(_walls[i]);
+		// 		GameObject[] _walls = GameObject.FindGameObjectsWithTag("Walls");
+		// 		for (int i = 0; i < _walls.Length; i++)
+		// 		{
+		// 			Destroy(_walls[i]);
+		// 		}
+
+		// 		walls.Clear();
+
+
 		// 	}
 
-		// 	walls.Clear();
+		// 	GenerateWallMap();
 
 
 		// }
+
+
+		if (Input.GetMouseButtonDown(0))
+		{
+			GameObject.Find("WallObjects").transform.rotation *= Quaternion.Euler(new Vector3(0, 0, 90));
+		}
+
+		if (walls.Count > 0)
+		{
+			GameObject[] _walls = GameObject.FindGameObjectsWithTag("Walls");
+			for (int i = 0; i < _walls.Length; i++)
+			{
+				Destroy(_walls[i]);
+			}
+
+			walls.Clear();
+
+			GenerateWallMap();
+
+		}
 
 
 	}
