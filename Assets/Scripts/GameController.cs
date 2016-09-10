@@ -28,19 +28,31 @@ public class GameController : MonoBehaviour {
 	int index = 1;
 	void Update ()
 	{
+<<<<<<< HEAD
 		GameObject.Find("WallObjects").transform.position = GameObject.Find("Player").transform.position;
+=======
+		//Camera.main.transform.position += new Vector3(0, .1f * Time.deltaTime, 0);
+>>>>>>> 4e8e47713a53e4c2f1eee09001d3fbfe70a0b936
 		counter += Time.deltaTime;
 		if (counter > .05f)
 		{
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 4e8e47713a53e4c2f1eee09001d3fbfe70a0b936
 			index++;
 			counter = 0;
 		}
 
 		Destroy();
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4e8e47713a53e4c2f1eee09001d3fbfe70a0b936
 		if (Input.GetMouseButtonDown(0))
 		{
 			_pointerDown = Input.mousePosition;
@@ -62,10 +74,19 @@ public class GameController : MonoBehaviour {
 			float _difference = -(_pointerDown.x - _pointerUp.x);
 			if (_difference < 0)
 			{
+<<<<<<< HEAD
 
 			} else if (_difference > 0)
 			{
 
+=======
+				//Debug.Log("Swipe Left");
+				GameObject.Find("WallObjects").transform.rotation *= Quaternion.Euler(new Vector3(0, 0, -90));
+			} else if (_difference > 0)
+			{
+				//Debug.Log("Swipe Right");
+				GameObject.Find("WallObjects").transform.rotation *= Quaternion.Euler(new Vector3(0, 0, 90));
+>>>>>>> 4e8e47713a53e4c2f1eee09001d3fbfe70a0b936
 			}
 		}
 
@@ -73,6 +94,11 @@ public class GameController : MonoBehaviour {
 		_pointerUp = Vector2.zero;
 	}
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4e8e47713a53e4c2f1eee09001d3fbfe70a0b936
 	public float _rotationFreq;
 	public float _size;
 	public float _minHeight;
@@ -81,6 +107,10 @@ public class GameController : MonoBehaviour {
 	private void GenerateWallMap()
 	{
 
+<<<<<<< HEAD
+=======
+		GameObject.Find("WallObjects").transform.position = GameObject.Find("Player").transform.position;
+>>>>>>> 4e8e47713a53e4c2f1eee09001d3fbfe70a0b936
 		for (int i = 0; i < 5; i++)
 		{
 			GameObject _currentWall = Instantiate(_wall, new Vector2(0, -.5f), Quaternion.identity) as GameObject;
@@ -103,7 +133,6 @@ public class GameController : MonoBehaviour {
 					}
 
 				}
-
 			}
 
 			_currentWall.transform.localScale = new Vector2(_size, _height);
@@ -163,11 +192,25 @@ public class GameController : MonoBehaviour {
 
 		}
 
+		if (Input.GetMouseButtonDown(0)) {
 
-		if (Input.GetMouseButtonDown(0))
-		{
-			GameObject.Find("WallObjects").transform.rotation *= Quaternion.Euler(new Vector3(0, 0, 90));
+//	GameObject.Find("WallObjects").transform.rotation *= Quaternion.Euler(new Vector3(0, 0, 90));
 		}
+
+<<<<<<< HEAD
+		// if (walls.Count > 0)
+		// {
+		// 	GameObject[] _walls = GameObject.FindGameObjectsWithTag("Walls");
+		// 	for (int i = 0; i < _walls.Length; i++)
+		// 	{
+		// 		Destroy(_walls[i]);
+		// 	}
+
+		// 	walls.Clear();
+
+		// 	GenerateWallMap();
+
+=======
 
 		// if (walls.Count > 0)
 		// {
@@ -181,6 +224,7 @@ public class GameController : MonoBehaviour {
 
 		// 	GenerateWallMap();
 
+>>>>>>> 4e8e47713a53e4c2f1eee09001d3fbfe70a0b936
 		// }
 
 
