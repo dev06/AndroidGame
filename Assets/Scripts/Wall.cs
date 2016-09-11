@@ -4,45 +4,70 @@ using System.Collections;
 public class Wall : MonoBehaviour {
 
 	// Use this for initialization
-	void Start () {
+
+	public GameObject previousWall;
+	private bool _wallPassed;
+	private GameController _gameController;
+	private GameObject _wallObjects;
+	private SpriteRenderer _spriteRenderer;
+	public bool move;
+	private bool _enteredWall;
+	void Start ()
+	{
+		_gameController = GameObject.FindWithTag("GameController").GetComponent<GameController>();
+		if (previousWall != null)
+		{
+			float _pixelToUnit = .32f;
+			transform.position = previousWall.transform.GetChild(0).transform.position;
+			Transform _previousWall = previousWall.transform;
+			if ( transform.rotation.eulerAngles.z != 0)
+			{
+				transform.position = new Vector3( transform.position.x,  transform.position.y + _previousWall.transform.localScale.x / 2.0f * _pixelToUnit);
+
+				if ( transform.rotation.eulerAngles.z > 180)
+				{
+					transform.position = new Vector3( transform.position.x -  transform.localScale.x / 2.0f * _pixelToUnit,  transform.position.y -  transform.localScale.x / 2.0f * _pixelToUnit);
+				} else
+				{
+					transform.position = new Vector3( transform.position.x +  transform.localScale.x / 2.0f * _pixelToUnit,  transform.position.y -  transform.localScale.x / 2.0f * _pixelToUnit);
+				}
+			} else
+			{
+				transform.position = new Vector3( transform.position.x ,  transform.position.y -  transform.localScale.x / 2.0f * _pixelToUnit);
+			}
+
+
+		}
+		_wallObjects = GameObject.FindWithTag("WallObjects");
+		_spriteRenderer = GetComponent<SpriteRenderer>();
 
 	}
 
-	// Update is called once per frame
-	float offset = 0;
-	float yOffset = 0;
+
 	void Update ()
 	{
-		float num = .005f;
-		if (Input.GetKeyDown(KeyCode.LeftArrow))
-		{
-			offset -= num;
-		} else if (Input.GetKeyDown(KeyCode.RightArrow))
-		{
-			offset += num;
-		} else {
-			offset = 0;
-		}
 
-
-
-		if (Input.GetKeyDown(KeyCode.UpArrow))
-		{
-			yOffset -= num;
-		} else if (Input.GetKeyDown(KeyCode.DownArrow))
-		{
-			yOffset += num;
-		} else {
-			yOffset = 0;
-		}
-
-		transform.position -= new Vector3(offset, Time.deltaTime * .4f , 0);
+		if (move)
+			transform.position -= new Vector3(0, Time.deltaTime * 25f , 0);
 
 		Vector3 screenPoint = Camera.main.WorldToViewportPoint (transform.position + transform.localScale * .32f);
-		// if (screenPoint.y < 0) {
-		// 	Destroy(gameObject);
-		// }
+
+
+		if (screenPoint.y < 0)
+		{
+
+			if (_enteredWall)
+			{
+				Destroy(gameObject);
+				_gameController.GenerateEmptyGameObjects(1);
+			}
+
+
+			//_gameController.ModifyTransformForObjects(gameObject, _wallObjects.transform.GetChild(_wallObjects.transform.childCount - 1).gameObject, Modifier.TRANSFORM);
+		}
 	}
+
+
 
 
 	void OnCollisionStay2D(Collision2D  col)
@@ -58,6 +83,17 @@ public class Wall : MonoBehaviour {
 	{
 
 	}
+
+
+	public void ChangeColor(bool entered)
+	{
+		if (entered)
+		{
+			_enteredWall = entered;
+		}
+		_spriteRenderer.color = (entered) ? new Color(0, 1, 0, 1) : new Color(1, 1, 1, 1);
+	}
+
 
 
 

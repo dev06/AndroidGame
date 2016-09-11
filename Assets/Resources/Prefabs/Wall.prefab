@@ -85,6 +85,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fefe8c9f19e141b479bb6d56abb896b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  previousWall: {fileID: 0}
+  move: 1
 --- !u!212 &21203978
 SpriteRenderer:
   m_ObjectHideFlags: 1

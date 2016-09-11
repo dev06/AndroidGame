@@ -3,10 +3,10 @@ using System.Collections;
 
 public class Player : MonoBehaviour {
 
-	// Use this for initialization
 
-	SpriteRenderer _sprite;
-	GameObject _enterObject, _exitObject;
+	private SpriteRenderer _sprite;
+	private GameObject _enterObject, _exitObject;
+	private int _hits;
 
 	void Start () {
 		_sprite = GetComponent<SpriteRenderer>();
@@ -18,33 +18,34 @@ public class Player : MonoBehaviour {
 	void Update ()
 	{
 
-
-		if (_enterObject != null && _exitObject != null)
-			if (_enterObject.name == _exitObject.name) {
+		if (_exitObject != null)
+		{
+			if (_hits <= 0)
+			{
 				_sprite.color = new Color(1, 0, 0, 1);
-				//_controller.DestroyMap();
+				UnityEngine.SceneManagement.SceneManager.LoadScene("GameScene");
 			}
-
-
-
+		}
 	}
 
 
 	void OnTriggerEnter2D(Collider2D col)
 	{
-
+		_hits++;
 	}
 
 
 	void OnTriggerExit2D(Collider2D col)
 	{
 		_exitObject = col.gameObject;
+		col.gameObject.SendMessage("ChangeColor", false);
+		_hits--;
 	}
 
 	void OnTriggerStay2D(Collider2D col)
 	{
-
 		_enterObject = col.gameObject;
+		col.gameObject.SendMessage("ChangeColor", true);
 		_sprite.color = new Color(0, 1, 1, 1);
 
 	}
