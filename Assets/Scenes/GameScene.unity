@@ -146,7 +146,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!1 &1118713954
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,7 +161,7 @@ GameObject:
   - 50: {fileID: 1118713958}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Entity/Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -174,11 +174,12 @@ Transform:
   m_GameObject: {fileID: 1118713954}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.2}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
+  m_Children:
+  - {fileID: 2102163569}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!212 &1118713956
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -278,8 +279,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8150122237b5ea4c8b3a64ea6118d6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rotationFreq: 0.3
-  _size: 0.01
+  _rotationFreq: 0.5
+  _size: 0.2
   _minHeight: 0.4
   _maxHeight: 2
 --- !u!4 &1450836123
@@ -294,7 +295,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!1 &1934733715
 GameObject:
   m_ObjectHideFlags: 0
@@ -305,7 +306,7 @@ GameObject:
   - 4: {fileID: 1934733716}
   m_Layer: 0
   m_Name: WallObjects
-  m_TagString: Untagged
+  m_TagString: WallObjects
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -322,7 +323,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!1 &2102163564
 GameObject:
   m_ObjectHideFlags: 0
@@ -383,7 +384,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 1
+  orthographic size: 0.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -404,9 +405,9 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2102163564}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -100}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1118713955}
   m_RootOrder: 0

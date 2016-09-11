@@ -18,23 +18,33 @@ public class GameController : MonoBehaviour {
 
 	private int _threshold = 20;
 	private GameObject _wall;
+	private GameObject _wallObjects;
+	private GameObject _player;
 	private List<GameObject> walls;
 
 	private float _pixelToUnit = .32f;
 
-	void Start ()
+	void Awake ()
 	{
 		_wall = Resources.Load("Prefabs/Wall") as GameObject;
+		_wallObjects = GameObject.FindWithTag("WallObjects");
+		_player = GameObject.FindWithTag("Entity/Player");
 		walls = new List<GameObject>();
 
 		GenerateWallMap();
 	}
 
 	// Update is called once per frame
-
+	float counter = 0;
 	void Update ()
 	{
 
+		// counter += Time.deltaTime;
+		// if (counter > 1.0f)
+		// {
+		// 	GenerateWallMap();
+		// 	counter = 0;
+		// }
 		DestroyMap();
 
 		if (Input.GetMouseButtonDown(0))
@@ -48,18 +58,18 @@ public class GameController : MonoBehaviour {
 			Calculate();
 		}
 
-		float rotation = GameObject.Find("WallObjects").transform.rotation.eulerAngles.z;
+		float rotation = _wallObjects.transform.rotation.eulerAngles.z;
 		direction = rotation / 360.0f;
 
 
 
 		if (Input.GetKeyDown(KeyCode.Q)) {
-			GameObject.Find("WallObjects").transform.rotation *= Quaternion.Euler(new Vector3(0, 0, -90));
-			GameObject.Find("Player").transform.rotation *= Quaternion.Euler(new Vector3(0, 0, -90));
+			_wallObjects.transform.rotation *= Quaternion.Euler(new Vector3(0, 0, -90));
+			_player.transform.rotation *= Quaternion.Euler(new Vector3(0, 0, -90));
 
 		} else if (Input.GetKeyDown(KeyCode.E)) {
-			GameObject.Find("WallObjects").transform.rotation *= Quaternion.Euler(new Vector3(0, 0, 90));
-			GameObject.Find("Player").transform.rotation *= Quaternion.Euler(new Vector3(0, 0, 90));
+			_wallObjects.transform.rotation *= Quaternion.Euler(new Vector3(0, 0, 90));
+			_player.transform.rotation *= Quaternion.Euler(new Vector3(0, 0, 90));
 
 		}
 	}
@@ -71,13 +81,16 @@ public class GameController : MonoBehaviour {
 		if (_abs > _threshold)
 		{
 			float _difference = -(_pointerDown.x - _pointerUp.x);
-			if (_difference < 0)
+			if (_difference < 0 )
 			{
-				GameObject.Find("WallObjects").transform.rotation *= Quaternion.Euler(new Vector3(0, 0, -90));
+
+				_wallObjects.transform.rotation *= Quaternion.Euler(new Vector3(0, 0, -90));
 
 			} else if (_difference > 0)
 			{
-				GameObject.Find("WallObjects").transform.rotation *= Quaternion.Euler(new Vector3(0, 0, 90));
+
+
+				_wallObjects.transform.rotation *= Quaternion.Euler(new Vector3(0, 0, 90));
 
 			}
 
@@ -95,21 +108,31 @@ public class GameController : MonoBehaviour {
 	private void GenerateWallMap()
 	{
 
-		GameObject.Find("WallObjects").transform.position = GameObject.Find("Player").transform.position;
-		for (int i = 0; i < 20; i++)
+		_wallObjects.transform.position = _player.transform.position;
+		for (int i = 0; i < 4; i++)
 		{
-			GameObject _currentWall = Instantiate(_wall, new Vector2(0, .1f), Quaternion.identity) as GameObject;
-			_currentWall.name = "Wall" + i;
-			_currentWall.transform.parent = GameObject.Find("WallObjects").transform;
+			GameObject _currentWall = null;
+			GameObject _lastwall = null;
+			if (_wallObjects.transform.childCount > 0)
+			{
+				_lastwall = _wallObjects.transform.GetChild(_wallObjects.transform.childCount - 1).gameObject;
+			}
+
+
+			_currentWall = Instantiate(_wall, new Vector2(0, 0 ), Quaternion.identity) as GameObject;
+			_currentWall.name = "Wall" + _currentWall.GetHashCode();
+			_currentWall.transform.parent = _wallObjects.transform;
+
 			float _height = Random.Range(_minHeight, _maxHeight);
 			bool _rotated = false;
-			if ( i > 0)
+
+			if (_lastwall != null)
 			{
 				if (Random.Range(0.0f, 1.1f) < _rotationFreq)
 				{
-					if (walls[i - 1].transform.rotation.eulerAngles.z != 0)
+					if (_lastwall.transform.rotation.eulerAngles.z != 0)
 					{
-						Quaternion _rotation = walls[i - 1].transform.rotation;
+						Quaternion _rotation = _lastwall.transform.rotation;
 						_currentWall.transform.rotation = _rotation;
 						_rotated = true;
 					} else {
@@ -119,39 +142,40 @@ public class GameController : MonoBehaviour {
 					}
 
 				}
+
 			}
+
 
 			_currentWall.transform.localScale = new Vector2(_size, _height);
 
 			walls.Add(_currentWall);
-			PositionWall(_currentWall, i, _rotated);
+			PositionWall(_currentWall, _lastwall, _rotated);
 		}
+
+
 	}
 
-	private void PositionWall(GameObject _currentWall, int _currentIndex, bool _rotated)
+	private void PositionWall(GameObject _currentWall, GameObject _lastWallTransform, bool _rotated)
 	{
-		if (_currentIndex > 0)
+		if (_lastWallTransform != null)
 		{
-			Transform _previousWall = walls[_currentIndex - 1].transform;
-
+			Transform _previousWall = _lastWallTransform.transform;
 			_currentWall.transform.position = _previousWall.GetChild(0).transform.position;
-
 			if (_currentWall.transform.rotation.eulerAngles.z != 0)
 			{
 				_currentWall.transform.position = new Vector3(_currentWall.transform.position.x, _currentWall.transform.position.y + _previousWall.transform.localScale.x / 2.0f * _pixelToUnit);
-				if (_currentWall.transform.rotation.eulerAngles.z > 180) {
+				if (_currentWall.transform.rotation.eulerAngles.z > 180)
+				{
 					_currentWall.transform.position = new Vector3(_currentWall.transform.position.x - _currentWall.transform.localScale.x / 2.0f * _pixelToUnit, _currentWall.transform.position.y - _currentWall.transform.localScale.x / 2.0f * _pixelToUnit);
-				} else {
+				} else
+				{
 					_currentWall.transform.position = new Vector3(_currentWall.transform.position.x + _currentWall.transform.localScale.x / 2.0f * _pixelToUnit, _currentWall.transform.position.y - _currentWall.transform.localScale.x / 2.0f * _pixelToUnit);
-
 				}
-
-			} else {
+			} else
+			{
 				_currentWall.transform.position = new Vector3(_currentWall.transform.position.x , _currentWall.transform.position.y - _currentWall.transform.localScale.x / 2.0f * _pixelToUnit);
 			}
-
 		}
-
 	}
 
 
@@ -161,18 +185,18 @@ public class GameController : MonoBehaviour {
 		if (Input.GetMouseButtonDown(1))
 		{
 
-			if (walls.Count > 0)
-			{
-				GameObject[] _walls = GameObject.FindGameObjectsWithTag("Walls");
-				for (int i = 0; i < _walls.Length; i++)
-				{
-					Destroy(_walls[i]);
-				}
+			// if (walls.Count > 0)
+			// {
+			// 	GameObject[] _walls = GameObject.FindGameObjectsWithTag("Walls");
+			// 	for (int i = 0; i < _walls.Length; i++)
+			// 	{
+			// 		//Destroy(_walls[i]);
+			// 	}
 
-				walls.Clear();
+			// 	//walls.Clear();
 
-				GameObject.Find("WallObjects").transform.rotation = Quaternion.Euler(Vector3.zero);
-			}
+			// 	//GameObject.Find("WallObjects").transform.rotation = Quaternion.Euler(Vector3.zero);
+			// }
 
 			GenerateWallMap();
 		}

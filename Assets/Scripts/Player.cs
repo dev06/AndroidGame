@@ -43,6 +43,7 @@ public class Player : MonoBehaviour {
 
 	void OnTriggerStay2D(Collider2D col)
 	{
+
 		_enterObject = col.gameObject;
 		_sprite.color = new Color(0, 1, 1, 1);
 

@@ -36,9 +36,12 @@ public class Wall : MonoBehaviour {
 			yOffset = 0;
 		}
 
-		transform.position -= new Vector3(offset, Time.deltaTime * .5f , 0);
+		transform.position -= new Vector3(offset, Time.deltaTime * .4f , 0);
 
-
+		Vector3 screenPoint = Camera.main.WorldToViewportPoint (transform.position + transform.localScale * .32f);
+		// if (screenPoint.y < 0) {
+		// 	Destroy(gameObject);
+		// }
 	}
 
 
