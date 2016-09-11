@@ -35,8 +35,6 @@ public class GameController : MonoBehaviour {
 	void Update ()
 	{
 
-
-
 		DestroyMap();
 
 		if (Input.GetMouseButtonDown(0))
@@ -49,9 +47,24 @@ public class GameController : MonoBehaviour {
 			_pointerUp = Input.mousePosition;
 			Calculate();
 		}
+
+		float rotation = GameObject.Find("WallObjects").transform.rotation.eulerAngles.z;
+		direction = rotation / 360.0f;
+
+
+
+		if (Input.GetKeyDown(KeyCode.Q)) {
+			GameObject.Find("WallObjects").transform.rotation *= Quaternion.Euler(new Vector3(0, 0, -90));
+			GameObject.Find("Player").transform.rotation *= Quaternion.Euler(new Vector3(0, 0, -90));
+
+		} else if (Input.GetKeyDown(KeyCode.E)) {
+			GameObject.Find("WallObjects").transform.rotation *= Quaternion.Euler(new Vector3(0, 0, 90));
+			GameObject.Find("Player").transform.rotation *= Quaternion.Euler(new Vector3(0, 0, 90));
+
+		}
 	}
 
-
+	public static float direction;
 	private void Calculate()
 	{
 		float _abs = Mathf.Abs(_pointerUp.x - _pointerDown.x);
@@ -60,18 +73,21 @@ public class GameController : MonoBehaviour {
 			float _difference = -(_pointerDown.x - _pointerUp.x);
 			if (_difference < 0)
 			{
-				GameObject.Find("WallObjects").transform.rotation *= Quaternion.Euler(new Vector3(0, 0, 90));
+				GameObject.Find("WallObjects").transform.rotation *= Quaternion.Euler(new Vector3(0, 0, -90));
 
 			} else if (_difference > 0)
 			{
-				GameObject.Find("WallObjects").transform.rotation *= Quaternion.Euler(new Vector3(0, 0, -90));
+				GameObject.Find("WallObjects").transform.rotation *= Quaternion.Euler(new Vector3(0, 0, 90));
 
 			}
+
 
 		}
 
 		_pointerDown = Vector2.zero;
 		_pointerUp = Vector2.zero;
+
+
 	}
 
 
@@ -80,9 +96,10 @@ public class GameController : MonoBehaviour {
 	{
 
 		GameObject.Find("WallObjects").transform.position = GameObject.Find("Player").transform.position;
-		for (int i = 0; i < 5; i++)
+		for (int i = 0; i < 20; i++)
 		{
-			GameObject _currentWall = Instantiate(_wall, new Vector2(0, 0), Quaternion.identity) as GameObject;
+			GameObject _currentWall = Instantiate(_wall, new Vector2(0, .1f), Quaternion.identity) as GameObject;
+			_currentWall.name = "Wall" + i;
 			_currentWall.transform.parent = GameObject.Find("WallObjects").transform;
 			float _height = Random.Range(_minHeight, _maxHeight);
 			bool _rotated = false;
@@ -138,7 +155,7 @@ public class GameController : MonoBehaviour {
 	}
 
 
-	private void DestroyMap()
+	public void DestroyMap()
 	{
 
 		if (Input.GetMouseButtonDown(1))
@@ -154,7 +171,7 @@ public class GameController : MonoBehaviour {
 
 				walls.Clear();
 
-
+				GameObject.Find("WallObjects").transform.rotation = Quaternion.Euler(Vector3.zero);
 			}
 
 			GenerateWallMap();
