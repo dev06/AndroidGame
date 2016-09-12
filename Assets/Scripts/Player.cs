@@ -23,7 +23,7 @@ public class Player : MonoBehaviour {
 			if (_hits <= 0)
 			{
 				_sprite.color = new Color(1, 0, 0, 1);
-				UnityEngine.SceneManagement.SceneManager.LoadScene("GameScene");
+				//UnityEngine.SceneManagement.SceneManager.LoadScene("GameScene");
 			}
 		}
 	}

@@ -30,7 +30,7 @@ public class GameController : MonoBehaviour {
 		_wallObjects = GameObject.FindWithTag("WallObjects");
 		_player = GameObject.FindWithTag("Entity/Player");
 		walls = new List<GameObject>();
-		GenerateEmptyGameObjects(10);
+		GenerateEmptyGameObjects(2);
 	}
 
 	// Update is called once per frame
@@ -132,7 +132,7 @@ public class GameController : MonoBehaviour {
 	{
 		float _height = Random.Range(_minHeight, _maxHeight);
 		float _rotationFreqNumber = Random.Range(0.0f, 1.1f);
-		float _rotationDirection = (Random.Range(0, 2) == 0) ? 90 : -90;
+		float _rotationDirection = (Random.Range(0, 2) == 0) ? 90 : 270;
 
 		if (_modifier == Modifier.TRANSFORM) // USE THIS FOR MODIFING ENTIRE TRANSFORM
 		{
@@ -140,22 +140,23 @@ public class GameController : MonoBehaviour {
 
 			if (_previousObject != null)
 			{
+
+				Debug.Log(_previousObject + " " + _previousObject.transform.localRotation.eulerAngles.z + " " + _previousObject.transform.rotation.eulerAngles.z);
+				float _previousObjectRotation = _previousObject.transform.localRotation.eulerAngles.z;
 				if (_rotationFreqNumber < _rotationFreq)
 				{
-
-					if (_previousObject.transform.eulerAngles.z != 0)
+					if (_previousObjectRotation == 0)
 					{
-						_object.transform.rotation *= _previousObject.transform.rotation;
-					} else
-					{
-						_object.transform.Rotate(new Vector3(0, 0, _rotationDirection));
+						_object.transform.rotation = Quaternion.Euler(new Vector3(0, 0, _rotationDirection));
+					} else {
+						_object.transform.rotation = _previousObject.transform.rotation;
 					}
 				}
+
+
+
 				_object.transform.position = _previousObject.transform.GetChild(0).transform.position;
-
-
 				PositionWall(_object, _previousObject);
-
 			}
 		}
 	}
