@@ -142,7 +142,7 @@ public class GameController : MonoBehaviour {
 			{
 
 				Debug.Log(_previousObject + " " + _previousObject.transform.localRotation.eulerAngles.z + " " + _previousObject.transform.rotation.eulerAngles.z);
-				float _previousObjectRotation = _previousObject.transform.localRotation.eulerAngles.z;
+				float _previousObjectRotation = _previousObject.transform.rotation.eulerAngles.z;
 				if (_rotationFreqNumber < _rotationFreq)
 				{
 					if (_previousObjectRotation == 0)
