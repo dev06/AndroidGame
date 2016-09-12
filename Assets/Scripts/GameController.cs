@@ -141,10 +141,11 @@ public class GameController : MonoBehaviour {
 			if (_previousObject != null)
 			{
 
-				Debug.Log(_previousObject + " " + _previousObject.transform.localRotation.eulerAngles.z + " " + _previousObject.transform.rotation.eulerAngles.z);
-				float _previousObjectRotation = _previousObject.transform.localRotation.eulerAngles.z;
+				float _previousObjectRotation = _wallObjects.transform.rotation.eulerAngles.z + _previousObject.transform.localRotation.eulerAngles.z;
 				if (_rotationFreqNumber < _rotationFreq)
 				{
+					Debug.Log(_previousObject + " " + _previousObject.transform.localRotation.eulerAngles.z + " " + _previousObject.transform.rotation.eulerAngles.z);
+
 					if (_previousObjectRotation == 0)
 					{
 						_object.transform.rotation = Quaternion.Euler(new Vector3(0, 0, _rotationDirection));
@@ -152,9 +153,6 @@ public class GameController : MonoBehaviour {
 						_object.transform.rotation = _previousObject.transform.rotation;
 					}
 				}
-
-
-
 				_object.transform.position = _previousObject.transform.GetChild(0).transform.position;
 				PositionWall(_object, _previousObject);
 			}
