@@ -12,32 +12,11 @@ public class Wall : MonoBehaviour {
 	private SpriteRenderer _spriteRenderer;
 	public bool move;
 	private bool _enteredWall;
+	private bool _shouldDestroy;
 	void Start ()
 	{
 		_gameController = GameObject.FindWithTag("GameController").GetComponent<GameController>();
-		if (previousWall != null)
-		{
-			float _pixelToUnit = .32f;
-			transform.position = previousWall.transform.GetChild(0).transform.position;
-			Transform _previousWall = previousWall.transform;
-			if ( transform.rotation.eulerAngles.z != 0)
-			{
-				transform.position = new Vector3( transform.position.x,  transform.position.y + _previousWall.transform.localScale.x / 2.0f * _pixelToUnit);
 
-				if ( transform.rotation.eulerAngles.z > 180)
-				{
-					transform.position = new Vector3( transform.position.x -  transform.localScale.x / 2.0f * _pixelToUnit,  transform.position.y -  transform.localScale.x / 2.0f * _pixelToUnit);
-				} else
-				{
-					transform.position = new Vector3( transform.position.x +  transform.localScale.x / 2.0f * _pixelToUnit,  transform.position.y -  transform.localScale.x / 2.0f * _pixelToUnit);
-				}
-			} else
-			{
-				transform.position = new Vector3( transform.position.x ,  transform.position.y -  transform.localScale.x / 2.0f * _pixelToUnit);
-			}
-
-
-		}
 		_wallObjects = GameObject.FindWithTag("WallObjects");
 		_spriteRenderer = GetComponent<SpriteRenderer>();
 
@@ -47,42 +26,38 @@ public class Wall : MonoBehaviour {
 	void Update ()
 	{
 
-		if (move)
-			transform.position -= new Vector3(0, Time.deltaTime * 25f , 0);
-
-		Vector3 screenPoint = Camera.main.WorldToViewportPoint (transform.position + transform.localScale * .32f);
+		Move(GameController.direction);
 
 
-		if (screenPoint.y < 0)
+		Vector2 screenPoint = Camera.main.WorldToViewportPoint(transform.position);
+
+		if (_shouldDestroy)
 		{
-
-			if (_enteredWall)
-			{
-				Destroy(gameObject);
-				_gameController.GenerateEmptyGameObjects(1);
-			}
-
-
-			//_gameController.ModifyTransformForObjects(gameObject, _wallObjects.transform.GetChild(_wallObjects.transform.childCount - 1).gameObject, Modifier.TRANSFORM);
+			if (screenPoint.y < 0)
+				Destroy(gameObject, 2);
 		}
 	}
 
 
-
-
-	void OnCollisionStay2D(Collision2D  col)
+	private void Move(float direction)
 	{
-
+		if (move)
+		{
+			if (direction == .75f)
+			{
+				transform.position += new Vector3(-Time.deltaTime * _gameController.speed, 0 , 0);
+			} else if (direction == .25)
+			{
+				transform.position += new Vector3(Time.deltaTime * _gameController.speed, 0 , 0);
+			} else if (direction == .5f)
+			{
+				transform.position += new Vector3(0, Time.deltaTime * _gameController.speed , 0);
+			} else {
+				transform.position += new Vector3(0, -Time.deltaTime * _gameController.speed , 0);
+			}
+		}
 	}
-	void OnCollisionExit2D(Collision2D  col)
-	{
 
-	}
-
-	void OnTriggerStay2D(Collider2D col)
-	{
-
-	}
 
 
 	public void ChangeColor(bool entered)
@@ -92,6 +67,12 @@ public class Wall : MonoBehaviour {
 			_enteredWall = entered;
 		}
 		_spriteRenderer.color = (entered) ? new Color(0, 1, 0, 1) : new Color(1, 1, 1, 1);
+	}
+
+
+	public void Hit(bool b)
+	{
+		_shouldDestroy = b;
 	}
 
 
