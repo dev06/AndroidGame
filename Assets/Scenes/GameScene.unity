@@ -505,8 +505,8 @@ MonoBehaviour:
   speed: 100
   _rotationFreq: 0.25
   _size: 1
-  _minHeight: 25
-  _maxHeight: 50
+  _minHeight: 150
+  _maxHeight: 200
   generateOnTimer: 0
   swipe: 0
   rate: 0
