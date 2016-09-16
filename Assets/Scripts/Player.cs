@@ -16,25 +16,14 @@ public class Player : MonoBehaviour {
 
 	void Update ()
 	{
-
-		if (_hits <= 0)
+		if (_exitObject != null)
 		{
-			_sprite.color = new Color(1, 0, 0, 1);
-			UnityEngine.SceneManagement.SceneManager.LoadScene("GameScene");
+			if (_hits <= 0)
+			{
+				_sprite.color = new Color(1, 0, 0, 1);
+				UnityEngine.SceneManagement.SceneManager.LoadScene("GameScene");
+			}
 		}
-
-		Debug.Log(_hits);
-
-		// if (_currentWall != null)
-		// {
-		// 	if (CheckIfOutsideBounds(_currentWall))
-		// 	{
-		// 		_sprite.color = new Color(1, 0, 0, 1);
-		// 	} else {
-		// 		_sprite.color = new Color(0, 1, 1, 1);
-		// 	}
-		// }
-
 	}
 
 
@@ -47,19 +36,15 @@ public class Player : MonoBehaviour {
 
 	void OnTriggerExit2D(Collider2D col)
 	{
-		//_exitObject = col.gameObject;
-		col.gameObject.SendMessage("ChangeColor", false);
-		col.gameObject.SendMessage("Hit", true);
+		_exitObject = col.gameObject;
+		//col.gameObject.SendMessage("Hit", true);
+		Destroy(col.gameObject);
 		_hits--;
 		_gameController.GenerateEmptyGameObjects(1);
 	}
 
 	void OnTriggerStay2D(Collider2D col)
 	{
-		//_currentWall = col.gameObject;
-		//_enterObject = col.gameObject;
-		col.gameObject.SendMessage("ChangeColor", true);
-		//_sprite.color = new Color(0, 1, 1, 1);
 
 	}
 
@@ -80,8 +65,9 @@ public class Player : MonoBehaviour {
 
 		if (_rotation == 0f || _rotation == 180f)
 		{
-			if (px + psX < (wx - wsX) || px - psX > (wx + wsX) || py + psY < wy)
+			if (px + psX < (wx - wsX) || px - psX > (wx + wsX) || py + psY < wy) {
 				_outside = true;
+			}
 		} else {
 			if (_rotation == 270f)
 			{

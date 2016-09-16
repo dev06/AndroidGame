@@ -13,6 +13,7 @@ public class GameController : MonoBehaviour {
 	public float _minHeight;
 	public float _maxHeight;
 	public bool  generateOnTimer;
+	public Swipe swipe;
 	public float  rate;
 
 	private Vector2 _pointerDown;
@@ -27,6 +28,8 @@ public class GameController : MonoBehaviour {
 
 	private float _pixelToUnit = .32f;
 	private float _timer;
+	private int _leftRotation = 0;
+	private int _rightRotation = 0;
 
 	void Awake ()
 	{
@@ -35,18 +38,20 @@ public class GameController : MonoBehaviour {
 		_player = GameObject.FindWithTag("Entity/Player");
 		_cameraTransform = _player.transform.GetChild(0).transform;
 		walls = new List<GameObject>();
-		GenerateEmptyGameObjects(15);
+		GenerateEmptyGameObjects(7);
 	}
 
 	// Update is called once per frame
 
 	void Update ()
 	{
-		if (generateOnTimer) GenerateWallOnTimer(rate);
+		if (generateOnTimer) { GenerateWallOnTimer(rate); }
 		DestroyMap();
 		RegisterSwipe();
 		float rotation = _cameraTransform.rotation.eulerAngles.z;
 		direction = rotation / 360.0f;
+
+
 
 	}
 
@@ -69,6 +74,17 @@ public class GameController : MonoBehaviour {
 		{
 			float _difference = -(_pointerDown.x - _pointerUp.x);
 			float zRotation = (_difference < 0) ? 90 : -90;
+			if (_difference < 0)
+			{
+				swipe = Swipe.LEFT;
+			} else if (_difference > 0)
+			{
+				swipe = Swipe.RIGHT;
+			} else {
+				swipe = Swipe.NONE;
+			}
+
+			//swipe = (_difference < 0) ? Swipe.LEFT  : (_difference > 0 ) ? Swipe.RIGHT : Swipe.NONE;
 			_cameraTransform.rotation *= Quaternion.Euler(new Vector3(0, 0, zRotation));
 		}
 
@@ -76,53 +92,6 @@ public class GameController : MonoBehaviour {
 		_pointerUp = Vector2.zero;
 	}
 
-
-
-	private void GenerateWallMap()
-	{
-
-
-		for (int i = 0; i < 4; i++)
-		{
-			GameObject _currentWall = null;
-			GameObject _lastwall = null;
-			if (_wallObjects.transform.childCount > 0)
-			{
-				_lastwall = _wallObjects.transform.GetChild(_wallObjects.transform.childCount - 1).gameObject;
-			}
-
-
-			_currentWall = Instantiate(_wall, new Vector2(0, 0 ), Quaternion.identity) as GameObject;
-			_currentWall.name = "Wall" + _currentWall.GetHashCode();
-			_currentWall.transform.parent = _wallObjects.transform;
-
-			float _height = Random.Range(_minHeight, _maxHeight);
-			bool _rotated = false;
-
-			if (_lastwall != null)
-			{
-				if (Random.Range(0.0f, 1.1f) < _rotationFreq)
-				{
-					if (_lastwall.transform.rotation.eulerAngles.z != 0)
-					{
-						Quaternion _rotation = _lastwall.transform.rotation;
-						_currentWall.transform.rotation = _rotation;
-						_rotated = true;
-					} else {
-						float _rotation = (Random.Range(0, 2) == 0) ? 90 : -90;
-						_currentWall.transform.Rotate(new Vector3(0, 0, _rotation));
-						_rotated = true;
-					}
-
-				}
-
-			}
-			_currentWall.transform.localScale = new Vector2(_size, _height);
-
-			walls.Add(_currentWall);
-			//PositionWall(_currentWall, _lastwall, _rotated);
-		}
-	}
 
 	/// <summary>
 	///
@@ -145,7 +114,7 @@ public class GameController : MonoBehaviour {
 
 	}
 
-	int minRotations = 0;
+
 	public void ModifyTransformForObjects(GameObject _object, GameObject _previousObject, Modifier _modifier)
 	{
 		float _height = Random.Range(_minHeight, _maxHeight);
@@ -154,27 +123,61 @@ public class GameController : MonoBehaviour {
 
 		if (_modifier == Modifier.TRANSFORM) // USE THIS FOR MODIFING ENTIRE TRANSFORM
 		{
-			_object.transform.localScale = new Vector2(_size, _height);
+
 
 			if (_previousObject != null)
 			{
-				_object.transform.localRotation = _previousObject.transform.localRotation;
-
+				_object.transform.localScale = new Vector2(_size, _height);
+				_object.transform.rotation = _previousObject.transform.rotation;
 				if (_rotationFreq < _rotationFreqNumber)
 				{
-					minRotations++;
-					if (minRotations > 1)
-					{
-						_object.transform.localRotation *= Quaternion.Euler(new Vector3(0, 0, _rotationDirection));
-						minRotations = 0;
-					}
+					RotateWall(_object, _rotationDirection);
 				}
-
 				_object.transform.position = _previousObject.transform.GetChild(0).transform.position;
 				PositionWall(_object, _previousObject);
+			} else
+			{
+				_object.transform.localScale = new Vector2(_size, 300);
 			}
 		}
 	}
+
+
+	private void RotateWall(GameObject _currentWall, float targetRotation)
+	{
+		// -90 == right
+		// 90 == left
+
+		if (targetRotation == -90f)
+		{
+			if (_rightRotation < 2 )
+			{
+				_currentWall.transform.rotation *= Quaternion.Euler(new Vector3(0, 0, targetRotation));
+				_rightRotation++;
+				_leftRotation = 0;
+			} else
+			{
+				_currentWall.transform.rotation *= Quaternion.Euler(new Vector3(0, 0, -targetRotation));
+				_leftRotation++;
+				_rightRotation = 0;
+			}
+		} else if (targetRotation == 90f)
+		{
+			if (_leftRotation < 2)
+			{
+				_currentWall.transform.rotation *= Quaternion.Euler(new Vector3(0, 0, targetRotation));
+				_leftRotation++;
+				_rightRotation = 0;
+			} else {
+				_currentWall.transform.rotation *= Quaternion.Euler(new Vector3(0, 0, -targetRotation));
+				_rightRotation++;
+				_leftRotation = 0;
+			}
+		}
+	}
+
+
+
 
 
 
@@ -205,6 +208,9 @@ public class GameController : MonoBehaviour {
 		}
 
 	}
+
+
+
 
 
 	private void RegisterSwipe()
@@ -257,4 +263,11 @@ public enum Modifier
 	POSITION,
 	ROTATION,
 	SCALE,
+}
+
+public enum Swipe
+{
+	RIGHT,
+	LEFT,
+	NONE,
 }
