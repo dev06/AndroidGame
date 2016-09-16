@@ -279,10 +279,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8150122237b5ea4c8b3a64ea6118d6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rotationFreq: 0.5
-  _size: 2
-  _minHeight: 50
-  _maxHeight: 75
+  speed: 35
+  _rotationFreq: 0.2
+  _size: 1
+  _minHeight: 35
+  _maxHeight: 40
+  generateOnTimer: 0
+  rate: 0.2
 --- !u!4 &1450836123
 Transform:
   m_ObjectHideFlags: 0
@@ -336,6 +339,9 @@ GameObject:
   - 92: {fileID: 2102163567}
   - 124: {fileID: 2102163566}
   - 81: {fileID: 2102163565}
+  - 114: {fileID: 2102163570}
+  - 114: {fileID: 2102163571}
+  - 114: {fileID: 2102163572}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -373,7 +379,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0.019607844}
+  m_BackGroundColor: {r: 0.49264705, g: 0.38222617, b: 0.02173442, a: 0.019607844}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -411,3 +417,48 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1118713955}
   m_RootOrder: 0
+--- !u!114 &2102163570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2102163564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4975a6e437fc3b149a8cd508ce5bdd69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  threshold: 0.25
+  intensity: 1.25
+  blurSize: 2.65
+  blurIterations: 2
+  blurType: 0
+  fastBloomShader: {fileID: 4800000, guid: 68a00c837b82e4c6d92e7da765dc5f1d, type: 3}
+--- !u!114 &2102163571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2102163564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4739c22ef73ad62488fe344c8fe9addd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  strengthX: 0.5
+  strengthY: 0.5
+  fishEyeShader: {fileID: 4800000, guid: 874ceab4425f64bccb1d14032f4452b1, type: 3}
+--- !u!114 &2102163572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2102163564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 478a2083ad114a07d000fbfb8d76c639, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shader: {fileID: 4800000, guid: e9ba2083ad114a07d000fbfb8d76c639, type: 3}
+  blurAmount: 0.8
+  extraBlur: 0
