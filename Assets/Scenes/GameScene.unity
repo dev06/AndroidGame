@@ -98,7 +98,7 @@ GameObject:
   - 114: {fileID: 129207273}
   m_Layer: 0
   m_Name: Bottom
-  m_TagString: Untagged
+  m_TagString: AutoPlay/Bounds
   m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -171,7 +171,7 @@ GameObject:
   - 114: {fileID: 799067967}
   m_Layer: 0
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: AutoPlay/Bounds
   m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -244,7 +244,7 @@ GameObject:
   - 61: {fileID: 935738504}
   m_Layer: 0
   m_Name: Left
-  m_TagString: Untagged
+  m_TagString: AutoPlay/Bounds
   m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -502,12 +502,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8150122237b5ea4c8b3a64ea6118d6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 100
+  speed: 50
   _rotationFreq: 0.25
   _size: 1
-  _minHeight: 150
-  _maxHeight: 200
+  _minHeight: 75
+  _maxHeight: 150
   generateOnTimer: 0
+  autoPlay: 0
   swipe: 0
   rate: 0
 --- !u!4 &1450836123
@@ -684,7 +685,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shader: {fileID: 4800000, guid: e9ba2083ad114a07d000fbfb8d76c639, type: 3}
-  blurAmount: 0.536
+  blurAmount: 0.095
   extraBlur: 0
 --- !u!1 &2124208866
 GameObject:
@@ -699,7 +700,7 @@ GameObject:
   - 50: {fileID: 2124208870}
   m_Layer: 0
   m_Name: Right
-  m_TagString: Untagged
+  m_TagString: AutoPlay/Bounds
   m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

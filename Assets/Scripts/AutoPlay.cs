@@ -15,41 +15,45 @@ public class AutoPlay : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D col)
 	{
-		if (GameController.direction == 0)
+		if (_gameController.autoPlay)
 		{
-			if (gameObject.name == "Right")
+			if (GameController.direction == 0)
 			{
-				Camera.main.transform.rotation *= Quaternion.Euler(new Vector3(0, 0, -90));
-			} else if (gameObject.name == "Left")
-			{
-				Camera.main.transform.rotation *= Quaternion.Euler(new Vector3(0, 0, 90));
-			}
-		} else if (GameController.direction == .5f) {
-			if (gameObject.name == "Right")
-			{
-				Camera.main.transform.rotation *= Quaternion.Euler(new Vector3(0, 0, 90));
-			} else if (gameObject.name == "Left")
-			{
-				Camera.main.transform.rotation *= Quaternion.Euler(new Vector3(0, 0, -90));
-			}
+				if (gameObject.name == "Right")
+				{
+					Camera.main.transform.rotation *= Quaternion.Euler(new Vector3(0, 0, -90));
+				} else if (gameObject.name == "Left")
+				{
+					Camera.main.transform.rotation *= Quaternion.Euler(new Vector3(0, 0, 90));
+				}
+			} else if (GameController.direction == .5f) {
+				if (gameObject.name == "Right")
+				{
+					Camera.main.transform.rotation *= Quaternion.Euler(new Vector3(0, 0, 90));
+				} else if (gameObject.name == "Left")
+				{
+					Camera.main.transform.rotation *= Quaternion.Euler(new Vector3(0, 0, -90));
+				}
 
-		}
-		else
-		{
-			if (GameController.direction == .75f)
+			}
+			else
 			{
-				if (gameObject.name == "Top") {
-					Camera.main.transform.rotation *= Quaternion.Euler(new Vector3(0, 0, 90));
-				} else if (gameObject.name == "Bottom") {
-					Camera.main.transform.rotation *= Quaternion.Euler(new Vector3(0, 0, -90));
-				}
-			} else {
-				if (gameObject.name == "Top") {
-					Camera.main.transform.rotation *= Quaternion.Euler(new Vector3(0, 0, -90));
-				} else if (gameObject.name == "Bottom") {
-					Camera.main.transform.rotation *= Quaternion.Euler(new Vector3(0, 0, 90));
+				if (GameController.direction == .75f)
+				{
+					if (gameObject.name == "Top") {
+						Camera.main.transform.rotation *= Quaternion.Euler(new Vector3(0, 0, 90));
+					} else if (gameObject.name == "Bottom") {
+						Camera.main.transform.rotation *= Quaternion.Euler(new Vector3(0, 0, -90));
+					}
+				} else {
+					if (gameObject.name == "Top") {
+						Camera.main.transform.rotation *= Quaternion.Euler(new Vector3(0, 0, -90));
+					} else if (gameObject.name == "Bottom") {
+						Camera.main.transform.rotation *= Quaternion.Euler(new Vector3(0, 0, 90));
+					}
 				}
 			}
 		}
+
 	}
 }

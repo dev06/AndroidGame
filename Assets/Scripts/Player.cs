@@ -16,7 +16,7 @@ public class Player : MonoBehaviour {
 
 	void Update ()
 	{
-		if (_exitObject != null)
+		if (_currentWall != null)
 		{
 			if (_hits <= 0)
 			{
@@ -29,23 +29,26 @@ public class Player : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D col)
 	{
-		_currentWall = col.gameObject;
-		_sprite.color = new Color(0, 1, 1, 1);
-		_hits++;
+
+		if (col.gameObject.tag == "Walls")
+		{
+
+			_sprite.color = new Color(0, 1, 1, 1);
+			_hits++;
+		}
 	}
 
 	void OnTriggerExit2D(Collider2D col)
 	{
 		_exitObject = col.gameObject;
-		//col.gameObject.SendMessage("Hit", true);
-		Destroy(col.gameObject);
+		Destroy(col.gameObject, 1f);
 		_hits--;
 		_gameController.GenerateEmptyGameObjects(1);
 	}
 
 	void OnTriggerStay2D(Collider2D col)
 	{
-
+		_currentWall = col.gameObject;
 	}
 
 	private bool CheckIfOutsideBounds(GameObject _currentWall)

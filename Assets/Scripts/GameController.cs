@@ -13,6 +13,7 @@ public class GameController : MonoBehaviour {
 	public float _minHeight;
 	public float _maxHeight;
 	public bool  generateOnTimer;
+	public bool autoPlay;
 	public Swipe swipe;
 	public float  rate;
 
@@ -30,6 +31,7 @@ public class GameController : MonoBehaviour {
 	private float _timer;
 	private int _leftRotation = 0;
 	private int _rightRotation = 0;
+
 
 	void Awake ()
 	{
