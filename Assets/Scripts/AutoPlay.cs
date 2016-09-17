@@ -4,56 +4,61 @@ using System.Collections;
 public class AutoPlay : MonoBehaviour {
 
 	GameController _gameController;
+
 	void Start () {
 		_gameController = GameObject.FindWithTag("GameController").GetComponent<GameController>();
 	}
 
-
-	void Update () {
-
-	}
-
-	void OnTriggerEnter2D(Collider2D col)
+	private void ChangeDirections(Direction direction)
 	{
-		if (_gameController.autoPlay)
+		if (direction == Direction.NORTH)
 		{
-			if (GameController.direction == 0)
+			if (gameObject.name == "Right")
 			{
-				if (gameObject.name == "Right")
-				{
-					Camera.main.transform.rotation *= Quaternion.Euler(new Vector3(0, 0, -90));
-				} else if (gameObject.name == "Left")
-				{
-					Camera.main.transform.rotation *= Quaternion.Euler(new Vector3(0, 0, 90));
-				}
-			} else if (GameController.direction == .5f) {
-				if (gameObject.name == "Right")
-				{
-					Camera.main.transform.rotation *= Quaternion.Euler(new Vector3(0, 0, 90));
-				} else if (gameObject.name == "Left")
-				{
-					Camera.main.transform.rotation *= Quaternion.Euler(new Vector3(0, 0, -90));
-				}
-
+				Camera.main.transform.rotation *= Quaternion.Euler(new Vector3(0, 0, -90));
+			} else if (gameObject.name == "Left")
+			{
+				Camera.main.transform.rotation *= Quaternion.Euler(new Vector3(0, 0, 90));
 			}
-			else
+		} else if (direction == Direction.SOUTH) {
+			if (gameObject.name == "Right")
 			{
-				if (GameController.direction == .75f)
-				{
-					if (gameObject.name == "Top") {
-						Camera.main.transform.rotation *= Quaternion.Euler(new Vector3(0, 0, 90));
-					} else if (gameObject.name == "Bottom") {
-						Camera.main.transform.rotation *= Quaternion.Euler(new Vector3(0, 0, -90));
-					}
-				} else {
-					if (gameObject.name == "Top") {
-						Camera.main.transform.rotation *= Quaternion.Euler(new Vector3(0, 0, -90));
-					} else if (gameObject.name == "Bottom") {
-						Camera.main.transform.rotation *= Quaternion.Euler(new Vector3(0, 0, 90));
-					}
+				Camera.main.transform.rotation *= Quaternion.Euler(new Vector3(0, 0, 90));
+			} else if (gameObject.name == "Left")
+			{
+				Camera.main.transform.rotation *= Quaternion.Euler(new Vector3(0, 0, -90));
+			}
+
+		}
+		else
+		{
+			if (direction == Direction.EAST)
+			{
+				if (gameObject.name == "Top") {
+					Camera.main.transform.rotation *= Quaternion.Euler(new Vector3(0, 0, 90));
+				} else if (gameObject.name == "Bottom") {
+					Camera.main.transform.rotation *= Quaternion.Euler(new Vector3(0, 0, -90));
+				}
+			} else {
+				if (gameObject.name == "Top") {
+					Camera.main.transform.rotation *= Quaternion.Euler(new Vector3(0, 0, -90));
+				} else if (gameObject.name == "Bottom") {
+					Camera.main.transform.rotation *= Quaternion.Euler(new Vector3(0, 0, 90));
 				}
 			}
 		}
 
 	}
+
+
+
+	void OnTriggerEnter2D(Collider2D col)
+	{
+		if (_gameController.autoPlay)
+		{
+			ChangeDirections(_gameController.facingDirection);
+		}
+	}
+
+
 }
