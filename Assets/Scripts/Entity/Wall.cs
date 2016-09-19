@@ -16,13 +16,24 @@ public class Wall : MonoBehaviour
 	private bool _wallPassed;
 	private bool _enteredWall;
 	private bool _shouldDestroy;
+<<<<<<< HEAD
 	private bool _assignPosition;
+=======
+	private float _wallSpeed;
+	private Vector3 _movementDirection;
+>>>>>>> 5e79c8ba428ab43c4bd018bcfb45b61f17893a39
 
 	void Start ()
 	{
 		_gameController = GameObject.FindWithTag("GameController").GetComponent<GameController>();
 		_wallObjects = GameObject.FindWithTag("WallObjects");
 		_spriteRenderer = GetComponent<SpriteRenderer>();
+<<<<<<< HEAD
+=======
+		_wallSpeed = Constants.WallSpeed;
+		_movementDirection = Vector3.zero;
+		transform.position += offsetedPosition;
+>>>>>>> 5e79c8ba428ab43c4bd018bcfb45b61f17893a39
 	}
 
 
@@ -41,20 +52,29 @@ public class Wall : MonoBehaviour
 
 	private void Move(Direction _direction)
 	{
-		float _wallSpeed = Constants.WallSpeed;
+
 		if (move)
 		{
-			if (_direction == Direction.EAST)
+			if (GameController.timerBool == false)
 			{
-				transform.position += new Vector3(-Time.deltaTime * _wallSpeed, 0 , 0);
-			} else if (_direction == Direction.WEST)
-			{
-				transform.position += new Vector3(Time.deltaTime * _wallSpeed, 0 , 0);
-			} else if (_direction == Direction.SOUTH)
-			{
-				transform.position += new Vector3(0, Time.deltaTime * _wallSpeed , 0);
-			} else {
-				transform.position += new Vector3(0, -Time.deltaTime * _wallSpeed, 0);
+				if (_direction == Direction.EAST)
+				{
+					_movementDirection.x = -Time.deltaTime * _wallSpeed;
+					_movementDirection.y = 0;
+				} else if (_direction == Direction.WEST)
+				{
+					_movementDirection.x = Time.deltaTime * _wallSpeed;
+					_movementDirection.y = 0;
+				} else if (_direction == Direction.SOUTH)
+				{
+					_movementDirection.x = 0;
+					_movementDirection.y = Time.deltaTime * _wallSpeed;
+				} else {
+					_movementDirection.x = 0;
+					_movementDirection.y = -Time.deltaTime * _wallSpeed;
+				}
+
+				transform.position += _movementDirection;
 			}
 		}
 	}

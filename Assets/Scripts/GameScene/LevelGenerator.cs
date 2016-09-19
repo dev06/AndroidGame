@@ -24,7 +24,7 @@ public class LevelGenerator : MonoBehaviour {
 	void Start()
 	{
 		Init();
-		GenerateEmptyGameObjects(4);
+		GenerateEmptyGameObjects(5);
 	}
 
 	private void Init()
@@ -84,6 +84,7 @@ public class LevelGenerator : MonoBehaviour {
 
 	}
 
+<<<<<<< HEAD
 	void Update()
 	{
 
@@ -112,6 +113,8 @@ public class LevelGenerator : MonoBehaviour {
 
 	}
 
+=======
+>>>>>>> 5e79c8ba428ab43c4bd018bcfb45b61f17893a39
 
 	private void RotateWall(GameObject _currentWall, float targetRotation)
 	{
@@ -166,7 +169,6 @@ public class LevelGenerator : MonoBehaviour {
 			} else {
 				_offsetedPosition = new Vector3(0, -(_previousWall.transform.localScale.x / 2.0f * _pixelToUnit), 0);
 			}
-			//_currentWall.transform.position += _offsetedPosition;
 			_currentWall.GetComponent<Wall>().offsetedPosition  = _offsetedPosition;
 		}
 	}
@@ -189,17 +191,16 @@ public class LevelGenerator : MonoBehaviour {
 	// }
 
 
-	private bool EndTooClostToPlayer()
-	{
-		Transform _lastWall = _wallObjects.transform.GetChild(_wallObjects.transform.childCount - 1).transform;
-		float _distance = Vector3.Distance(_lastWall.GetChild(0).transform.position, _player.transform.position);
-		return _distance < 100f;
-	}
 
 	public void DestroyWall(GameObject _object)
 	{
+<<<<<<< HEAD
 		Destroy(_object, 1.5f);
 		_activeWalls--;
+=======
+		//	Destroy(_object, 1.5f);
+		//_activeWalls--;
+>>>>>>> 5e79c8ba428ab43c4bd018bcfb45b61f17893a39
 	}
 
 
