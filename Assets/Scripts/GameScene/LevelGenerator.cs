@@ -84,21 +84,11 @@ public class LevelGenerator : MonoBehaviour {
 
 	}
 
-<<<<<<< HEAD
+
 	void Update()
 	{
 
-		if (EndTooClostToPlayer())
-		{
-			if (_proximityGeneratedWall < Constants.ProximityGenereatedWalls)
-			{
-				StartCoroutine("ProximitedObjects");
-				_proximityGeneratedWall++;
-			}
-		} else
-		{
-			_proximityGeneratedWall = 0;
-		}
+
 
 		// if (Input.GetMouseButtonDown(0))
 		// {
@@ -113,8 +103,6 @@ public class LevelGenerator : MonoBehaviour {
 
 	}
 
-=======
->>>>>>> 5e79c8ba428ab43c4bd018bcfb45b61f17893a39
 
 	private void RotateWall(GameObject _currentWall, float targetRotation)
 	{
@@ -194,13 +182,12 @@ public class LevelGenerator : MonoBehaviour {
 
 	public void DestroyWall(GameObject _object)
 	{
-<<<<<<< HEAD
+
 		Destroy(_object, 1.5f);
 		_activeWalls--;
-=======
+
 		//	Destroy(_object, 1.5f);
 		//_activeWalls--;
->>>>>>> 5e79c8ba428ab43c4bd018bcfb45b61f17893a39
 	}
 
 

@@ -16,24 +16,21 @@ public class Wall : MonoBehaviour
 	private bool _wallPassed;
 	private bool _enteredWall;
 	private bool _shouldDestroy;
-<<<<<<< HEAD
 	private bool _assignPosition;
-=======
+
 	private float _wallSpeed;
 	private Vector3 _movementDirection;
->>>>>>> 5e79c8ba428ab43c4bd018bcfb45b61f17893a39
 
 	void Start ()
 	{
 		_gameController = GameObject.FindWithTag("GameController").GetComponent<GameController>();
 		_wallObjects = GameObject.FindWithTag("WallObjects");
 		_spriteRenderer = GetComponent<SpriteRenderer>();
-<<<<<<< HEAD
-=======
+
+
 		_wallSpeed = Constants.WallSpeed;
 		_movementDirection = Vector3.zero;
 		transform.position += offsetedPosition;
->>>>>>> 5e79c8ba428ab43c4bd018bcfb45b61f17893a39
 	}
 
 

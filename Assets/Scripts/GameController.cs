@@ -35,11 +35,10 @@ public class GameController : MonoBehaviour {
 		levelGenerator = GetComponent<LevelGenerator>();
 		poolManager = GetComponent<PoolManager>();
 		gameInput = GetComponent<GameInput>();
-<<<<<<< HEAD
+
 		gameInput.gameController = this;
-=======
+
 		cameraTransform = Camera.main.transform;
->>>>>>> 5e79c8ba428ab43c4bd018bcfb45b61f17893a39
 	}
 
 
