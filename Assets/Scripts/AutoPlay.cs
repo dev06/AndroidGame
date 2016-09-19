@@ -4,6 +4,7 @@ using System.Collections;
 public class AutoPlay : MonoBehaviour {
 
 	GameController _gameController;
+	Quaternion _rotation;
 
 	void Start () {
 		_gameController = GameObject.FindWithTag("GameController").GetComponent<GameController>();
@@ -15,18 +16,18 @@ public class AutoPlay : MonoBehaviour {
 		{
 			if (gameObject.name == "Right")
 			{
-				Camera.main.transform.rotation *= Quaternion.Euler(new Vector3(0, 0, -90));
+				_rotation *= Quaternion.Euler(new Vector3(0, 0, -90));
 			} else if (gameObject.name == "Left")
 			{
-				Camera.main.transform.rotation *= Quaternion.Euler(new Vector3(0, 0, 90));
+				_rotation *= Quaternion.Euler(new Vector3(0, 0, 90));
 			}
 		} else if (direction == Direction.SOUTH) {
 			if (gameObject.name == "Right")
 			{
-				Camera.main.transform.rotation *= Quaternion.Euler(new Vector3(0, 0, 90));
+				_rotation *= Quaternion.Euler(new Vector3(0, 0, 90));
 			} else if (gameObject.name == "Left")
 			{
-				Camera.main.transform.rotation *= Quaternion.Euler(new Vector3(0, 0, -90));
+				_rotation *= Quaternion.Euler(new Vector3(0, 0, -90));
 			}
 
 		}
@@ -35,18 +36,21 @@ public class AutoPlay : MonoBehaviour {
 			if (direction == Direction.EAST)
 			{
 				if (gameObject.name == "Top") {
-					Camera.main.transform.rotation *= Quaternion.Euler(new Vector3(0, 0, 90));
+					_rotation *= Quaternion.Euler(new Vector3(0, 0, 90));
 				} else if (gameObject.name == "Bottom") {
-					Camera.main.transform.rotation *= Quaternion.Euler(new Vector3(0, 0, -90));
+					_rotation *= Quaternion.Euler(new Vector3(0, 0, -90));
 				}
 			} else {
 				if (gameObject.name == "Top") {
-					Camera.main.transform.rotation *= Quaternion.Euler(new Vector3(0, 0, -90));
+					_rotation *= Quaternion.Euler(new Vector3(0, 0, -90));
 				} else if (gameObject.name == "Bottom") {
-					Camera.main.transform.rotation *= Quaternion.Euler(new Vector3(0, 0, 90));
+					_rotation *= Quaternion.Euler(new Vector3(0, 0, 90));
 				}
 			}
 		}
+
+
+		_gameController.player.transform.rotation = _rotation;
 
 	}
 

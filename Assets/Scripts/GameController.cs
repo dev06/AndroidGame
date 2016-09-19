@@ -6,16 +6,20 @@ public class GameController : MonoBehaviour {
 	// Use this for initialization
 
 	public LevelGenerator levelGenerator;
+	public PoolManager poolManager;
 	public GameInput gameInput;
 	public GameObject wallObjects;
 	public GameObject player;
 	public Direction facingDirection;
 	public static float direction;
-
 	public bool autoPlay;
 
 
+	public Transform cameraTransform;
 
+
+	public static float timer;
+	public static bool timerBool;
 
 
 	void Awake ()
@@ -28,12 +32,25 @@ public class GameController : MonoBehaviour {
 		wallObjects = GameObject.FindWithTag("WallObjects");
 		player = GameObject.FindWithTag("Entity/Player");
 		levelGenerator = GetComponent<LevelGenerator>();
+		poolManager = GetComponent<PoolManager>();
 		gameInput = GetComponent<GameInput>();
+		cameraTransform = Camera.main.transform;
 	}
 
 
 	void Update ()
 	{
+		if (timerBool)
+		{
+			timer += Time.deltaTime;
+		}
+
+		if (timer > .4f)
+		{
+			timerBool = false;
+			timer = 0;
+		}
+
 
 		UpdateFacingDirection();
 		gameInput.RegisterSwipe();
@@ -44,9 +61,9 @@ public class GameController : MonoBehaviour {
 
 	private void UpdateFacingDirection()
 	{
-		float rotation = Camera.main.transform.rotation.eulerAngles.z;
+		float rotation = cameraTransform.rotation.eulerAngles.z;
 		direction = rotation / 360.0f;
-		facingDirection = (direction == 0) ? Direction.NORTH : (direction == .25f) ? Direction.WEST : (direction == .5f) ? Direction.SOUTH : Direction.EAST;
+		//facingDirection = (direction == 0) ? Direction.NORTH : (direction == .25f) ? Direction.WEST : (direction == .5f) ? Direction.SOUTH : Direction.EAST;
 	}
 
 

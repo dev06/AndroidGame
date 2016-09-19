@@ -393,7 +393,7 @@ Transform:
   m_GameObject: {fileID: 1118713954}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 3, y: 3, z: 4}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 2102163569}
@@ -486,6 +486,7 @@ GameObject:
   - 114: {fileID: 1450836122}
   - 114: {fileID: 1450836124}
   - 114: {fileID: 1450836125}
+  - 114: {fileID: 1450836126}
   m_Layer: 0
   m_Name: GameController
   m_TagString: GameController
@@ -505,10 +506,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelGenerator: {fileID: 0}
+  poolManager: {fileID: 0}
+  gameInput: {fileID: 0}
   wallObjects: {fileID: 0}
   player: {fileID: 0}
   facingDirection: 0
   autoPlay: 0
+  cameraTransform: {fileID: 0}
 --- !u!4 &1450836123
 Transform:
   m_ObjectHideFlags: 0
@@ -542,6 +546,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d737fbf3035523f4d8bc75d6e0b10b15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1450836126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1450836121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef898eb54afa3d4a98923e832894309, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1934733715
@@ -587,6 +602,7 @@ GameObject:
   - 114: {fileID: 2102163570}
   - 114: {fileID: 2102163571}
   - 114: {fileID: 2102163572}
+  - 114: {fileID: 2102163573}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -635,7 +651,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 40
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -656,7 +672,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2102163564}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -100}
+  m_LocalPosition: {x: 0, y: 1.44, z: -1}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -673,10 +689,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4975a6e437fc3b149a8cd508ce5bdd69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  threshold: 0.25
-  intensity: 1.25
-  blurSize: 2.65
-  blurIterations: 2
+  threshold: 0.189
+  intensity: 1.427
+  blurSize: 3.91
+  blurIterations: 3
   blurType: 0
   fastBloomShader: {fileID: 4800000, guid: 68a00c837b82e4c6d92e7da765dc5f1d, type: 3}
 --- !u!114 &2102163571
@@ -685,7 +701,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2102163564}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4739c22ef73ad62488fe344c8fe9addd, type: 3}
   m_Name: 
@@ -699,7 +715,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2102163564}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 478a2083ad114a07d000fbfb8d76c639, type: 3}
   m_Name: 
@@ -707,6 +723,19 @@ MonoBehaviour:
   shader: {fileID: 4800000, guid: e9ba2083ad114a07d000fbfb8d76c639, type: 3}
   blurAmount: 0.095
   extraBlur: 0
+--- !u!114 &2102163573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2102163564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bf66f86a35fcaa498cc7e60bb7856d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startLerping: 0
+  targetRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &2124208866
 GameObject:
   m_ObjectHideFlags: 0

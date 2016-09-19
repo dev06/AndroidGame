@@ -7,11 +7,11 @@ public class Constants
 	public static float PixelToUnit = .32f;
 
 	// lEVEL GENERATION FIELDS
-	public static float WallSpeed = 50;
-	public static float WallWidth = 1;
-	public static float RotationFrequency = .5f;
-	public static float MinWallHeight = 75;
-	public static float MaxWallHeight = 150;
+	public static float WallSpeed = 8;
+	public static float WallWidth = .35f;
+	public static float RotationFrequency = .4f;
+	public static float MinWallHeight = 50;
+	public static float MaxWallHeight = 75;
 
 	// GAME INPUT
 	public static float SwipeThresHold = 20;
