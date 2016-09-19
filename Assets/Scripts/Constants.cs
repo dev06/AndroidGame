@@ -12,6 +12,9 @@ public class Constants
 	public static float RotationFrequency = .5f;
 	public static float MinWallHeight = 75;
 	public static float MaxWallHeight = 150;
+	public static int MaxWallsAtTime = 7;
+	public static int ProximityGenereatedWalls = 3;
+
 
 	// GAME INPUT
 	public static float SwipeThresHold = 20;

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using System.Collections;
 using UnityEngine.UI;
 public class GameController : MonoBehaviour {
 
@@ -29,6 +30,7 @@ public class GameController : MonoBehaviour {
 		player = GameObject.FindWithTag("Entity/Player");
 		levelGenerator = GetComponent<LevelGenerator>();
 		gameInput = GetComponent<GameInput>();
+		gameInput.gameController = this;
 	}
 
 
@@ -37,7 +39,10 @@ public class GameController : MonoBehaviour {
 
 		UpdateFacingDirection();
 		gameInput.RegisterSwipe();
+
 	}
+
+
 
 
 

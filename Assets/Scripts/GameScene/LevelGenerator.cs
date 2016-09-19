@@ -43,7 +43,7 @@ public class LevelGenerator : MonoBehaviour {
 
 	public void GenerateEmptyGameObjects(int value)
 	{
-		if (_activeWalls < 7)
+		if (_activeWalls < Constants.MaxWallsAtTime)
 		{
 			for (int i = 0; i < value; i++)
 			{
@@ -89,15 +89,27 @@ public class LevelGenerator : MonoBehaviour {
 
 		if (EndTooClostToPlayer())
 		{
-			if (_proximityGeneratedWall < 3)
+			if (_proximityGeneratedWall < Constants.ProximityGenereatedWalls)
 			{
-				GenerateEmptyGameObjects(1);
+				StartCoroutine("ProximitedObjects");
 				_proximityGeneratedWall++;
 			}
 		} else
 		{
 			_proximityGeneratedWall = 0;
 		}
+
+		// if (Input.GetMouseButtonDown(0))
+		// {
+		// 	Pool();
+		// }
+	}
+
+	IEnumerator ProximitedObjects()
+	{
+		yield return new WaitForEndOfFrame();
+		GenerateEmptyGameObjects(1);
+
 	}
 
 
@@ -159,6 +171,23 @@ public class LevelGenerator : MonoBehaviour {
 		}
 	}
 
+	// private void Pool()
+	// {
+	// 	// for (int i = 0; i < _wallObjects.transform.childCount; i++)
+	// 	// {
+	// 	// 	GameObject _currentI = _wallObjects.transform.GetChild(i).gameObject;
+	// 	// 	_currentI.transform.SetSiblingIndex(i + 1 );
+	// 	// }
+
+	// 	PoolObject(_wallObjects.transform.GetChild(0).gameObject, _wallObjects.transform.GetChild(_wallObjects.transform.childCount - 1).transform.GetChild(0).transform.position);
+	// }
+
+	// private void PoolObject(GameObject _targetObject, Vector3 _position)
+	// {
+	// 	_targetObject.transform.position = _position;
+	// 	//ModifyTransformForObjects(_targetObject, _targetObject.GetComponent<Wall>().previousWall);
+	// }
+
 
 	private bool EndTooClostToPlayer()
 	{
@@ -169,7 +198,7 @@ public class LevelGenerator : MonoBehaviour {
 
 	public void DestroyWall(GameObject _object)
 	{
-		Destroy(_object, 1.0f);
+		Destroy(_object, 1.5f);
 		_activeWalls--;
 	}
 

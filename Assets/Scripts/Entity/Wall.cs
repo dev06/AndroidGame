@@ -16,19 +16,26 @@ public class Wall : MonoBehaviour
 	private bool _wallPassed;
 	private bool _enteredWall;
 	private bool _shouldDestroy;
+	private bool _assignPosition;
 
 	void Start ()
 	{
 		_gameController = GameObject.FindWithTag("GameController").GetComponent<GameController>();
 		_wallObjects = GameObject.FindWithTag("WallObjects");
 		_spriteRenderer = GetComponent<SpriteRenderer>();
-		transform.position += offsetedPosition;
 	}
 
 
 	void Update ()
 	{
+		if (!_assignPosition)
+		{
+			transform.position += offsetedPosition;
+			_assignPosition = true;
+		}
+
 		Move(_gameController.facingDirection);
+
 	}
 
 

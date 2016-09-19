@@ -505,10 +505,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelGenerator: {fileID: 0}
+  gameInput: {fileID: 0}
   wallObjects: {fileID: 0}
   player: {fileID: 0}
   facingDirection: 0
-  autoPlay: 0
+  autoPlay: 1
 --- !u!4 &1450836123
 Transform:
   m_ObjectHideFlags: 0
@@ -544,6 +545,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d737fbf3035523f4d8bc75d6e0b10b15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameController: {fileID: 0}
 --- !u!1 &1934733715
 GameObject:
   m_ObjectHideFlags: 0

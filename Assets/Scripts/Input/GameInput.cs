@@ -3,6 +3,7 @@ using System.Collections;
 
 public class GameInput : MonoBehaviour {
 
+	public GameController gameController;
 	private Vector2 _pointerDown;
 	private Vector2 _pointerUp;
 
@@ -23,15 +24,18 @@ public class GameInput : MonoBehaviour {
 
 	public void RegisterSwipe()
 	{
-		if (Input.GetMouseButtonDown(0))
+		if (gameController.autoPlay == false)
 		{
-			_pointerDown = Input.mousePosition;
-		}
+			if (Input.GetMouseButtonDown(0))
+			{
+				_pointerDown = Input.mousePosition;
+			}
 
-		if (Input.GetMouseButtonUp(0))
-		{
-			_pointerUp = Input.mousePosition;
-			CalculateSwipe();
+			if (Input.GetMouseButtonUp(0))
+			{
+				_pointerUp = Input.mousePosition;
+				CalculateSwipe();
+			}
 		}
 	}
 }
