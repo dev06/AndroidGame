@@ -506,20 +506,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelGenerator: {fileID: 0}
-<<<<<<< HEAD
-=======
   poolManager: {fileID: 0}
->>>>>>> 5e79c8ba428ab43c4bd018bcfb45b61f17893a39
   gameInput: {fileID: 0}
   wallObjects: {fileID: 0}
   player: {fileID: 0}
   facingDirection: 0
-<<<<<<< HEAD
-  autoPlay: 1
-=======
   autoPlay: 0
   cameraTransform: {fileID: 0}
->>>>>>> 5e79c8ba428ab43c4bd018bcfb45b61f17893a39
 --- !u!4 &1450836123
 Transform:
   m_ObjectHideFlags: 0
@@ -555,9 +548,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d737fbf3035523f4d8bc75d6e0b10b15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  gameController: {fileID: 0}
-=======
 --- !u!114 &1450836126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -569,7 +559,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ef898eb54afa3d4a98923e832894309, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
->>>>>>> 5e79c8ba428ab43c4bd018bcfb45b61f17893a39
 --- !u!1 &1934733715
 GameObject:
   m_ObjectHideFlags: 0
