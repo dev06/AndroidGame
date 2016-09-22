@@ -30,17 +30,12 @@ public class Wall : MonoBehaviour
 
 		_wallSpeed = Constants.WallSpeed;
 		_movementDirection = Vector3.zero;
-		transform.position += offsetedPosition;
 	}
 
 
 	void Update ()
 	{
-		if (!_assignPosition)
-		{
-			transform.position += offsetedPosition;
-			_assignPosition = true;
-		}
+
 
 		Move(_gameController.facingDirection);
 
@@ -52,28 +47,26 @@ public class Wall : MonoBehaviour
 
 		if (move)
 		{
-			if (GameController.timerBool == false)
+			if (_direction == Direction.EAST)
 			{
-				if (_direction == Direction.EAST)
-				{
-					_movementDirection.x = -Time.deltaTime * _wallSpeed;
-					_movementDirection.y = 0;
-				} else if (_direction == Direction.WEST)
-				{
-					_movementDirection.x = Time.deltaTime * _wallSpeed;
-					_movementDirection.y = 0;
-				} else if (_direction == Direction.SOUTH)
-				{
-					_movementDirection.x = 0;
-					_movementDirection.y = Time.deltaTime * _wallSpeed;
-				} else {
-					_movementDirection.x = 0;
-					_movementDirection.y = -Time.deltaTime * _wallSpeed;
-				}
-
-				transform.position += _movementDirection;
+				_movementDirection.x = -Time.deltaTime * _wallSpeed;
+				_movementDirection.y = 0;
+			} else if (_direction == Direction.WEST)
+			{
+				_movementDirection.x = Time.deltaTime * _wallSpeed;
+				_movementDirection.y = 0;
+			} else if (_direction == Direction.SOUTH)
+			{
+				_movementDirection.x = 0;
+				_movementDirection.y = Time.deltaTime * _wallSpeed;
+			} else {
+				_movementDirection.x = 0;
+				_movementDirection.y = -Time.deltaTime * _wallSpeed;
 			}
+
+			transform.position += _movementDirection;
 		}
+
 	}
 
 	public void ChangeColor(bool entered)
@@ -86,8 +79,5 @@ public class Wall : MonoBehaviour
 	}
 
 
-	public void Hit(bool b)
-	{
-		_shouldDestroy = b;
-	}
+
 }

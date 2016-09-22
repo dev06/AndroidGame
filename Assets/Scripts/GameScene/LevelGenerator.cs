@@ -71,7 +71,7 @@ public class LevelGenerator : MonoBehaviour {
 		{
 			_object.transform.localScale = new Vector2(_wallWidth, _height);
 			_object.transform.rotation = _previousObject.transform.rotation;
-			if (_rotationFreq < _rotationFreqNumber)
+			if (_rotationFreq > _rotationFreqNumber)
 			{
 				RotateWall(_object, _rotationDirection);
 			}
@@ -79,7 +79,7 @@ public class LevelGenerator : MonoBehaviour {
 			PositionWall(_object, _previousObject);
 		} else
 		{
-			_object.transform.localScale = new Vector2(_wallWidth, 300);
+			_object.transform.localScale = new Vector2(_wallWidth, Constants.InitWallSize);
 		}
 
 	}
@@ -157,7 +157,7 @@ public class LevelGenerator : MonoBehaviour {
 			} else {
 				_offsetedPosition = new Vector3(0, -(_previousWall.transform.localScale.x / 2.0f * _pixelToUnit), 0);
 			}
-			_currentWall.GetComponent<Wall>().offsetedPosition  = _offsetedPosition;
+			_currentWall.transform.position  += _offsetedPosition;
 		}
 	}
 

@@ -42,7 +42,6 @@ public class Player : MonoBehaviour {
 	{
 		_exitObject = col.gameObject;
 		_hits--;
-		_gameController.gameObject.SendMessage("DestroyWall", col.gameObject);
 		_gameController.poolManager.PoolObject(col.gameObject, _gameController.wallObjects.transform.GetChild(_gameController.wallObjects.transform.childCount - 1).gameObject);
 	}
 

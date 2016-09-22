@@ -44,17 +44,6 @@ public class GameController : MonoBehaviour {
 
 	void Update ()
 	{
-		if (timerBool)
-		{
-			timer += Time.deltaTime;
-		}
-
-		if (timer > .4f)
-		{
-			timerBool = false;
-			timer = 0;
-		}
-
 
 		UpdateFacingDirection();
 		gameInput.RegisterSwipe();
