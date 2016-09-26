@@ -11,7 +11,7 @@ public class Constants
 
 
 
-	public static float WallSpeed = 26.5F;
+	public static float WallSpeed = 15f;//26.5F;
 	public static float WallWidth = .75f;
 	public static float RotationFrequency = 1f;
 	public static float MinWallHeight = 50;

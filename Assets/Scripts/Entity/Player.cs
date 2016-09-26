@@ -3,12 +3,15 @@ using System.Collections;
 
 public class Player : MonoBehaviour {
 
+	public Quaternion targetRotation;
+	public float zRotation;
 
 	private GameController _gameController;
 	private SpriteRenderer _sprite;
 	private GameObject _enterObject, _exitObject;
 	private GameObject _currentWall;
 	private int _hits;
+
 
 	void Start ()
 	{
@@ -23,9 +26,14 @@ public class Player : MonoBehaviour {
 			if (_hits <= 0)
 			{
 				_sprite.color = new Color(1, 0, 0, 1);
-				UnityEngine.SceneManagement.SceneManager.LoadScene("GameScene");
+				//UnityEngine.SceneManagement.SceneManager.LoadScene("GameScene");
 			}
 		}
+
+		Vector3 _playerRotation = transform.eulerAngles;
+		_playerRotation = Vector3.Lerp(_playerRotation, new Vector3(0, 0, zRotation), Time.deltaTime / .05f);
+		transform.rotation = Quaternion.Euler(_playerRotation);
+		Debug.Log(zRotation);
 	}
 
 
@@ -48,5 +56,8 @@ public class Player : MonoBehaviour {
 	void OnTriggerStay2D(Collider2D col)
 	{
 		_currentWall = col.gameObject;
+	}
+	private bool IsNaN(Quaternion q) {
+		return float.IsNaN(q.x) || float.IsNaN(q.y) || float.IsNaN(q.z) || float.IsNaN(q.w);
 	}
 }

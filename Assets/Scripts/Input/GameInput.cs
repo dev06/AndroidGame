@@ -8,13 +8,14 @@ public class GameInput : MonoBehaviour {
 	private Vector2 _pointerUp;
 	private GameController _gameController;
 	private Vector3 _rotation;
+	private Player _player;
 
 	void Start()
 	{
 		_gameController = GetComponent<GameController>();
+		_player = _gameController.player.GetComponent <Player>();
 		_rotation = Vector3.zero;
 	}
-
 
 	private void CalculateSwipe()
 	{
@@ -23,7 +24,12 @@ public class GameInput : MonoBehaviour {
 		{
 			float _difference = -(_pointerDown.x - _pointerUp.x);
 			float zRotation = (_difference < 0) ? 90 : -90;
-			_gameController.player.transform.rotation *= Quaternion.Euler(new Vector3(0, 0, zRotation));
+
+			_player.targetRotation *= Quaternion.Euler(new Vector3(0, 0, zRotation));
+
+			_player.zRotation += zRotation;
+			_player.zRotation %= 360f;
+
 			float _rotationZ = _gameController.player.transform.eulerAngles.z;
 			if (_rotationZ == 90)
 			{

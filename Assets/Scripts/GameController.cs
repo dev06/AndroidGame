@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
 using UnityEngine.UI;
@@ -35,24 +35,16 @@ public class GameController : MonoBehaviour {
 		levelGenerator = GetComponent<LevelGenerator>();
 		poolManager = GetComponent<PoolManager>();
 		gameInput = GetComponent<GameInput>();
-
 		gameInput.gameController = this;
-
 		cameraTransform = Camera.main.transform;
 	}
 
 
 	void Update ()
 	{
-
 		UpdateFacingDirection();
 		gameInput.RegisterSwipe();
-
 	}
-
-
-
-
 
 
 	private void UpdateFacingDirection()
@@ -61,9 +53,6 @@ public class GameController : MonoBehaviour {
 		direction = rotation / 360.0f;
 		//facingDirection = (direction == 0) ? Direction.NORTH : (direction == .25f) ? Direction.WEST : (direction == .5f) ? Direction.SOUTH : Direction.EAST;
 	}
-
-
-
 
 }
 
