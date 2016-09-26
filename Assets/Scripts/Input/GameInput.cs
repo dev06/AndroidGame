@@ -25,10 +25,8 @@ public class GameInput : MonoBehaviour {
 			float _difference = -(_pointerDown.x - _pointerUp.x);
 			float zRotation = (_difference < 0) ? 90 : -90;
 
-			_player.targetRotation *= Quaternion.Euler(new Vector3(0, 0, zRotation));
 
-			_player.zRotation += zRotation;
-			_player.zRotation %= 360f;
+			//_player.rotation += new Vector3(0, 0, zRotation);
 
 			float _rotationZ = _gameController.player.transform.eulerAngles.z;
 			if (_rotationZ == 90)

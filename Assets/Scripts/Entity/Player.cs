@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Player : MonoBehaviour {
 
-	public Quaternion targetRotation;
+
 	public float zRotation;
 
 	private GameController _gameController;
@@ -17,6 +17,8 @@ public class Player : MonoBehaviour {
 	{
 		_sprite = GetComponent<SpriteRenderer>();
 		_gameController = GameObject.FindWithTag("GameController").GetComponent<GameController>();
+
+
 	}
 
 	void Update ()
@@ -29,11 +31,6 @@ public class Player : MonoBehaviour {
 				//UnityEngine.SceneManagement.SceneManager.LoadScene("GameScene");
 			}
 		}
-
-		Vector3 _playerRotation = transform.eulerAngles;
-		_playerRotation = Vector3.Lerp(_playerRotation, new Vector3(0, 0, zRotation), Time.deltaTime / .05f);
-		transform.rotation = Quaternion.Euler(_playerRotation);
-		Debug.Log(zRotation);
 	}
 
 
