@@ -4,12 +4,11 @@ using System.Collections;
 public class Wall : MonoBehaviour
 {
 
-	// Use this for initialization
-
 	public GameObject previousWall;
 	public bool move;
 	public Vector3 offsetedPosition;
 
+	private Vector3 _movementDirection;
 	private GameController _gameController;
 	private GameObject _wallObjects;
 	private SpriteRenderer _spriteRenderer;
@@ -17,56 +16,67 @@ public class Wall : MonoBehaviour
 	private bool _enteredWall;
 	private bool _shouldDestroy;
 	private bool _assignPosition;
-
+	private bool _isPaused;
 	private float _wallSpeed;
-	private Vector3 _movementDirection;
+	private float _pauseTimer;
 
 	void Start ()
 	{
 		_gameController = GameObject.FindWithTag("GameController").GetComponent<GameController>();
 		_wallObjects = GameObject.FindWithTag("WallObjects");
 		_spriteRenderer = GetComponent<SpriteRenderer>();
-
-
 		_wallSpeed = Constants.WallSpeed;
 		_movementDirection = Vector3.zero;
+		EventManager.OnSwipe += Pause;
 	}
 
 
 	void Update ()
 	{
+		if (_isPaused)
+		{
+			_pauseTimer += Time.deltaTime;
+			Move(_gameController.facingDirection, _wallSpeed / 5.0f);
+		} else
+		{
+			Move(_gameController.facingDirection, _wallSpeed);
+		}
 
-
-		Move(_gameController.facingDirection);
-
+		if (_pauseTimer > Constants.SwipePause)
+		{
+			_isPaused = false;
+			_pauseTimer = 0;
+		}
 	}
 
-
-	private void Move(Direction _direction)
+	private void Move(Direction _direction, float _velocity)
 	{
-
 		if (move)
 		{
 			if (_direction == Direction.EAST)
 			{
-				_movementDirection.x = -Time.deltaTime * _wallSpeed;
+				_movementDirection.x = -Time.deltaTime * _velocity;
 				_movementDirection.y = 0;
 			} else if (_direction == Direction.WEST)
 			{
-				_movementDirection.x = Time.deltaTime * _wallSpeed;
+				_movementDirection.x = Time.deltaTime * _velocity;
 				_movementDirection.y = 0;
 			} else if (_direction == Direction.SOUTH)
 			{
 				_movementDirection.x = 0;
-				_movementDirection.y = Time.deltaTime * _wallSpeed;
+				_movementDirection.y = Time.deltaTime * _velocity;
 			} else {
 				_movementDirection.x = 0;
-				_movementDirection.y = -Time.deltaTime * _wallSpeed;
+				_movementDirection.y = -Time.deltaTime * _velocity;
 			}
 
 			transform.position += _movementDirection;
 		}
+	}
 
+	private void Pause()
+	{
+		_isPaused = true;
 	}
 
 	public void ChangeColor(bool entered)
@@ -77,7 +87,6 @@ public class Wall : MonoBehaviour
 		}
 		_spriteRenderer.color = (entered) ? new Color(0, 1, 0, 1) : new Color(1, 1, 1, 1);
 	}
-
 
 
 }

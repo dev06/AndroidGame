@@ -86,7 +86,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   previousWall: {fileID: 0}
-  move: 1
+  move: 0
   offsetedPosition: {x: 0, y: 0, z: 0}
 --- !u!212 &21203978
 SpriteRenderer:

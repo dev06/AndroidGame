@@ -6,19 +6,23 @@ public class Player : MonoBehaviour {
 
 	public float zRotation;
 
+	private float _zRotationAmp;
+	private float _zRotationFreq = .6f;
+	private float _bob;
 	private GameController _gameController;
 	private SpriteRenderer _sprite;
 	private GameObject _enterObject, _exitObject;
 	private GameObject _currentWall;
 	private int _hits;
-
+	private bool _swiped;
+	private float bb;
+	private float vel;
 
 	void Start ()
 	{
 		_sprite = GetComponent<SpriteRenderer>();
 		_gameController = GameObject.FindWithTag("GameController").GetComponent<GameController>();
-
-
+		EventManager.OnSwipe += SetAmp;
 	}
 
 	void Update ()
@@ -28,9 +32,10 @@ public class Player : MonoBehaviour {
 			if (_hits <= 0)
 			{
 				_sprite.color = new Color(1, 0, 0, 1);
-				UnityEngine.SceneManagement.SceneManager.LoadScene("GameScene");
+				//UnityEngine.SceneManagement.SceneManager.LoadScene("GameScene");
 			}
 		}
+
 
 		transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 0, zRotation), Time.deltaTime * 20.4f);
 	}
@@ -55,5 +60,13 @@ public class Player : MonoBehaviour {
 	void OnTriggerStay2D(Collider2D col)
 	{
 		_currentWall = col.gameObject;
+	}
+
+
+	public void SetAmp()
+	{
+		_zRotationAmp = 10.0f;
+		_bob = 0;
+		bb = 0;
 	}
 }
