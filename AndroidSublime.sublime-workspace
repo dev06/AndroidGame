@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"_player",
+				"_player.rotation"
+			],
+			[
+				"_p",
+				"_player"
+			],
+			[
 				"_ro",
 				"_rotationZ"
 			],
@@ -428,10 +436,6 @@
 				"_pointerUp.x"
 			],
 			[
-				"_p",
-				"_pointerUp"
-			],
-			[
 				"TouchPhas",
 				"TouchPhase.Began"
 			],
@@ -510,10 +514,6 @@
 			[
 				"_he",
 				"_HealthText"
-			],
-			[
-				"_hea",
-				"_heathQuadMaterial"
 			]
 		]
 	},
@@ -569,9 +569,9 @@
 	],
 	"file_history":
 	[
-		"/E/Unity/Projects/AndroidGame/Assets/Scripts/GameController.cs",
 		"/E/Unity/Projects/AndroidGame/Assets/Scripts/Input/GameInput.cs",
 		"/E/Unity/Projects/AndroidGame/Assets/Scripts/Entity/Player.cs",
+		"/E/Unity/Projects/AndroidGame/Assets/Scripts/GameController.cs",
 		"/E/Unity/Projects/CSE_Game1/CSE_GAME/Assets/Scripts/GameController.cs",
 		"/E/Unity/Projects/AndroidGame/Assets/Scripts/Constants.cs",
 		"/E/Unity/Projects/CSE_Game1/CSE_GAME/Assets/Scripts/UI/Inventory/InventoryManager.cs",
@@ -949,16 +949,16 @@
 		"selected_items":
 		[
 			[
-				"con",
-				"Constants.cs"
-			],
-			[
 				"player",
 				"Entity\\Player.cs"
 			],
 			[
 				"gameinput",
 				"Input\\GameInput.cs"
+			],
+			[
+				"con",
+				"Constants.cs"
 			],
 			[
 				"game",

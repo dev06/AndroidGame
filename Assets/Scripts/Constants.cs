@@ -26,4 +26,9 @@ public class Constants
 	// GAME INPUT
 	public static float SwipeThresHold = 20;
 
+
+	//DIRECTION
+
+	public static Direction[] directions = new Direction[4] {Direction.NORTH, Direction.EAST, Direction.SOUTH, Direction.WEST};
+
 }

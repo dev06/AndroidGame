@@ -127,8 +127,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af7ead3bc4021424a9fc92028a73ce3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameController: {fileID: 0}
-  _rotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!50 &129207274
 Rigidbody2D:
   serializedVersion: 2
@@ -202,8 +200,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af7ead3bc4021424a9fc92028a73ce3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameController: {fileID: 0}
-  _rotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!50 &799067968
 Rigidbody2D:
   serializedVersion: 2
@@ -277,8 +273,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af7ead3bc4021424a9fc92028a73ce3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameController: {fileID: 0}
-  _rotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!50 &935738503
 Rigidbody2D:
   serializedVersion: 2
@@ -397,10 +391,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1118713954}
-  m_LocalRotation: {x: 0, y: 0, z: 0.004886903, w: 0.9999881}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.56}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 2102163569}
   - {fileID: 935738501}
@@ -450,15 +444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9448cf84d0631684bb5f94237bd207c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetRotation: {x: 0, y: 0, z: 0, w: 0}
-  rotation: {x: 0, y: 0, z: 0, w: 0}
   zRotation: 0
-  _gameController: {fileID: 0}
-  _sprite: {fileID: 0}
-  _enterObject: {fileID: 0}
-  _exitObject: {fileID: 0}
-  _currentWall: {fileID: 0}
-  _hits: 0
 --- !u!50 &1118713958
 Rigidbody2D:
   serializedVersion: 2
@@ -552,20 +538,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4083fe3d354f5fe44bb7d503e4e756a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameController: {fileID: 0}
-  _leftRotation: 0
-  _rightRotation: 0
-  _proximityGeneratedWall: 0
-  _activeWalls: 0
-  _pixelToUnit: 0
-  _wallSpeed: 0
-  _rotationFreq: 0
-  _wallWidth: 0
-  _minHeight: 0
-  _maxHeight: 0
-  _wallResource: {fileID: 0}
-  _wallObjects: {fileID: 0}
-  _player: {fileID: 0}
 --- !u!114 &1450836125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -578,11 +550,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameController: {fileID: 0}
-  _pointerDown: {x: 0, y: 0}
-  _pointerUp: {x: 0, y: 0}
-  _gameController: {fileID: 0}
-  _rotation: {x: 0, y: 0, z: 0}
-  _player: {fileID: 0}
 --- !u!114 &1450836126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -594,9 +561,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ef898eb54afa3d4a98923e832894309, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameController: {fileID: 0}
-  _levelGenerator: {fileID: 0}
-  _wallObjects: {fileID: 0}
 --- !u!1 &1934733715
 GameObject:
   m_ObjectHideFlags: 0
@@ -774,8 +738,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startLerping: 0
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
-  _gameController: {fileID: 0}
-  _playerRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &2124208866
 GameObject:
   m_ObjectHideFlags: 0
@@ -832,8 +794,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af7ead3bc4021424a9fc92028a73ce3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameController: {fileID: 0}
-  _rotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!50 &2124208870
 Rigidbody2D:
   serializedVersion: 2

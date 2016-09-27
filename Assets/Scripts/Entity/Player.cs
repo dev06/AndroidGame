@@ -28,9 +28,11 @@ public class Player : MonoBehaviour {
 			if (_hits <= 0)
 			{
 				_sprite.color = new Color(1, 0, 0, 1);
-				//UnityEngine.SceneManagement.SceneManager.LoadScene("GameScene");
+				UnityEngine.SceneManagement.SceneManager.LoadScene("GameScene");
 			}
 		}
+
+		transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 0, zRotation), Time.deltaTime * 20.4f);
 	}
 
 
@@ -53,8 +55,5 @@ public class Player : MonoBehaviour {
 	void OnTriggerStay2D(Collider2D col)
 	{
 		_currentWall = col.gameObject;
-	}
-	private bool IsNaN(Quaternion q) {
-		return float.IsNaN(q.x) || float.IsNaN(q.y) || float.IsNaN(q.z) || float.IsNaN(q.w);
 	}
 }
