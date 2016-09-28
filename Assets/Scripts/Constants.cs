@@ -8,23 +8,20 @@ public class Constants
 
 	// lEVEL GENERATION FIELDS
 
-
-
-
 	public static float WallSpeed = 15f;//26.5F;
 	public static float WallWidth = .75f;
 	public static float RotationFrequency = 1f;
 	public static float MinWallHeight = 50;
 	public static float MaxWallHeight = 75;
 	public static float InitWallSize = 100;
+	public static float SwipePause = .2f;
 	public static int MaxWallsAtTime = 7;
-	public static int ProximityGenereatedWalls = 3;
-
 
 
 
 	// GAME INPUT
 	public static float SwipeThresHold = 20;
+	public static float SwipeDelay = .5f;
 
 
 	//DIRECTION
