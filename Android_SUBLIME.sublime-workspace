@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"Time",
+				"Time.deltaTime"
+			],
+			[
 				"_wall",
 				"_wallSpeed"
 			],
@@ -510,10 +514,6 @@
 			[
 				"_ani",
 				"_animation"
-			],
-			[
-				"Wrap",
-				"WrapMode.PingPong"
 			]
 		]
 	},
@@ -532,8 +532,16 @@
 			"file": "Assets/Scripts/Entity/Player.cs",
 			"settings":
 			{
-				"buffer_size": 1593,
+				"buffer_size": 1515,
 				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Player/CameraController.cs",
+			"settings":
+			{
+				"buffer_size": 7534,
 				"line_ending": "Windows"
 			}
 		},
@@ -614,6 +622,20 @@
 	],
 	"file_history":
 	[
+		"/C/Program Files (x86)/Steam/steamapps/common/Unturned/Bundles/Animals/Reindeer/Reindeer.dat",
+		"/C/Program Files (x86)/Steam/steamapps/common/Unturned/Bundles/Animals/Wolf/Wolf.dat",
+		"/C/Program Files (x86)/Steam/steamapps/common/Unturned/Bundles/Animals/Wolf/English.dat",
+		"/C/Program Files (x86)/Steam/steamapps/common/Unturned/Bundles/Effects/General/Firemode/Firemode.dat",
+		"/C/Program Files (x86)/Steam/steamapps/common/Unturned/Bundles/Effects/Explosions/Bomb_2/Bomb_2.dat",
+		"/C/Program Files (x86)/Steam/steamapps/common/Unturned/Bundles/Effects/Explosions/Bomb_1/Bomb_1.dat",
+		"/C/Program Files (x86)/Steam/steamapps/common/Unturned/Bundles/Effects/Explosions/Bomb_0/Bomb_0.dat",
+		"/C/Program Files (x86)/Steam/steamapps/common/Unturned/Bundles/Objects/Small/Furniture/Candle_0/English.dat",
+		"/C/Program Files (x86)/Steam/steamapps/common/Unturned/Bundles/Objects/Small/Furniture/Candle_0/Candle_0.dat",
+		"/C/Program Files (x86)/Steam/steamapps/common/Unturned/Bundles/Items/Barrels/Ranger_Suppressor/Ranger_Suppressor.dat",
+		"/C/Program Files (x86)/Steam/steamapps/common/Unturned/Bundles/Items/Barrels/Military_Suppressor/Military_Suppressor.dat",
+		"/C/Program Files (x86)/Steam/steamapps/common/Unturned/Bundles/Items/Barrels/Military_Suppressor/English.dat",
+		"/C/Program Files (x86)/Steam/steamapps/common/Unturned/Bundles/Items/Barrels/Bow_Barrel/Bow_Barrel.dat",
+		"/C/Program Files (x86)/Steam/steamapps/common/Unturned/Bundles/Items/Barrels/Bow_Barrel/English.dat",
 		"/C/Program Files (x86)/Steam/steamapps/common/Cities_Skylines/Files/Mods/UnlockAll/Source/UnlockAll.cs",
 		"/C/Program Files (x86)/Steam/steamapps/common/Cities_Skylines/Files/Mods/UnlimitedMoney/Source/UnlimitedMoney.cs",
 		"/C/Program Files (x86)/Steam/steamapps/common/Cities_Skylines/Files/Mods/NewMod/Source/NewMod.cs",
@@ -727,21 +749,7 @@
 		"/C/Users/Devan/Documents/Unity/Projects/Vuforia AR Test/Assets/Vuforia/Scripts/DefaultTrackableEventHandler.cs",
 		"/C/Users/Devan/Documents/Unity/Projects/Vuforia AR Test/Assets/Vuforia/Scripts/ImageTargetBehaviour.cs",
 		"/C/Users/Devan/Documents/Unity/Projects/Vuforia AR Test/Assets/Vuforia/Scripts/VuforiaBehaviour.cs",
-		"/C/Users/Devan/Documents/Unity/Projects/Vuforia AR Test/Assets/Vuforia/Scripts/DeviceTrackerBehaviour.cs",
-		"/C/Users/Devan/Documents/Unity/Projects/Bump/Assets/Scripts/GameScene/Entity/EntityMovementHandler.cs",
-		"/C/Users/Devan/Documents/Unity/Projects/Bump/Assets/Scripts/GameScene/Entity/AIMovementHandler.cs",
-		"/C/Users/Devan/Documents/Unity/Projects/Bump/Assets/Scripts/GameScene/PlayerController/MovementHandler.cs",
-		"/C/Users/Devan/Documents/Unity/Projects/Vuforia AR Test/Assets/Vuforia/Scripts/TurnOffBehaviour.cs",
-		"/C/Users/Devan/Documents/Unity/Projects/Bump/Assets/Scripts/InputManager/CustomInputManager.cs",
-		"/C/Users/Devan/Documents/Unity/Projects/Bump/Assets/Scripts/GameScene/GameSceneManager.cs",
-		"/C/Users/Devan/Documents/Unity/Projects/Bump/Assets/Scripts/GameScene/Entity/Bumper.cs",
-		"/C/Users/Devan/Documents/Unity/Projects/Bump/Assets/Scripts/GameScene/Instantiator.cs",
-		"/C/Users/Devan/Documents/Unity/Projects/Bump/Assets/Scripts/Logger.cs",
-		"/C/Git/FOPSMobile/FearOfPublicSpeaking5.3.4/Assets/Scripts/ClientScene/SpeechController.cs",
-		"/C/Git/FOPSMobile/FearOfPublicSpeaking5.3.4/Assets/Scripts/ClientScene/ClientSceneManager.cs",
-		"/C/Git/FOPSMobile/FearOfPublicSpeaking5.3.4/Assets/Scripts/ControllerTestScene/PlayerController.cs",
-		"/C/Git/FOPSMobile/FearOfPublicSpeaking5.3.4/Assets/Scripts/ClientScene/ModelDoor.cs",
-		"/C/Git/FOPSMobile/FearOfPublicSpeaking5.3.4/Assets/Scripts/ControllerTestScene/ServerPlayerController.cs"
+		"/C/Users/Devan/Documents/Unity/Projects/Vuforia AR Test/Assets/Vuforia/Scripts/DeviceTrackerBehaviour.cs"
 	],
 	"find":
 	{
@@ -958,7 +966,7 @@
 						"translation.y": 504.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -967,15 +975,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1593,
+						"buffer_size": 1515,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								924,
-								924
+								178,
+								178
 							]
 						],
 						"settings":
@@ -985,7 +993,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 360.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -993,6 +1001,36 @@
 				},
 				{
 					"buffer": 2,
+					"file": "/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Player/CameraController.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7534,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5877,
+								5877
+							]
+						],
+						"settings":
+						{
+							"side_bar_folders_auto_load_folder": 1,
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 3888.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
 					"file": "Assets/Scripts/Event/EventManager.cs",
 					"semi_transient": false,
 					"settings":
@@ -1017,11 +1055,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 4,
 					"file": "Assets/Scripts/Entity/Wall.cs",
 					"semi_transient": false,
 					"settings":
@@ -1047,11 +1085,11 @@
 						"translation.y": 720.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 5,
 					"file": "Assets/Scripts/Constants.cs",
 					"semi_transient": false,
 					"settings":
@@ -1077,7 +1115,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -1666,7 +1704,7 @@
 		[
 			[
 				"",
-				"C:\\Users\\Devan\\Documents\\UnityProjects\\CSE_GAME1\\CSE_SUBLIME.sublime-project"
+				"C:\\Users\\Devan\\Documents\\UnityProjects\\KSU\\NetworkingSolution\\KSU_NETWORK_SOLUTION\\KSU_SUBLIME.sublime-project"
 			]
 		],
 		"width": 475.0

@@ -30,7 +30,7 @@ public class LevelGenerator : MonoBehaviour {
 	private void Init()
 	{
 		_gameController = GameObject.FindWithTag("GameController").GetComponent<GameController>();
-		_wallResource = Resources.Load("Prefabs/Wall") as GameObject;
+		_wallResource = GameResources.WallResource;
 		_wallObjects = _gameController.wallObjects;
 		_player = _gameController.player;
 		_pixelToUnit = Constants.PixelToUnit;
@@ -49,11 +49,11 @@ public class LevelGenerator : MonoBehaviour {
 			{
 				_wallObjects.transform.position = _player.transform.position;
 				GameObject _clone = Instantiate(_wallResource, -Vector2.up * 4.0f, Quaternion.identity) as GameObject;
-				_clone.name = "Wall" + _clone.GetHashCode();
-				_clone.tag = "Walls";
+				_clone.name = "Path" + _clone.GetHashCode();
+				_clone.tag = "Path";
 				_clone.transform.parent = _wallObjects.transform;
 				GameObject _lastClone = (_wallObjects.transform.childCount > 1) ? _wallObjects.transform.GetChild(_wallObjects.transform.childCount - 2).gameObject : null;
-				_clone.GetComponent<Wall>().previousWall = (_lastClone != null ) ? _lastClone : null;
+				_clone.GetComponent<Path>().previousWall = (_lastClone != null ) ? _lastClone : null;
 				ModifyTransformForObjects(_clone, _lastClone);
 			}
 			_activeWalls += value;
@@ -82,33 +82,12 @@ public class LevelGenerator : MonoBehaviour {
 			_object.transform.localScale = new Vector2(_wallWidth, Constants.InitWallSize);
 		}
 
-	}
-
-
-	void Update()
-	{
-
-
-
-		// if (Input.GetMouseButtonDown(0))
-		// {
-		// 	Pool();
-		// }
-	}
-
-	IEnumerator ProximitedObjects()
-	{
-		yield return new WaitForEndOfFrame();
-		GenerateEmptyGameObjects(1);
 
 	}
-
-
 	private void RotateWall(GameObject _currentWall, float targetRotation)
 	{
 		// -90 == right
 		// 90 == left
-
 		if (targetRotation == -90f)
 		{
 			if (_rightRotation < 2 )
@@ -161,35 +140,9 @@ public class LevelGenerator : MonoBehaviour {
 		}
 	}
 
-	// private void Pool()
-	// {
-	// 	// for (int i = 0; i < _wallObjects.transform.childCount; i++)
-	// 	// {
-	// 	// 	GameObject _currentI = _wallObjects.transform.GetChild(i).gameObject;
-	// 	// 	_currentI.transform.SetSiblingIndex(i + 1 );
-	// 	// }
-
-	// 	PoolObject(_wallObjects.transform.GetChild(0).gameObject, _wallObjects.transform.GetChild(_wallObjects.transform.childCount - 1).transform.GetChild(0).transform.position);
-	// }
-
-	// private void PoolObject(GameObject _targetObject, Vector3 _position)
-	// {
-	// 	_targetObject.transform.position = _position;
-	// 	//ModifyTransformForObjects(_targetObject, _targetObject.GetComponent<Wall>().previousWall);
-	// }
-
-
-
 	public void DestroyWall(GameObject _object)
 	{
-
 		Destroy(_object, 1.5f);
 		_activeWalls--;
-
-		//	Destroy(_object, 1.5f);
-		//_activeWalls--;
 	}
-
-
-
 }

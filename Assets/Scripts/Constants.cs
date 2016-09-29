@@ -15,6 +15,7 @@ public class Constants
 	public static float MaxWallHeight = 75;
 	public static float InitWallSize = 100;
 	public static float SwipePause = .2f;
+
 	public static int MaxWallsAtTime = 7;
 
 
@@ -28,4 +29,10 @@ public class Constants
 
 	public static Direction[] directions = new Direction[4] {Direction.NORTH, Direction.EAST, Direction.SOUTH, Direction.WEST};
 
+}
+
+
+public class GameResources
+{
+	public static GameObject WallResource = Resources.Load("Prefabs/prefabs_path/path") as GameObject;
 }

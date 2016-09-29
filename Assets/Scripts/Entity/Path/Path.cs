@@ -1,11 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Wall : MonoBehaviour
+public class Path : MonoBehaviour
 {
 
 	public GameObject previousWall;
-	public bool move;
 	public Vector3 offsetedPosition;
 
 	private Vector3 _movementDirection;
@@ -28,6 +27,7 @@ public class Wall : MonoBehaviour
 		_wallSpeed = Constants.WallSpeed;
 		_movementDirection = Vector3.zero;
 		EventManager.OnSwipe += Pause;
+
 	}
 
 
@@ -51,7 +51,7 @@ public class Wall : MonoBehaviour
 
 	private void Move(Direction _direction, float _velocity)
 	{
-		if (move)
+		if (_gameController.move)
 		{
 			if (_direction == Direction.EAST)
 			{

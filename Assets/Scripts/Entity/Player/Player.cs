@@ -32,7 +32,10 @@ public class Player : MonoBehaviour {
 			if (_hits <= 0)
 			{
 				_sprite.color = new Color(1, 0, 0, 1);
-				//UnityEngine.SceneManagement.SceneManager.LoadScene("GameScene");
+				if (_gameController.endGameUponDeath)
+				{
+					UnityEngine.SceneManagement.SceneManager.LoadScene("GameScene");
+				}
 			}
 		}
 
@@ -43,7 +46,7 @@ public class Player : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D col)
 	{
-		if (col.gameObject.tag == "Walls")
+		if (col.gameObject.tag == "Path")
 		{
 			_sprite.color = new Color(0, 1, 1, 1);
 			_hits++;

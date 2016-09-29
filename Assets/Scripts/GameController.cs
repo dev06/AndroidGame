@@ -4,25 +4,27 @@ using System.Collections;
 using UnityEngine.UI;
 public class GameController : MonoBehaviour {
 
-	// Use this for initialization
-
-	public LevelGenerator levelGenerator;
-	public PoolManager poolManager;
-	public GameInput gameInput;
-	public GameObject wallObjects;
-	public GameObject player;
-	public Direction facingDirection;
 	public static float direction;
-	public bool autoPlay;
-
-
-	public Transform cameraTransform;
-
-
 	public static float timer;
 	public static bool timerBool;
 
 
+	public LevelGenerator levelGenerator;
+	public PoolManager poolManager;
+	public GameInput gameInput;
+	public Direction facingDirection;
+
+	public GameObject wallObjects;
+	public GameObject player;
+	public Transform cameraTransform;
+	public bool autoPlay;
+	public bool move;
+
+
+
+	#region--- DEBUG MEMBERS----
+	public bool endGameUponDeath;
+	#endregion--- /DEBUG MEMBERS----
 	void Awake ()
 	{
 		Init();
@@ -51,9 +53,7 @@ public class GameController : MonoBehaviour {
 	{
 		float rotation = cameraTransform.rotation.eulerAngles.z;
 		direction = rotation / 360.0f;
-		//facingDirection = (direction == 0) ? Direction.NORTH : (direction == .25f) ? Direction.WEST : (direction == .5f) ? Direction.SOUTH : Direction.EAST;
 	}
-
 }
 
 public enum Direction
