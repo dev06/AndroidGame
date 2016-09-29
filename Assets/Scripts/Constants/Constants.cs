@@ -34,5 +34,7 @@ public class Constants
 
 public class GameResources
 {
-	public static GameObject WallResource = Resources.Load("Prefabs/prefabs_path/path") as GameObject;
+	public static GameObject Path_resource = Resources.Load("Prefabs/prefabs_path/path") as GameObject;
+	public static GameObject Player_resource = Resources.Load("Prefabs/prefabs_character/character") as GameObject;
+
 }

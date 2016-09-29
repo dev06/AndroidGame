@@ -4,10 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Walls
+  - Path
   - WallObjects
   - Entity/Player
   - AutoPlay/Bounds
+  - Camera/DummyCamera
   layers:
   - Default
   - TransparentFX

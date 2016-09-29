@@ -32,6 +32,7 @@ public class GameController : MonoBehaviour {
 
 	private void Init()
 	{
+		InitPlayer();
 		wallObjects = GameObject.FindWithTag("WallObjects");
 		player = GameObject.FindWithTag("Entity/Player");
 		levelGenerator = GetComponent<LevelGenerator>();
@@ -46,6 +47,13 @@ public class GameController : MonoBehaviour {
 	{
 		UpdateFacingDirection();
 		gameInput.RegisterSwipe();
+	}
+
+	private void InitPlayer()
+	{
+		Destroy(GameObject.FindWithTag("Camera/DummyCamera"));
+		Instantiate(GameResources .Player_resource, Vector3.zero, Quaternion.identity);
+
 	}
 
 

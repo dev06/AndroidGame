@@ -16,7 +16,7 @@ public class LevelGenerator : MonoBehaviour {
 	private float _minHeight;
 	private float _maxHeight;
 
-	private GameObject _wallResource;
+	private GameObject _pathResource;
 	private GameObject _wallObjects;
 	private GameObject _player;
 
@@ -30,7 +30,7 @@ public class LevelGenerator : MonoBehaviour {
 	private void Init()
 	{
 		_gameController = GameObject.FindWithTag("GameController").GetComponent<GameController>();
-		_wallResource = GameResources.WallResource;
+		_pathResource = GameResources.Path_resource;
 		_wallObjects = _gameController.wallObjects;
 		_player = _gameController.player;
 		_pixelToUnit = Constants.PixelToUnit;
@@ -48,7 +48,7 @@ public class LevelGenerator : MonoBehaviour {
 			for (int i = 0; i < value; i++)
 			{
 				_wallObjects.transform.position = _player.transform.position;
-				GameObject _clone = Instantiate(_wallResource, -Vector2.up * 4.0f, Quaternion.identity) as GameObject;
+				GameObject _clone = Instantiate(_pathResource, -Vector2.up * 4.0f, Quaternion.identity) as GameObject;
 				_clone.name = "Path" + _clone.GetHashCode();
 				_clone.tag = "Path";
 				_clone.transform.parent = _wallObjects.transform;

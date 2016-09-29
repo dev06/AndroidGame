@@ -86,8 +86,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   previousWall: {fileID: 0}
-  move: 0
   offsetedPosition: {x: 0, y: 0, z: 0}
+  _movementDirection: {x: 0, y: 0, z: 0}
+  _gameController: {fileID: 0}
+  _wallObjects: {fileID: 0}
+  _spriteRenderer: {fileID: 0}
+  _wallPassed: 0
+  _enteredWall: 0
+  _shouldDestroy: 0
+  _assignPosition: 0
+  _isPaused: 0
+  _wallSpeed: 0
+  _pauseTimer: 0
 --- !u!212 &21203978
 SpriteRenderer:
   m_ObjectHideFlags: 1
