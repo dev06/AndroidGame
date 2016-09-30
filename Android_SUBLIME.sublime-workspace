@@ -4,6 +4,38 @@
 		"selected_items":
 		[
 			[
+				"Event",
+				"EventManager.OnDoubleTap"
+			],
+			[
+				"Evne",
+				"EventManager.OnDoubleTap"
+			],
+			[
+				"_doub",
+				"_doubleTapped"
+			],
+			[
+				"Game",
+				"GameGesture"
+			],
+			[
+				"_fi",
+				"_difference"
+			],
+			[
+				"Ges",
+				"Gesture.LEFT_SWIPE"
+			],
+			[
+				"GEs",
+				"Gesture.RIGHT_SWIPE"
+			],
+			[
+				"_ap",
+				"_pathAnimation"
+			],
+			[
 				"Time",
 				"Time.deltaTime"
 			],
@@ -324,10 +356,6 @@
 				"GameController"
 			],
 			[
-				"Game",
-				"GameController"
-			],
-			[
 				"Gen",
 				"GenerateWallOnTimer"
 			],
@@ -486,62 +514,26 @@
 			[
 				"Part",
 				"ParticleSystem"
-			],
-			[
-				"gra",
-				"grad.colorKeys"
-			],
-			[
-				"MinMax",
-				"MinMaxGradient"
-			],
-			[
-				"_color",
-				"_colorOverLifeTime"
-			],
-			[
-				"Par",
-				"ParticleSystem"
-			],
-			[
-				"Cur",
-				"Cursor"
-			],
-			[
-				"Player",
-				"Player.transform"
-			],
-			[
-				"_ani",
-				"_animation"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
+			"file": "Assets/Scripts/Camera/CameraController.cs",
+			"settings":
+			{
+				"buffer_size": 740,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "Assets/Scripts/Input/GameInput.cs",
 			"settings":
 			{
-				"buffer_size": 1995,
+				"buffer_size": 3433,
 				"encoding": "UTF-8 with BOM",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Assets/Scripts/Entity/Player.cs",
-			"settings":
-			{
-				"buffer_size": 1515,
-				"encoding": "UTF-8 with BOM",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Player/CameraController.cs",
-			"settings":
-			{
-				"buffer_size": 7534,
 				"line_ending": "Windows"
 			}
 		},
@@ -549,25 +541,7 @@
 			"file": "Assets/Scripts/Event/EventManager.cs",
 			"settings":
 			{
-				"buffer_size": 156,
-				"encoding": "UTF-8 with BOM",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Assets/Scripts/Entity/Wall.cs",
-			"settings":
-			{
-				"buffer_size": 2017,
-				"encoding": "UTF-8 with BOM",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Assets/Scripts/Constants.cs",
-			"settings":
-			{
-				"buffer_size": 717,
+				"buffer_size": 399,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Windows"
 			}
@@ -622,6 +596,26 @@
 	],
 	"file_history":
 	[
+		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Event/EventManager.cs",
+		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Input/GameInput.cs",
+		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/GameController.cs",
+		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Entity/Path/Path.cs",
+		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/Network/GameNetworkManager.cs",
+		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/GameController.cs",
+		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Controllers/GameController.cs",
+		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/GameScene/PoolManager.cs",
+		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Entity/Player/Player.cs",
+		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Constants/Constants.cs",
+		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/GameScene/LevelGenerator.cs",
+		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Constants.cs",
+		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Animation/G_Animation.cs",
+		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/Container/ContainerController.cs",
+		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/ControllerConfiguration.cs",
+		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Standard Assets/Effects/ImageEffects/Scripts/ColorCorrectionRamp.cs",
+		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Standard Assets/Effects/ImageEffects/Shaders/_BloomAndFlares/Blend.shader",
+		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Player/CameraController.cs",
+		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Entity/Wall.cs",
+		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Entity/Player.cs",
 		"/C/Program Files (x86)/Steam/steamapps/common/Unturned/Bundles/Animals/Reindeer/Reindeer.dat",
 		"/C/Program Files (x86)/Steam/steamapps/common/Unturned/Bundles/Animals/Wolf/Wolf.dat",
 		"/C/Program Files (x86)/Steam/steamapps/common/Unturned/Bundles/Animals/Wolf/English.dat",
@@ -646,14 +640,12 @@
 		"/C/Program Files (x86)/Steam/steamapps/common/Unturned/Bundles/Objects/Large/Roads/Bridge_Line_0/English.dat",
 		"/C/Program Files (x86)/Steam/steamapps/common/Unturned/Maps/Russia/Spawns/Animals.dat",
 		"/C/Program Files (x86)/Steam/steamapps/common/Unturned/Maps/Russia/Spawns/Jars.dat",
-		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/GameController.cs",
 		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/CSE_SUBLIME.sublime-project",
 		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/GameController.cs",
 		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/Network/OverridenNetworkDiscovery.cs",
 		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/UI/Button/ConnectionButton.cs",
 		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/Network/NetworkConnectionManager.cs",
 		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/Network/NetworkMessageReceiver.cs",
-		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/GameController.cs",
 		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/Inventory/InventoryManager.cs",
 		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/Inventory/InventorySlot.cs",
 		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/Inventory/Item.cs",
@@ -661,17 +653,11 @@
 		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/GameScene/GameSceneController.cs",
 		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/Container/Container.cs",
 		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/Network/NetworkMessageSender.cs",
-		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/Network/GameNetworkManager.cs",
 		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/UI/Button/Button.cs",
 		"/C/Users/Devan/AppData/Roaming/Sublime Text 3/Packages/User/SublimeAStyleFormatter.sublime-settings",
 		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/Network/NetMessage.cs",
 		"/C/Users/Devan/AppData/Roaming/Sublime Text 3/Packages/SublimeAStyleFormatter/SublimeAStyleFormatter.sublime-settings",
 		"/C/Users/Devan/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
-		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Input/GameInput.cs",
-		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Constants.cs",
-		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Entity/Wall.cs",
-		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Entity/Player.cs",
-		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/GameScene/LevelGenerator.cs",
 		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Library/metadata/06/06604c8d1a7370f4b9c353b1c0ab8c80",
 		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Library/metadata/59/59c1bded2f75b9d44b2fc6c4e459edd4",
 		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Library/metadata/92/923593dc578bde349bad66a94c65a23a",
@@ -683,7 +669,6 @@
 		"/C/Users/Devan/AppData/Local/Temp/Rar$DIa0.945/Master.cs",
 		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/Network/Packet.cs",
 		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/Inventory/ToolTip.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/Container/ContainerController.cs",
 		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/Event/EventManager.cs",
 		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Entity/EntityItem.cs",
 		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Constants.cs",
@@ -716,9 +701,7 @@
 		"/C/Users/Devan/Documents/UnityProjects/test/Assets/VayLaserPack/Scripts/Laser Scripts/LaserParticleManager.cs",
 		"/C/Users/Devan/Downloads/Textbook.pdf",
 		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Particles/Effect.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/ControllerConfiguration.cs",
 		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/ButtonEventHandler.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Player/CameraController.cs",
 		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Entity/Mob.cs",
 		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Entity/Projectile.cs",
 		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/Button/CustomRotationButton.cs",
@@ -740,20 +723,11 @@
 		"/C/Users/Devan/Documents/UnityProjects/CSEGame1/.gitignore.txt",
 		"/C/Users/Devan/Documents/Unity/Projects/.gitignore.txt",
 		"/C/Users/Devan/Documents/UnityProjects/CSEGame1/Assets/Scripts/Constants.cs",
-		"/C/Users/Devan/Documents/Unity/Projects/CSE_Game1/Assets/Scripts/CameraController.cs",
-		"/C/Users/Devan/Documents/Unity/Projects/CSE_Game1/Assets/Scripts/Constants.cs",
-		"/C/Git/FOPSMobile/FearOfPublicSpeaking5.3.4/Assets/Scripts/ControllerTestScene/CameraController.cs",
-		"/C/Users/Devan/Documents/Unity/Projects/Vuforia AR Test/Assets/Vuforia/Scripts/KeepAliveBehaviour.cs",
-		"/C/Users/Devan/Documents/Unity/Projects/Vuforia AR Test/Assets/Script/cube.cs",
-		"/C/Users/Devan/Documents/Unity/Projects/Vuforia AR Test/Assets/CustomText.cs",
-		"/C/Users/Devan/Documents/Unity/Projects/Vuforia AR Test/Assets/Vuforia/Scripts/DefaultTrackableEventHandler.cs",
-		"/C/Users/Devan/Documents/Unity/Projects/Vuforia AR Test/Assets/Vuforia/Scripts/ImageTargetBehaviour.cs",
-		"/C/Users/Devan/Documents/Unity/Projects/Vuforia AR Test/Assets/Vuforia/Scripts/VuforiaBehaviour.cs",
-		"/C/Users/Devan/Documents/Unity/Projects/Vuforia AR Test/Assets/Vuforia/Scripts/DeviceTrackerBehaviour.cs"
+		"/C/Users/Devan/Documents/Unity/Projects/CSE_Game1/Assets/Scripts/CameraController.cs"
 	],
 	"find":
 	{
-		"height": 52.0
+		"height": 30.0
 	},
 	"find_in_files":
 	{
@@ -781,6 +755,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"WallResource",
+			"DestroyWall",
 			"ActivateChild",
 			"OnInventoryUnActive",
 			"AddToQuickItem",
@@ -906,9 +882,7 @@
 			"region",
 			"REGION",
 			"MODEL_PATH",
-			"DELETE LIN",
-			"DELETE ",
-			"DELETEB"
+			"DELETE LIN"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -916,6 +890,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"Path_resource",
 			"intValue",
 			"_inventoryContainer_prefab",
 			" ",
@@ -941,109 +916,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "Assets/Scripts/Input/GameInput.cs",
+					"file": "Assets/Scripts/Camera/CameraController.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1995,
+						"buffer_size": 740,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								767,
-								767
-							]
-						],
-						"settings":
-						{
-							"side_bar_folders_auto_load_folder": 1,
-							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 504.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "Assets/Scripts/Entity/Player.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1515,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								178,
-								178
-							]
-						],
-						"settings":
-						{
-							"side_bar_folders_auto_load_folder": 1,
-							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Player/CameraController.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7534,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5877,
-								5877
-							]
-						],
-						"settings":
-						{
-							"side_bar_folders_auto_load_folder": 1,
-							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": -0.0,
-						"translation.y": 3888.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "Assets/Scripts/Event/EventManager.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 156,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
+								441,
+								441
 							]
 						],
 						"settings":
@@ -1055,24 +940,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "Assets/Scripts/Entity/Wall.cs",
+					"buffer": 1,
+					"file": "Assets/Scripts/Input/GameInput.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2017,
+						"buffer_size": 3433,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2014,
-								2014
+								1920,
+								1920
 							]
 						],
 						"settings":
@@ -1082,27 +967,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 720.0,
+						"translation.y": 1466.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "Assets/Scripts/Constants.cs",
+					"buffer": 2,
+					"file": "Assets/Scripts/Event/EventManager.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 717,
+						"buffer_size": 399,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								272,
-								272
+								392,
+								392
 							]
 						],
 						"settings":
@@ -1115,7 +1000,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -1123,7 +1008,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 51.0
+		"height": 26.0
 	},
 	"input":
 	{
@@ -1172,7 +1057,7 @@
 	"project": "Android_SUBLIME.sublime-project",
 	"replace":
 	{
-		"height": 52.0
+		"height": 50.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1182,32 +1067,68 @@
 		"selected_items":
 		[
 			[
-				"wall",
-				"Entity\\Wall.cs"
-			],
-			[
-				"cons",
-				"Constants.cs"
-			],
-			[
-				"player",
-				"Entity\\Player.cs"
-			],
-			[
 				"event",
 				"Event\\EventManager.cs"
+			],
+			[
+				"gaminput",
+				"Input\\GameInput.cs"
+			],
+			[
+				"gamecon",
+				"Controllers\\GameController.cs"
 			],
 			[
 				"gameinput",
 				"Input\\GameInput.cs"
 			],
 			[
+				"cona",
+				"Constants\\Constants.cs"
+			],
+			[
+				"poo",
+				"GameScene\\PoolManager.cs"
+			],
+			[
+				"poolm",
+				"GameScene\\PoolManager.cs"
+			],
+			[
+				"path",
+				"Entity\\Path\\Path.cs"
+			],
+			[
+				"eventm",
+				"Event\\EventManager.cs"
+			],
+			[
+				"player",
+				"Entity\\Player\\Player.cs"
+			],
+			[
+				"",
+				"Entity\\Path\\Path.cs"
+			],
+			[
 				"game",
 				"GameController.cs"
 			],
 			[
-				"gamecon",
-				"CSE_GAME1\\Assets\\Scripts\\GameController.cs"
+				"constant",
+				"Constants.cs"
+			],
+			[
+				"levelt",
+				"GameScene\\LevelGenerator.cs"
+			],
+			[
+				"wall",
+				"Entity\\Wall.cs"
+			],
+			[
+				"cons",
+				"Constants.cs"
 			],
 			[
 				"messge",
@@ -1292,10 +1213,6 @@
 			[
 				"inventory",
 				"CSE_GAME1\\Assets\\Scripts\\UI\\Container\\InventoryContainer.cs"
-			],
-			[
-				"",
-				"CSE_GAME1\\Assets\\Scripts\\UI\\Inventory\\InventorySlot.cs"
 			],
 			[
 				"tooltip",
@@ -1660,38 +1577,6 @@
 			[
 				"slidesho",
 				"Slideshow\\SlideshowController.cs"
-			],
-			[
-				"videoplayer",
-				"ControlScene\\VideoPlayer.cs"
-			],
-			[
-				"slideshowc",
-				"Slideshow\\SlideshowController.cs"
-			],
-			[
-				"slideshow",
-				"Slideshow\\SlideshowController.cs"
-			],
-			[
-				"clientnetw",
-				"Network\\ClientNetworkManager.cs"
-			],
-			[
-				"servernetw",
-				"Network\\ServerNetworkManager.cs"
-			],
-			[
-				"servernetworkma",
-				"Network\\ServerNetworkManager.cs"
-			],
-			[
-				"speechontr",
-				"ClientScene\\SpeechController.cs"
-			],
-			[
-				"controlment",
-				"ControlScene\\ControlMenuController.cs"
 			]
 		],
 		"width": 0.0

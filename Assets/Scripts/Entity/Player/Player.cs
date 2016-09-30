@@ -57,6 +57,15 @@ public class Player : MonoBehaviour {
 	{
 		_exitObject = col.gameObject;
 		_hits--;
+		col.gameObject.SendMessage("Animate");
+		//_gameController.poolManager.PoolObject(col.gameObject, _gameController.wallObjects.transform.GetChild(_gameController.wallObjects.transform.childCount - 1).gameObject);
+		StopCoroutine("PoolObject");
+		StartCoroutine("PoolObject", col);
+	}
+
+	IEnumerator PoolObject(Collider2D col)
+	{
+		yield return new WaitForSeconds(1f);
 		_gameController.poolManager.PoolObject(col.gameObject, _gameController.wallObjects.transform.GetChild(_gameController.wallObjects.transform.childCount - 1).gameObject);
 	}
 

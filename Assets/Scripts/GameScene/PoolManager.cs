@@ -31,14 +31,17 @@ public class PoolManager : MonoBehaviour {
 	public void PoolObject(GameObject current, GameObject previous)
 	{
 
+		if (EventManager.OnPooled != null)
+		{
+			EventManager.OnPooled();
+		}
+
 		ShiftElements(_wallObjects);
 		_levelGenerator.ModifyTransformForObjects(current, previous);
 
 		if (previous != null)
 		{
+
 		}
-
 	}
-
-
 }

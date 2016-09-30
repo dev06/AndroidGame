@@ -4,6 +4,7 @@ using System.Collections;
 using UnityEngine.UI;
 public class GameController : MonoBehaviour {
 
+
 	public static float direction;
 	public static float timer;
 	public static bool timerBool;

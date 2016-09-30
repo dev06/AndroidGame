@@ -26,6 +26,7 @@ GameObject:
   - 212: {fileID: 21203978}
   - 114: {fileID: 11430550}
   - 61: {fileID: 6151896}
+  - 111: {fileID: 11182836}
   m_Layer: 0
   m_Name: path
   m_TagString: Walls
@@ -40,7 +41,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 128768}
   m_LocalRotation: {x: 0, y: 0, z: 0.10357377, w: 0.9946218}
-  m_LocalPosition: {x: 0, y: 0.0448, z: 0}
+  m_LocalPosition: {x: -22.34138, y: -1.5072603, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 11.889999}
   m_Children:
@@ -74,6 +75,21 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0.16}
   serializedVersion: 2
   m_Size: {x: 0.32, y: 0.32}
+--- !u!111 &11182836
+Animation:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 128768}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: b32cee44d3cbe654484abec0ee2fb23c, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: b32cee44d3cbe654484abec0ee2fb23c, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!114 &11430550
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -87,17 +103,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousWall: {fileID: 0}
   offsetedPosition: {x: 0, y: 0, z: 0}
-  _movementDirection: {x: 0, y: 0, z: 0}
-  _gameController: {fileID: 0}
-  _wallObjects: {fileID: 0}
-  _spriteRenderer: {fileID: 0}
-  _wallPassed: 0
-  _enteredWall: 0
-  _shouldDestroy: 0
-  _assignPosition: 0
-  _isPaused: 0
-  _wallSpeed: 0
-  _pauseTimer: 0
 --- !u!212 &21203978
 SpriteRenderer:
   m_ObjectHideFlags: 1

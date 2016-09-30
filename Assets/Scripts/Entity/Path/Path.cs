@@ -11,6 +11,7 @@ public class Path : MonoBehaviour
 	private GameController _gameController;
 	private GameObject _wallObjects;
 	private SpriteRenderer _spriteRenderer;
+	private Animation _pathAnimation;
 	private bool _wallPassed;
 	private bool _enteredWall;
 	private bool _shouldDestroy;
@@ -18,6 +19,9 @@ public class Path : MonoBehaviour
 	private bool _isPaused;
 	private float _wallSpeed;
 	private float _pauseTimer;
+	private float _poolTimer;
+	private bool _startPoolTimer;
+	private float _maxPoolTimer;
 
 	void Start ()
 	{
@@ -26,8 +30,9 @@ public class Path : MonoBehaviour
 		_spriteRenderer = GetComponent<SpriteRenderer>();
 		_wallSpeed = Constants.WallSpeed;
 		_movementDirection = Vector3.zero;
+		_pathAnimation = GetComponent<Animation>();
 		EventManager.OnSwipe += Pause;
-
+		EventManager.OnPooled += ResetUponPool;
 	}
 
 
@@ -86,6 +91,21 @@ public class Path : MonoBehaviour
 			_enteredWall = entered;
 		}
 		_spriteRenderer.color = (entered) ? new Color(0, 1, 0, 1) : new Color(1, 1, 1, 1);
+	}
+
+	public void Animate()
+	{
+		G_Animation.Play(_pathAnimation, _pathAnimation.clip.name, 1, 1);
+	}
+
+	private void ResetUponPool()
+	{
+		if (_pathAnimation != null)
+		{
+			_pathAnimation.Stop();
+			_pathAnimation[_pathAnimation.clip.name].time = 0;
+			GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
+		}
 	}
 
 
