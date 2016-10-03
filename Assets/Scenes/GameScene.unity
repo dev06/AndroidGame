@@ -2384,7 +2384,7 @@ MonoBehaviour:
   player: {fileID: 0}
   cameraTransform: {fileID: 0}
   autoPlay: 1
-  move: 1
+  move: 0
   gameState: 0
   canvasManager: {fileID: 0}
   endGameUponDeath: 1
