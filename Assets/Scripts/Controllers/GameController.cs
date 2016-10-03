@@ -93,8 +93,8 @@ public class GameController : MonoBehaviour {
 		float _pathHeight = _lastPath.parent.transform.localScale.y;
 		Vector3 _itemPos =  new Vector3(_pathWidth * Constants.PixelToUnit, Random.Range(0f, .32f), 0);
 		_item.transform.localPosition = _itemPos;
-		_item.transform.localScale = new Vector3(1.0f , 1.0f, 1f);
-
+		Vector3 scale = (_lastPath.eulerAngles.z == 0 || _lastPath.eulerAngles.z == 180) ? new Vector3(1.0f, _pathWidth / _pathHeight, 1.0f) : new Vector3(_pathWidth / _pathHeight, 1.0f, 1.0f);
+		_item.transform.localScale = scale;
 
 	}
 
