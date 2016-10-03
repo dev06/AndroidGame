@@ -9,6 +9,12 @@ TagManager:
   - Entity/Player
   - AutoPlay/Bounds
   - Camera/DummyCamera
+  - Walls
+  - UI/Canvas/Debug
+  - Manager/CanvasManager
+  - Particle/GridParticle
+  - Particles
+  - Manager/ParticleManager
   layers:
   - Default
   - TransparentFX
@@ -18,9 +24,9 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
+  - path
+  - particle
+  - Path
   - 
   - 
   - 

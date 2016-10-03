@@ -20,8 +20,9 @@ public class GameController : MonoBehaviour {
 	public Transform cameraTransform;
 	public bool autoPlay;
 	public bool move;
+	public GameState gameState;
 
-
+	public CanvasManager canvasManager;
 
 	#region--- DEBUG MEMBERS----
 	public bool endGameUponDeath;
@@ -39,22 +40,29 @@ public class GameController : MonoBehaviour {
 		levelGenerator = GetComponent<LevelGenerator>();
 		poolManager = GetComponent<PoolManager>();
 		gameInput = GetComponent<GameInput>();
+		canvasManager = GameObject.FindWithTag("Manager/CanvasManager").GetComponent<CanvasManager>();
 		gameInput.gameController = this;
-		cameraTransform = Camera.main.transform;
-	}
+		gameState = GameState.DEBUG;
 
+		cameraTransform = Camera.main.transform;
+		EventManager.OnDoubleTap += OnDoubleTap;
+	}
 
 	void Update ()
 	{
+
 		UpdateFacingDirection();
 		gameInput.RegisterSwipe();
+		if (Input.GetMouseButtonDown(1))
+		{
+			SpawnItem();
+		}
 	}
 
-	private void InitPlayer()
+	public void InitPlayer()
 	{
 		Destroy(GameObject.FindWithTag("Camera/DummyCamera"));
 		Instantiate(GameResources .Player_resource, Vector3.zero, Quaternion.identity);
-
 	}
 
 
@@ -63,6 +71,33 @@ public class GameController : MonoBehaviour {
 		float rotation = cameraTransform.rotation.eulerAngles.z;
 		direction = rotation / 360.0f;
 	}
+
+	public void OnDoubleTap()
+	{
+		UnityEngine.SceneManagement.SceneManager.LoadScene("GameScene");
+	}
+	void OnDisable()
+	{
+		PlayerPrefs.SetFloat("WallSpeed", Constants.WallSpeed);
+		PlayerPrefs.SetFloat("RotationFrequency", Constants.RotationFrequency);
+		PlayerPrefs.SetFloat("MinWallHeight", Constants.MinWallHeight);
+		PlayerPrefs.SetFloat("MaxWallHeight", Constants.MaxWallHeight);
+	}
+
+	public void SpawnItem()
+	{
+		GameObject _item = Instantiate(GameResources.Item_resource, Vector3.zero, Quaternion.identity) as GameObject;
+		Transform _lastPath = wallObjects.transform.GetChild(wallObjects.transform.childCount - 1).transform.GetChild(0).transform;
+		float _pathWidth = _lastPath.parent.transform.localScale.x;
+		float _pathHeight = _lastPath.parent.transform.localScale.y;
+		Vector3 _itemPos = _lastPath.position + new Vector3(_pathWidth * Constants.PixelToUnit, Random.Range(0, _pathHeight) * Constants.PixelToUnit, 0);
+		_item.transform.position = _itemPos;
+		_item.transform.parent = _lastPath.transform.parent.transform;
+		_item.transform.localScale = new Vector3(1.0f / _pathWidth, (1.0f / _pathHeight), 0);
+
+	}
+
+
 }
 
 public enum Direction
@@ -71,6 +106,12 @@ public enum Direction
 	SOUTH,
 	EAST,
 	WEST
+}
+
+public enum GameState
+{
+	DEBUG,
+	GAME,
 }
 
 

@@ -6,7 +6,7 @@ public class Path : MonoBehaviour
 
 	public GameObject previousWall;
 	public Vector3 offsetedPosition;
-
+	public bool isCurrentlyPaused;
 	private Vector3 _movementDirection;
 	private GameController _gameController;
 	private GameObject _wallObjects;
@@ -28,30 +28,32 @@ public class Path : MonoBehaviour
 		_gameController = GameObject.FindWithTag("GameController").GetComponent<GameController>();
 		_wallObjects = GameObject.FindWithTag("WallObjects");
 		_spriteRenderer = GetComponent<SpriteRenderer>();
-		_wallSpeed = Constants.WallSpeed;
 		_movementDirection = Vector3.zero;
 		_pathAnimation = GetComponent<Animation>();
 		EventManager.OnSwipe += Pause;
-		EventManager.OnPooled += ResetUponPool;
 	}
 
 
 	void Update ()
 	{
-		if (_isPaused)
+		_wallSpeed = Constants.WallSpeed;
+
+		if (_gameController.gameState == GameState.GAME)
 		{
-			_pauseTimer += Time.deltaTime;
-			Move(_gameController.facingDirection, _wallSpeed / 5.0f);
-		} else
-		{
-			Move(_gameController.facingDirection, _wallSpeed);
+			if (_isPaused)
+			{
+				_pauseTimer += Time.deltaTime;
+			} else
+			{
+				Move(_gameController.facingDirection, _wallSpeed);
+			}
+			if (_pauseTimer > Constants.SwipePause)
+			{
+				_isPaused = false;
+				_pauseTimer = 0;
+			}
 		}
 
-		if (_pauseTimer > Constants.SwipePause)
-		{
-			_isPaused = false;
-			_pauseTimer = 0;
-		}
 	}
 
 	private void Move(Direction _direction, float _velocity)

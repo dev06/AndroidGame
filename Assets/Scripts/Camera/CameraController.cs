@@ -3,28 +3,37 @@ using System.Collections;
 
 public class CameraController : MonoBehaviour {
 
-	public bool startLerping;
-	public Quaternion targetRotation;
 	private GameController _gameController;
-	private Quaternion _playerRotation;
+	private Vector3 _jitterVel;
+	private Vector3 _jitterPos;
+	private float _jitterPosVelX;
+	private float _jitterPosVelY;
+	private Vector3 _camInitLocalPos;
+	private float _jitterRadius;
+
 	void Start () {
 
 		_gameController = GameObject.FindWithTag("GameController").GetComponent<GameController>();
-		_playerRotation = _gameController.transform.rotation;
+		_jitterVel = Vector3.zero;
+		_camInitLocalPos = transform.localPosition;
+		_jitterRadius = 0.05f;
 	}
 
-	// Update is called once per frame
+
 	void Update ()
 	{
-		if (startLerping)
-		{
-			LerpCamera(targetRotation);
-		}
+		JitterCamera(0.5f);
 	}
 
-	private void LerpCamera(Quaternion targetRotation)
+	private void JitterCamera(float intensity)
 	{
-		_playerRotation = Quaternion.Lerp(_playerRotation, targetRotation, Time.deltaTime * 5.0f);
-		_gameController.player.transform.rotation = _playerRotation;
+		_jitterVel.x = Random.Range(-_jitterRadius, _jitterRadius);
+		_jitterVel.y = Random.Range(-_jitterRadius, _jitterRadius);
+		_jitterPos.x = Mathf.SmoothDamp(_jitterPos.x, _jitterVel.x, ref _jitterPosVelX, .01f);
+		_jitterPos.y = Mathf.SmoothDamp(_jitterPos.y, _jitterVel.y, ref _jitterPosVelY, .01f);
+		_jitterPos.z = -2;
+		transform.localPosition = _camInitLocalPos + _jitterPos;
 	}
+
+
 }

@@ -24,7 +24,7 @@ public class LevelGenerator : MonoBehaviour {
 	void Start()
 	{
 		Init();
-		GenerateEmptyGameObjects(5);
+
 	}
 
 	private void Init()
@@ -58,6 +58,7 @@ public class LevelGenerator : MonoBehaviour {
 			}
 			_activeWalls += value;
 		}
+
 	}
 
 	public void ModifyTransformForObjects(GameObject _object, GameObject _previousObject)
