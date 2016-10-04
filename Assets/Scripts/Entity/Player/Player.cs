@@ -160,10 +160,6 @@ public class Player : MonoBehaviour {
 					index++;
 				}
 			}
-
-
-
-
 		}
 	}
 
