@@ -17,12 +17,13 @@ public class Path : MonoBehaviour
 	private bool _shouldDestroy;
 	private bool _assignPosition;
 	private bool _isPaused;
+	private bool _startPoolTimer;
+	private bool _onDeath;
 	private float _wallSpeed;
 	private float _pauseTimer;
 	private float _poolTimer;
-	private bool _startPoolTimer;
 	private float _maxPoolTimer;
-
+	private float _wallSpeedVel;
 	void Start ()
 	{
 		_gameController = GameObject.FindWithTag("GameController").GetComponent<GameController>();
@@ -31,12 +32,19 @@ public class Path : MonoBehaviour
 		_movementDirection = Vector3.zero;
 		_pathAnimation = GetComponent<Animation>();
 		EventManager.OnSwipe += Pause;
+		EventManager.OnDeath += OnPlayerDeath;
 	}
 
 
 	void Update ()
 	{
-		_wallSpeed = Constants.WallSpeed;
+		if (_onDeath == false)
+		{
+			_wallSpeed = Constants.WallSpeed;
+		} else
+		{
+			_wallSpeed = Mathf.SmoothDamp(_wallSpeed, 0, ref _wallSpeedVel, .5f);
+		}
 
 		if (_gameController.gameState == GameState.GAME)
 		{
@@ -108,6 +116,11 @@ public class Path : MonoBehaviour
 			_pathAnimation[_pathAnimation.clip.name].time = 0;
 			GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
 		}
+	}
+
+	private void OnPlayerDeath()
+	{
+		_onDeath = true;
 	}
 
 

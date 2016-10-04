@@ -40,7 +40,15 @@ public class Player : MonoBehaviour {
 					_sprite.color = new Color(1, 0, 0, 1);
 					if (_gameController.endGameUponDeath)
 					{
-						UnityEngine.SceneManagement.SceneManager.LoadScene("GameScene");
+						if (EventManager.OnDeath != null)
+						{
+							EventManager.OnDeath();
+
+						}
+
+						_gameController.dead = true;
+
+						StartCoroutine("Restart");
 					}
 				}
 				if (_gameController.facingDirection == Direction.NORTH || _gameController.facingDirection == Direction.SOUTH) {
@@ -192,5 +200,12 @@ public class Player : MonoBehaviour {
 		_zRotationAmp = 10.0f;
 		_bob = 0;
 		bb = 0;
+	}
+
+	IEnumerator Restart()
+	{
+		yield return new WaitForSeconds(2);
+		UnityEngine.SceneManagement.SceneManager.LoadScene("GameScene");
+
 	}
 }

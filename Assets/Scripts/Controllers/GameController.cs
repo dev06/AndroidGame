@@ -20,6 +20,7 @@ public class GameController : MonoBehaviour {
 	public Transform cameraTransform;
 	public bool autoPlay;
 	public bool move;
+	public bool dead;
 	public GameState gameState;
 
 	public CanvasManager canvasManager;
@@ -50,12 +51,14 @@ public class GameController : MonoBehaviour {
 
 	void Update ()
 	{
-
-		UpdateFacingDirection();
-		gameInput.RegisterSwipe();
-		if (Input.GetMouseButtonDown(1))
+		if (!dead)
 		{
-			SpawnItem();
+			UpdateFacingDirection();
+			gameInput.RegisterSwipe();
+			if (Input.GetMouseButtonDown(1))
+			{
+				SpawnItem();
+			}
 		}
 	}
 

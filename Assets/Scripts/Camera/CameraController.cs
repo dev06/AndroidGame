@@ -10,30 +10,39 @@ public class CameraController : MonoBehaviour {
 	private float _jitterPosVelY;
 	private Vector3 _camInitLocalPos;
 	private float _jitterRadius;
-
+	private float _jitterRadVel;
+	private bool _onDeath;
 	void Start () {
 
 		_gameController = GameObject.FindWithTag("GameController").GetComponent<GameController>();
 		_jitterVel = Vector3.zero;
 		_camInitLocalPos = transform.localPosition;
 		_jitterRadius = 0.05f;
+		EventManager.OnDeath += OnPlayerDeath;
 	}
 
 
 	void Update ()
 	{
-		JitterCamera(0.5f);
+		JitterCamera(_jitterRadius);
+		if (_onDeath)
+		{
+			_jitterRadius = Mathf.SmoothDamp(_jitterRadius, 0f, ref _jitterRadVel, .5f);
+		}
 	}
 
 	private void JitterCamera(float intensity)
 	{
-		_jitterVel.x = Random.Range(-_jitterRadius, _jitterRadius);
-		_jitterVel.y = Random.Range(-_jitterRadius, _jitterRadius);
+		_jitterVel.x = Random.Range(-intensity, intensity);
+		_jitterVel.y = Random.Range(-intensity, intensity);
 		_jitterPos.x = Mathf.SmoothDamp(_jitterPos.x, _jitterVel.x, ref _jitterPosVelX, .01f);
 		_jitterPos.y = Mathf.SmoothDamp(_jitterPos.y, _jitterVel.y, ref _jitterPosVelY, .01f);
 		_jitterPos.z = -2;
 		transform.localPosition = _camInitLocalPos + _jitterPos;
 	}
 
-
+	private void OnPlayerDeath()
+	{
+		_onDeath = true;
+	}
 }

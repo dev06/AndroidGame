@@ -18,6 +18,10 @@ public class EventManager : MonoBehaviour {
 	public static Gesture OnDoubleTap;
 
 
+	public delegate void Death();
+	public static Death OnDeath;
+
+
 
 
 }
