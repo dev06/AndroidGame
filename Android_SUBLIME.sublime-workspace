@@ -569,9 +569,9 @@
 	],
 	"file_history":
 	[
+		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Controllers/GameController.cs",
 		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Entity/Player/Player.cs",
 		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/GameScene/AutoPlay.cs",
-		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Controllers/GameController.cs",
 		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/GameController.cs",
 		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Camera/CameraController.cs",
 		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Input/GameInput.cs",
@@ -1472,7 +1472,7 @@
 		[
 			[
 				"",
-				"C:\\Users\\Devan\\Documents\\UnityProjects\\KSU\\NetworkingSolution\\KSU_NETWORK_SOLUTION\\KSU_SUBLIME.sublime-project"
+				"C:\\Users\\Devan\\Documents\\UnityProjects\\CSE_GAME1\\CSE_SUBLIME.sublime-workspace"
 			]
 		],
 		"width": 475.0

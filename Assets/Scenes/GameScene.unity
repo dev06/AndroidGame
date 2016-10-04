@@ -904,6 +904,52 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 510417237}
+--- !u!1001 &524694820
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 454358, guid: dd1826b6bea642346924ef9bbeed9b23, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -13.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 454358, guid: dd1826b6bea642346924ef9bbeed9b23, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 10.396
+      objectReference: {fileID: 0}
+    - target: {fileID: 454358, guid: dd1826b6bea642346924ef9bbeed9b23, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 454358, guid: dd1826b6bea642346924ef9bbeed9b23, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 454358, guid: dd1826b6bea642346924ef9bbeed9b23, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 454358, guid: dd1826b6bea642346924ef9bbeed9b23, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 454358, guid: dd1826b6bea642346924ef9bbeed9b23, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 454358, guid: dd1826b6bea642346924ef9bbeed9b23, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 129874, guid: dd1826b6bea642346924ef9bbeed9b23, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: dd1826b6bea642346924ef9bbeed9b23, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &723498298
 GameObject:
   m_ObjectHideFlags: 0
@@ -2164,52 +2210,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1341994982}
---- !u!1001 &1395477557
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 454358, guid: dd1826b6bea642346924ef9bbeed9b23, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -13.46
-      objectReference: {fileID: 0}
-    - target: {fileID: 454358, guid: dd1826b6bea642346924ef9bbeed9b23, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 10.396
-      objectReference: {fileID: 0}
-    - target: {fileID: 454358, guid: dd1826b6bea642346924ef9bbeed9b23, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 454358, guid: dd1826b6bea642346924ef9bbeed9b23, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 454358, guid: dd1826b6bea642346924ef9bbeed9b23, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 454358, guid: dd1826b6bea642346924ef9bbeed9b23, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 454358, guid: dd1826b6bea642346924ef9bbeed9b23, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 454358, guid: dd1826b6bea642346924ef9bbeed9b23, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 129874, guid: dd1826b6bea642346924ef9bbeed9b23, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: dd1826b6bea642346924ef9bbeed9b23, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1407411872
 GameObject:
   m_ObjectHideFlags: 0
@@ -2383,8 +2383,8 @@ MonoBehaviour:
   wallObjects: {fileID: 0}
   player: {fileID: 0}
   cameraTransform: {fileID: 0}
-  autoPlay: 1
-  move: 0
+  autoPlay: 0
+  move: 1
   gameState: 0
   canvasManager: {fileID: 0}
   endGameUponDeath: 1
