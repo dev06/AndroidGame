@@ -88,12 +88,13 @@ public class GameController : MonoBehaviour {
 	{
 		GameObject _item = Instantiate(GameResources.Item_resource, Vector3.zero, Quaternion.identity) as GameObject;
 		Transform _lastPath = wallObjects.transform.GetChild(wallObjects.transform.childCount - 1).transform.GetChild(0).transform;
+		_item.transform.parent = _lastPath.transform.parent.transform;
 		float _pathWidth = _lastPath.parent.transform.localScale.x;
 		float _pathHeight = _lastPath.parent.transform.localScale.y;
-		Vector3 _itemPos = _lastPath.position + new Vector3(_pathWidth * Constants.PixelToUnit, Random.Range(0, _pathHeight) * Constants.PixelToUnit, 0);
-		_item.transform.position = _itemPos;
-		_item.transform.parent = _lastPath.transform.parent.transform;
-		_item.transform.localScale = new Vector3(1.0f / _pathWidth, (1.0f / _pathHeight), 0);
+		Vector3 _itemPos =  new Vector3(_pathWidth * Constants.PixelToUnit, Random.Range(0f, .32f), 0);
+		_item.transform.localPosition = _itemPos;
+		Vector3 scale = (_lastPath.eulerAngles.z == 0 || _lastPath.eulerAngles.z == 180) ? new Vector3(1.0f, _pathWidth / _pathHeight, 1.0f) : new Vector3(_pathWidth / _pathHeight, 1.0f, 1.0f);
+		_item.transform.localScale = scale;
 
 	}
 

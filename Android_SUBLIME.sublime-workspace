@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"_path",
+				"_pathHeight"
+			],
+			[
 				"Event",
 				"EventManager.OnDoubleTap"
 			],
@@ -510,42 +514,11 @@
 			[
 				"GetC",
 				"GetComponent"
-			],
-			[
-				"Part",
-				"ParticleSystem"
 			]
 		]
 	},
 	"buffers":
 	[
-		{
-			"file": "Assets/Scripts/Camera/CameraController.cs",
-			"settings":
-			{
-				"buffer_size": 740,
-				"encoding": "UTF-8 with BOM",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Assets/Scripts/Input/GameInput.cs",
-			"settings":
-			{
-				"buffer_size": 3433,
-				"encoding": "UTF-8 with BOM",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Assets/Scripts/Event/EventManager.cs",
-			"settings":
-			{
-				"buffer_size": 399,
-				"encoding": "UTF-8 with BOM",
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -596,15 +569,17 @@
 	],
 	"file_history":
 	[
-		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Event/EventManager.cs",
+		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Entity/Player/Player.cs",
+		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/GameScene/AutoPlay.cs",
+		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Controllers/GameController.cs",
+		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/GameController.cs",
+		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Camera/CameraController.cs",
 		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Input/GameInput.cs",
+		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Event/EventManager.cs",
 		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/GameController.cs",
 		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Entity/Path/Path.cs",
 		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/Network/GameNetworkManager.cs",
-		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/GameController.cs",
-		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Controllers/GameController.cs",
 		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/GameScene/PoolManager.cs",
-		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Entity/Player/Player.cs",
 		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Constants/Constants.cs",
 		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/GameScene/LevelGenerator.cs",
 		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Constants.cs",
@@ -721,9 +696,7 @@
 		"/C/Users/Devan/Desktop/CGDD3103_Project_1/Assets/Scripts/Constants.cs",
 		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/PlayerController.cs",
 		"/C/Users/Devan/Documents/UnityProjects/CSEGame1/.gitignore.txt",
-		"/C/Users/Devan/Documents/Unity/Projects/.gitignore.txt",
-		"/C/Users/Devan/Documents/UnityProjects/CSEGame1/Assets/Scripts/Constants.cs",
-		"/C/Users/Devan/Documents/Unity/Projects/CSE_Game1/Assets/Scripts/CameraController.cs"
+		"/C/Users/Devan/Documents/Unity/Projects/.gitignore.txt"
 	],
 	"find":
 	{
@@ -911,98 +884,8 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "Assets/Scripts/Camera/CameraController.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 740,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								441,
-								441
-							]
-						],
-						"settings":
-						{
-							"side_bar_folders_auto_load_folder": 1,
-							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "Assets/Scripts/Input/GameInput.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3433,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1920,
-								1920
-							]
-						],
-						"settings":
-						{
-							"side_bar_folders_auto_load_folder": 1,
-							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1466.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "Assets/Scripts/Event/EventManager.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 399,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								392,
-								392
-							]
-						],
-						"settings":
-						{
-							"side_bar_folders_auto_load_folder": 1,
-							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -1067,6 +950,18 @@
 		"selected_items":
 		[
 			[
+				"game",
+				"Controllers\\GameController.cs"
+			],
+			[
+				"auto",
+				"GameScene\\AutoPlay.cs"
+			],
+			[
+				"player",
+				"Entity\\Player\\Player.cs"
+			],
+			[
 				"event",
 				"Event\\EventManager.cs"
 			],
@@ -1103,16 +998,8 @@
 				"Event\\EventManager.cs"
 			],
 			[
-				"player",
-				"Entity\\Player\\Player.cs"
-			],
-			[
 				"",
 				"Entity\\Path\\Path.cs"
-			],
-			[
-				"game",
-				"GameController.cs"
 			],
 			[
 				"constant",
@@ -1233,10 +1120,6 @@
 			[
 				"wal",
 				"AndroidGame\\Assets\\Resources\\Prefabs\\Wall.prefab"
-			],
-			[
-				"auto",
-				"AndroidGame\\Assets\\Scripts\\AutoPlay.cs"
 			],
 			[
 				"butoon",
