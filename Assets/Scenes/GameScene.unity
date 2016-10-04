@@ -2383,13 +2383,8 @@ MonoBehaviour:
   wallObjects: {fileID: 0}
   player: {fileID: 0}
   cameraTransform: {fileID: 0}
-<<<<<<< HEAD
-  autoPlay: 0
-  move: 1
-=======
   autoPlay: 1
   move: 0
->>>>>>> 696cbe13b735476925b3cf8d9b3a8b8cdd8bbfc9
   gameState: 0
   canvasManager: {fileID: 0}
   endGameUponDeath: 1
@@ -3072,7 +3067,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2050798520}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
