@@ -24,9 +24,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 445614}
   - 212: {fileID: 21203978}
-  - 114: {fileID: 11430550}
   - 61: {fileID: 6151896}
-  - 111: {fileID: 11182836}
+  - 114: {fileID: 11416076}
   m_Layer: 10
   m_Name: path
   m_TagString: Walls
@@ -34,6 +33,34 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &190992
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 417614}
+  m_Layer: 10
+  m_Name: BottomHinge
+  m_TagString: Untagged
+  m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &417614
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 190992}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 445614}
+  m_RootOrder: 1
 --- !u!4 &445614
 Transform:
   m_ObjectHideFlags: 1
@@ -41,11 +68,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 128768}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.464, y: 3.99, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 0.1}
+  m_LocalPosition: {x: -11.69, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 462570}
+  - {fileID: 417614}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &462570
@@ -75,22 +103,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0.16}
   serializedVersion: 2
   m_Size: {x: 0.32, y: 0.32}
---- !u!111 &11182836
-Animation:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 128768}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: b32cee44d3cbe654484abec0ee2fb23c, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: b32cee44d3cbe654484abec0ee2fb23c, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
-  m_CullingType: 0
---- !u!114 &11430550
+--- !u!114 &11416076
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

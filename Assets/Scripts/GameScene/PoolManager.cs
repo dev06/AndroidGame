@@ -38,7 +38,6 @@ public class PoolManager : MonoBehaviour {
 
 		ShiftElements(_wallObjects);
 		_levelGenerator.ModifyTransformForObjects(current, previous);
-
 		if (previous != null)
 		{
 

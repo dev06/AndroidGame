@@ -88,6 +88,7 @@ public class Player : MonoBehaviour {
 			_gameController.facingDirection = Constants.directions[index];
 		}
 
+
 	}
 
 
@@ -172,12 +173,10 @@ public class Player : MonoBehaviour {
 			_hits--;
 			if (_exitObject == _gameController.wallObjects.transform.GetChild(0).gameObject)
 			{
+
 				_gameController.poolManager.PoolObject(col.gameObject, _gameController.wallObjects.transform.GetChild(_gameController.wallObjects.transform.childCount - 1).gameObject);
-
 			}
-
 		}
-
 	}
 
 	void OnTriggerStay2D(Collider2D col)

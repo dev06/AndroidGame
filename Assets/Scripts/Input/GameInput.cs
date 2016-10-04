@@ -116,7 +116,11 @@ public class GameInput : MonoBehaviour {
 				}
 				_gameController.facingDirection = Constants.directions[_directionIndex];
 
+
+
 			}
+
+
 		}
 
 		if (EventManager.OnTap != null)
