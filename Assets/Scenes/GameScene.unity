@@ -2383,7 +2383,7 @@ MonoBehaviour:
   wallObjects: {fileID: 0}
   player: {fileID: 0}
   cameraTransform: {fileID: 0}
-  autoPlay: 1
+  autoPlay: 0
   move: 1
   gameState: 0
   canvasManager: {fileID: 0}
