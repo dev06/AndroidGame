@@ -4,6 +4,118 @@
 		"selected_items":
 		[
 			[
+				"_j",
+				"_jitterRadius"
+			],
+			[
+				"_walls",
+				"_wallSpeedVel"
+			],
+			[
+				"_wal",
+				"_wallSpeed"
+			],
+			[
+				"_poo",
+				"_poolObject"
+			],
+			[
+				"_po",
+				"_poolTimer"
+			],
+			[
+				"Waitf",
+				"WaitForSeconds(seconds)"
+			],
+			[
+				"_cur",
+				"_currRot"
+			],
+			[
+				"_nex",
+				"_nextRot"
+			],
+			[
+				"_cu",
+				"_currRot"
+			],
+			[
+				"_ne",
+				"_nextWall"
+			],
+			[
+				"_jiter",
+				"_jitterPos"
+			],
+			[
+				"_jitterPosVel",
+				"_jitterPosVelX"
+			],
+			[
+				"_jitterpos",
+				"_jitterPos"
+			],
+			[
+				"AutoPlay",
+				"AutoPlayID.Colliders"
+			],
+			[
+				"_pa",
+				"_pathWidth"
+			],
+			[
+				"_item",
+				"_itemPos"
+			],
+			[
+				"_ti",
+				"_itemPos"
+			],
+			[
+				"Instan",
+				"Instantiate"
+			],
+			[
+				"_par",
+				"_particleList"
+			],
+			[
+				"_p",
+				"_particleList"
+			],
+			[
+				"Constants",
+				"Constants.WallSpeed"
+			],
+			[
+				"WaitForSE",
+				"WaitForSeconds"
+			],
+			[
+				"_wa",
+				"_wallSpeed"
+			],
+			[
+				"Getchild",
+				"GetChild"
+			],
+			[
+				"_sli",
+				"_slider.value"
+			],
+			[
+				"Debug_m",
+				"Debug_Member_ID"
+			],
+			[
+				"Debug_",
+				"Debug_Member_ID"
+			],
+			[
+				"UnityE",
+				"UnityEngine"
+			],
+			[
 				"_di",
 				"_directionIndex"
 			],
@@ -18,10 +130,6 @@
 			[
 				"_player",
 				"_player.zRotation"
-			],
-			[
-				"_p",
-				"_player"
 			],
 			[
 				"_ro",
@@ -406,173 +514,11 @@
 			[
 				"prv",
 				"previousWall.transform"
-			],
-			[
-				"Vecto",
-				"Vector2"
-			],
-			[
-				"_wall",
-				"_wallObjects.transform"
-			],
-			[
-				"gameObj",
-				"gameObject.name"
-			],
-			[
-				"vEc",
-				"Vector2"
-			],
-			[
-				"_px",
-				"_pixelToUnit"
-			],
-			[
-				"_cur",
-				"_currentWall"
-			],
-			[
-				"VEc",
-				"Vector2"
-			],
-			[
-				"Res",
-				"Resources"
-			],
-			[
-				"_pin",
-				"_pointerUp.x"
-			],
-			[
-				"TouchPhas",
-				"TouchPhase.Began"
-			],
-			[
-				"_smo",
-				"_smokeSmall"
-			],
-			[
-				"_smok",
-				"_smokeLarge"
-			],
-			[
-				"deltaTime",
-				"Touch.deltaTime"
-			],
-			[
-				"Wait",
-				"WaitForEndOfFrame"
-			],
-			[
-				"Play",
-				"PlayAnimation"
-			],
-			[
-				"_ser",
-				"_servants.Length"
-			],
-			[
-				"Conter",
-				"ContainerController"
-			],
-			[
-				"FindGamee",
-				"GameObject.FindGameObjectsWithTag(tag)"
-			],
-			[
-				"Cont",
-				"ContainerController"
-			],
-			[
-				"S",
-				"SERVANT"
-			],
-			[
-				"InputButton",
-				"InputButton.Left"
-			],
-			[
-				"_re",
-				"_rectTransform.localScale"
-			],
-			[
-				"_pro",
-				"_profileTwoTransform"
-			],
-			[
-				"Camera",
-				"CameraMoveSpeed"
-			],
-			[
-				"Transform",
-				"TransformDirection"
-			],
-			[
-				"tranform",
-				"transform.forward"
-			],
-			[
-				"tra",
-				"transform"
 			]
 		]
 	},
 	"buffers":
 	[
-		{
-			"file": "Assets/Scripts/GameController.cs",
-			"settings":
-			{
-				"buffer_size": 1344,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Assets/Scripts/Constants.cs",
-			"settings":
-			{
-				"buffer_size": 692,
-				"encoding": "UTF-8 with BOM",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Assets/Scripts/Input/GameInput.cs",
-			"settings":
-			{
-				"buffer_size": 1554,
-				"encoding": "UTF-8 with BOM",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Assets/Scripts/Entity/Player.cs",
-			"settings":
-			{
-				"buffer_size": 1254,
-				"encoding": "UTF-8 with BOM",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/E/Unity/Projects/CSE_Game1/CSE_GAME/Assets/Scripts/GameController.cs",
-			"settings":
-			{
-				"buffer_size": 10721,
-				"encoding": "UTF-8 with BOM",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/E/Unity/Projects/CSE_Game1/CSE_GAME/Assets/Scripts/Entity/Projectile/ProjectileManager.cs",
-			"settings":
-			{
-				"buffer_size": 359,
-				"encoding": "UTF-8 with BOM",
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -623,10 +569,52 @@
 	],
 	"file_history":
 	[
+		"/E/Unity/Projects/AndroidGame/Assets/Scripts/Controllers/GameController.cs",
+		"/E/Unity/Projects/AndroidGame/Assets/Scripts/Entity/Player/Player.cs",
 		"/E/Unity/Projects/AndroidGame/Assets/Scripts/Input/GameInput.cs",
+		"/E/Unity/Projects/AndroidGame/Assets/Scripts/Entity/Path/Path.cs",
+		"/E/Unity/Projects/AndroidGame/Assets/Scripts/Camera/CameraController.cs",
+		"/E/Unity/Projects/AndroidGame/Assets/Scripts/Event/EventManager.cs",
+		"/E/Unity/Projects/AndroidGame/Assets/Scripts/GameScene/LevelGenerator.cs",
+		"/E/Unity/Projects/AndroidGame/Assets/Scripts/GameScene/PoolManager.cs",
+		"/E/Unity/Projects/AndroidGame/Assets/Scripts/Misc/Objects/DummyPath.cs",
+		"/E/Unity/Projects/AndroidGame/Assets/Scripts/Constants/Constants.cs",
+		"/E/Unity/Projects/AndroidGame/Assets/Scripts/GameScene/AutoPlay.cs",
+		"/E/Unity/Projects/AndroidGame/Assets/Scripts/dummy.cs",
+		"/E/Unity/Projects/AndroidGame/Assets/Scripts/Misc/Objects/dummy.cs",
+		"/C/Users/Devan/Documents/The Last Tree/The Last Tree_Alpha1.0_Pre-Alpha 1.0/Assets/Scripts/Player/PlayerBase.cs",
+		"/C/Users/Devan/Documents/The Last Tree/The Last Tree_Alpha1.0_Pre-Alpha 1.0/Assets/Scripts/Menu/ExitController.cs",
+		"/C/Users/Devan/Documents/The Last Tree/The Last Tree_Alpha1.0_Pre-Alpha 1.0/Assets/Scripts/UI/MiniMap/MiniMapIconController.cs",
+		"/C/Users/Devan/Documents/The Last Tree/The Last Tree_Alpha1.0_Pre-Alpha 1.0/Assets/Scripts/UI/MiniMap/MiniMap_Icon.cs",
+		"/C/Users/Devan/Documents/The Last Tree/The Last Tree_Alpha1.0_Pre-Alpha 1.0/Assets/Scripts/UI/MiniMap/CamerResize.cs",
+		"/C/Users/Devan/Documents/The Last Tree/The Last Tree_Alpha1.0_Pre-Alpha 1.0/Assets/Scripts/UI/Setting/_QualitySettings.cs",
+		"/C/Users/Devan/Documents/The Last Tree/The Last Tree_Alpha1.0_Pre-Alpha 1.0/Assets/Scripts/UI/Setting/Vsync.cs",
+		"/C/Users/Devan/Documents/The Last Tree/The Last Tree_Alpha1.0_Pre-Alpha 1.0/Assets/Scripts/UI/Setting/SettingCanvas.cs",
+		"/C/Users/Devan/Documents/The Last Tree/The Last Tree_Alpha1.0_Pre-Alpha 1.0/Assets/Scripts/UI/Setting/Resolution.cs",
+		"/C/Users/Devan/Documents/The Last Tree/The Last Tree_Alpha1.0_Pre-Alpha 1.0/Assets/Scripts/UI/Extras/ButtonColor.cs",
+		"/C/Users/Devan/Documents/The Last Tree/The Last Tree_Alpha1.0_Pre-Alpha 1.0/Assets/Scripts/ShuttleIntroScripts/SI_Camera.cs",
+		"/C/Users/Devan/Documents/The Last Tree/The Last Tree_Alpha1.0_Pre-Alpha 1.0/Assets/Scripts/Player/Player.cs",
+		"/C/Users/Devan/Documents/The Last Tree/The Last Tree_Alpha1.0_Pre-Alpha 1.0/Assets/Scripts/Player/NakedPlayer.cs",
+		"/C/Users/Devan/Documents/The Last Tree/The Last Tree_Alpha1.0_Pre-Alpha 1.0/Assets/Scripts/Custom/Vector3f.cs",
+		"/C/Users/Devan/Documents/The Last Tree/The Last Tree_Alpha1.0_Pre-Alpha 1.0/Assets/Scripts/Mechanics/ManageEntity.cs",
+		"/C/Users/Devan/Documents/The Last Tree/The Last Tree_Alpha1.0_Pre-Alpha 1.0/Assets/Scripts/IO/IOController.cs",
+		"/C/Users/Devan/Documents/The Last Tree/The Last Tree_Alpha1.0_Pre-Alpha 1.0/Assets/Scripts/Manager.cs",
+		"/C/Users/Devan/Documents/The Last Tree/The Last Tree_Alpha1.0_Pre-Alpha 1.0/Assets/Scripts/Controller.cs",
+		"/C/Users/Devan/Documents/The Last Tree/The Last Tree_Alpha1.0_Pre-Alpha 1.0/Assets/Scripts/Constants.cs",
+		"/E/Unity/Projects/AndroidGame/Assets/Scripts/Entity/Particle/Particle.cs",
+		"/E/Unity/Projects/AndroidGame/Assets/Scripts/Entity/Particle/GridParticle/GridParticle.cs",
+		"/E/Unity/Projects/AndroidGame/Assets/Scripts/Entity/Particle/CharacterParticle/characterParticle.cs",
+		"/E/Unity/Projects/AndroidGame/Assets/Scripts/UI/Button/ButtonEventHandler.cs",
+		"/E/Unity/Projects/AndroidGame/Assets/Scripts/Entity/Particle/ParticleManager.cs",
+		"/C/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll",
+		"/E/Unity/Projects/AndroidGame/Assets/Scripts/Entity/Particle/ParicleManager.cs",
+		"/E/Unity/Projects/AndroidGame/Assets/Scripts/UI/Debug/Debug_Member.cs",
+		"/E/Unity/Projects/AndroidGame/Assets/Scripts/UI/Canvas/CanvasHandler.cs",
+		"/E/Unity/Projects/AndroidGame/Assets/Scripts/UI/Canvas/CanvasManager.cs",
+		"/E/Unity/Projects/CSE_Game1/CSE_GAME/Assets/Scripts/GameController.cs",
+		"/E/Unity/Projects/CSE_Game1/CSE_GAME/Assets/Scripts/Entity/Projectile/ProjectileManager.cs",
 		"/E/Unity/Projects/AndroidGame/Assets/Scripts/Entity/Player.cs",
 		"/E/Unity/Projects/AndroidGame/Assets/Scripts/GameController.cs",
-		"/E/Unity/Projects/CSE_Game1/CSE_GAME/Assets/Scripts/GameController.cs",
 		"/E/Unity/Projects/AndroidGame/Assets/Scripts/Constants.cs",
 		"/E/Unity/Projects/CSE_Game1/CSE_GAME/Assets/Scripts/UI/Inventory/InventoryManager.cs",
 		"/E/Unity/Projects/CSE_Game1/CSE_GAME/Assets/Scripts/UI/Inventory/Item.cs",
@@ -708,53 +696,11 @@
 		"/C/Users/Devan/Downloads/Textbook.pdf",
 		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Particles/Effect.cs",
 		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/ControllerConfiguration.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/ButtonEventHandler.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Player/CameraController.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Entity/Mob.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Entity/Projectile.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/Button/CustomRotationButton.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/Button/CustomKeyButton.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/Button/ControllerProfileButton.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Player/PlayerController.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Entity/Bot.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Entity/LargeProjectile.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Entity/SmallProjectile.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Entity/BotArm.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Temp/Compiled-Standard.shader",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/CameraController.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/Health.cs",
-		"/C/Users/Devan/Documents/Unity/Projects/CSE_Game1/.gitignore.txt",
-		"/C/Users/Devan/Documents/Unity/Projects/CSE_Game1/README.md",
-		"/C/Users/Devan/Desktop/CGDD3103_Project_1/Assets/Scripts/CameraController.cs",
-		"/C/Users/Devan/Desktop/CGDD3103_Project_1/Assets/Scripts/Constants.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/PlayerController.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSEGame1/.gitignore.txt",
-		"/C/Users/Devan/Documents/Unity/Projects/.gitignore.txt",
-		"/C/Users/Devan/Documents/UnityProjects/CSEGame1/Assets/Scripts/Constants.cs",
-		"/C/Users/Devan/Documents/Unity/Projects/CSE_Game1/Assets/Scripts/CameraController.cs",
-		"/C/Users/Devan/Documents/Unity/Projects/CSE_Game1/Assets/Scripts/Constants.cs",
-		"/C/Git/FOPSMobile/FearOfPublicSpeaking5.3.4/Assets/Scripts/ControllerTestScene/CameraController.cs",
-		"/C/Users/Devan/Documents/Unity/Projects/Vuforia AR Test/Assets/Vuforia/Scripts/KeepAliveBehaviour.cs",
-		"/C/Users/Devan/Documents/Unity/Projects/Vuforia AR Test/Assets/Script/cube.cs",
-		"/C/Users/Devan/Documents/Unity/Projects/Vuforia AR Test/Assets/CustomText.cs",
-		"/C/Users/Devan/Documents/Unity/Projects/Vuforia AR Test/Assets/Vuforia/Scripts/DefaultTrackableEventHandler.cs",
-		"/C/Users/Devan/Documents/Unity/Projects/Vuforia AR Test/Assets/Vuforia/Scripts/ImageTargetBehaviour.cs",
-		"/C/Users/Devan/Documents/Unity/Projects/Vuforia AR Test/Assets/Vuforia/Scripts/VuforiaBehaviour.cs",
-		"/C/Users/Devan/Documents/Unity/Projects/Vuforia AR Test/Assets/Vuforia/Scripts/DeviceTrackerBehaviour.cs",
-		"/C/Users/Devan/Documents/Unity/Projects/Bump/Assets/Scripts/GameScene/Entity/EntityMovementHandler.cs",
-		"/C/Users/Devan/Documents/Unity/Projects/Bump/Assets/Scripts/GameScene/Entity/AIMovementHandler.cs",
-		"/C/Users/Devan/Documents/Unity/Projects/Bump/Assets/Scripts/GameScene/PlayerController/MovementHandler.cs",
-		"/C/Users/Devan/Documents/Unity/Projects/Vuforia AR Test/Assets/Vuforia/Scripts/TurnOffBehaviour.cs",
-		"/C/Users/Devan/Documents/Unity/Projects/Bump/Assets/Scripts/InputManager/CustomInputManager.cs",
-		"/C/Users/Devan/Documents/Unity/Projects/Bump/Assets/Scripts/GameScene/GameSceneManager.cs",
-		"/C/Users/Devan/Documents/Unity/Projects/Bump/Assets/Scripts/GameScene/Entity/Bumper.cs",
-		"/C/Users/Devan/Documents/Unity/Projects/Bump/Assets/Scripts/GameScene/Instantiator.cs",
-		"/C/Users/Devan/Documents/Unity/Projects/Bump/Assets/Scripts/Logger.cs",
-		"/C/Git/FOPSMobile/FearOfPublicSpeaking5.3.4/Assets/Scripts/ClientScene/SpeechController.cs"
+		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/ButtonEventHandler.cs"
 	],
 	"find":
 	{
-		"height": 42.0
+		"height": 60.0
 	},
 	"find_in_files":
 	{
@@ -782,6 +728,17 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"\n\t",
+			"\t\n",
+			"localScale",
+			"PoolObject",
+			"y",
+			"_position",
+			"gesture",
+			"01f",
+			"palyer",
+			"GenerateEmptyGameObjects",
+			"levelge",
 			"ActivateChild",
 			"OnInventoryUnActive",
 			"AddToQuickItem",
@@ -898,18 +855,7 @@
 			"Wait",
 			"Debug.Loger",
 			"CLIENT_MSG5",
-			"OpenFolderDialog",
-			"WaitAndDisableImage",
-			"ResetCamera",
-			"tab",
-			"COMPLETE",
-			"        \n",
-			"region",
-			"REGION",
-			"MODEL_PATH",
-			"DELETE LIN",
-			"DELETE ",
-			"DELETEB"
+			"OpenFolderDialog"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -937,195 +883,14 @@
 	"groups":
 	[
 		{
-			"selected": 5,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "Assets/Scripts/GameController.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1344,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								561,
-								561
-							]
-						],
-						"settings":
-						{
-							"side_bar_folders_auto_load_folder": 1,
-							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": -0.0,
-						"translation.y": 80.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "Assets/Scripts/Constants.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 692,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								563,
-								563
-							]
-						],
-						"settings":
-						{
-							"side_bar_folders_auto_load_folder": 1,
-							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "Assets/Scripts/Input/GameInput.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1554,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1138,
-								1138
-							]
-						],
-						"settings":
-						{
-							"side_bar_folders_auto_load_folder": 1,
-							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "Assets/Scripts/Entity/Player.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1254,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								445,
-								445
-							]
-						],
-						"settings":
-						{
-							"side_bar_folders_auto_load_folder": 1,
-							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 120.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "/E/Unity/Projects/CSE_Game1/CSE_GAME/Assets/Scripts/GameController.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 10721,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2628,
-								2628
-							]
-						],
-						"settings":
-						{
-							"side_bar_folders_auto_load_folder": 1,
-							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 944.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "/E/Unity/Projects/CSE_Game1/CSE_GAME/Assets/Scripts/Entity/Projectile/ProjectileManager.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 359,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								151,
-								151
-							]
-						],
-						"settings":
-						{
-							"side_bar_folders_auto_load_folder": 1,
-							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 51.0
+		"height": 28.0
 	},
 	"input":
 	{
@@ -1184,23 +949,123 @@
 		"selected_items":
 		[
 			[
-				"con",
-				"Constants.cs"
-			],
-			[
-				"player",
-				"Entity\\Player.cs"
+				"gamecon",
+				"Controllers\\GameController.cs"
 			],
 			[
 				"gameinput",
 				"Input\\GameInput.cs"
 			],
 			[
-				"gamec",
-				"GameController.cs"
+				"camera",
+				"Camera\\CameraController.cs"
+			],
+			[
+				"path",
+				"Entity\\Path\\Path.cs"
+			],
+			[
+				"event",
+				"Event\\EventManager.cs"
+			],
+			[
+				"dumm",
+				"Misc\\Objects\\DummyPath.cs"
+			],
+			[
+				"levelg",
+				"GameScene\\LevelGenerator.cs"
+			],
+			[
+				"pool",
+				"GameScene\\PoolManager.cs"
+			],
+			[
+				"palyer",
+				"Entity\\Player\\Player.cs"
 			],
 			[
 				"game",
+				"Controllers\\GameController.cs"
+			],
+			[
+				"cons",
+				"Constants\\Constants.cs"
+			],
+			[
+				"player",
+				"Entity\\Player\\Player.cs"
+			],
+			[
+				"gam",
+				"Controllers\\GameController.cs"
+			],
+			[
+				"autop",
+				"GameScene\\AutoPlay.cs"
+			],
+			[
+				"con",
+				"Constants\\Constants.cs"
+			],
+			[
+				"const",
+				"Constants\\Constants.cs"
+			],
+			[
+				"button",
+				"UI\\Button\\ButtonEventHandler.cs"
+			],
+			[
+				"auto",
+				"GameScene\\AutoPlay.cs"
+			],
+			[
+				"particle",
+				"Entity\\Particle\\ParticleManager.cs"
+			],
+			[
+				"gridp",
+				"Entity\\Particle\\GridParticle\\GridParticle.cs"
+			],
+			[
+				"grid",
+				"Entity\\Particle\\GridParticle\\GridParticle.cs"
+			],
+			[
+				"level",
+				"GameScene\\LevelGenerator.cs"
+			],
+			[
+				"gamin",
+				"Input\\GameInput.cs"
+			],
+			[
+				"gameinpu",
+				"Input\\GameInput.cs"
+			],
+			[
+				"deebu",
+				"UI\\Debug\\Debug_Member.cs"
+			],
+			[
+				"gamecont",
+				"Controllers\\GameController.cs"
+			],
+			[
+				"canvasma",
+				"UI\\Canvas\\CanvasManager.cs"
+			],
+			[
+				"canvash",
+				"UI\\Canvas\\CanvasHandler.cs"
+			],
+			[
+				"cns",
+				"Constants\\Constants.cs"
+			],
+			[
+				"gamec",
 				"GameController.cs"
 			],
 			[
@@ -1220,10 +1085,6 @@
 				"UI\\Button\\CustomKeyButton.cs"
 			],
 			[
-				"cons",
-				"Constants.cs"
-			],
-			[
 				"ivnet",
 				"UI\\Inventory\\InventoryManager.cs"
 			],
@@ -1234,14 +1095,6 @@
 			[
 				"ga",
 				"GameController.cs"
-			],
-			[
-				"gamecont",
-				"GameController.cs"
-			],
-			[
-				"gamecon",
-				"CSE_GAME1\\Assets\\Scripts\\GameController.cs"
 			],
 			[
 				"messge",
@@ -1284,10 +1137,6 @@
 				"KSU_NETWORK_SOLUTION\\Assets\\Scripts\\Network\\NetworkMessageReceiver.cs"
 			],
 			[
-				"button",
-				"KSU_NETWORK_SOLUTION\\Assets\\Scripts\\UI\\Button\\Button.cs"
-			],
-			[
 				"netowkr",
 				"KSU_NETWORK_SOLUTION\\Assets\\Scripts\\Network\\NetworkMessageSender.cs"
 			],
@@ -1302,10 +1151,6 @@
 			[
 				"entitywa",
 				"AndroidGame\\Assets\\Scripts\\Entity\\Wall.cs"
-			],
-			[
-				"const",
-				"AndroidGame\\Assets\\Scripts\\Constants.cs"
 			],
 			[
 				"toolti",
@@ -1332,20 +1177,12 @@
 				"AndroidGame\\Assets\\Scripts\\AutoPlay.cs"
 			],
 			[
-				"level",
-				"AndroidGame\\Assets\\Scripts\\GameScene\\LevelGenerator.cs"
-			],
-			[
 				"wall",
 				"AndroidGame\\Assets\\Scripts\\Entity\\Wall.cs"
 			],
 			[
 				"wal",
 				"AndroidGame\\Assets\\Resources\\Prefabs\\Wall.prefab"
-			],
-			[
-				"auto",
-				"AndroidGame\\Assets\\Scripts\\AutoPlay.cs"
 			],
 			[
 				"butoon",
@@ -1412,10 +1249,6 @@
 				"UI\\ControllerConfiguration.cs"
 			],
 			[
-				"camera",
-				"Player\\CameraController.cs"
-			],
-			[
 				"smal",
 				"Entity\\SmallProjectile.cs"
 			],
@@ -1462,10 +1295,6 @@
 			[
 				"heal",
 				"UI\\Health.cs"
-			],
-			[
-				"gam",
-				"GameController.cs"
 			],
 			[
 				"enitytm",
@@ -1630,70 +1459,6 @@
 			[
 				"serverpalyer",
 				"ControllerTestScene\\ServerPlayerController.cs"
-			],
-			[
-				"clientnter",
-				"Network\\ClientNetworkManager.cs"
-			],
-			[
-				"serverp",
-				"ControllerTestScene\\ServerPlayerController.cs"
-			],
-			[
-				"slide",
-				"Slideshow\\SlideshowController.cs"
-			],
-			[
-				"maserte",
-				"Network\\MasterMessageType.cs"
-			],
-			[
-				"clientnetwork",
-				"Network\\ClientNetworkManager.cs"
-			],
-			[
-				"speech",
-				"ClientScene\\SpeechController.cs"
-			],
-			[
-				"servernetwo",
-				"Network\\ServerNetworkManager.cs"
-			],
-			[
-				"constants",
-				"Constants.cs"
-			],
-			[
-				"serverplay",
-				"ControllerTestScene\\ServerPlayerController.cs"
-			],
-			[
-				"session",
-				"SessionManager.cs"
-			],
-			[
-				"serverplayerc",
-				"ControllerTestScene\\ServerPlayerController.cs"
-			],
-			[
-				"masterme",
-				"Network\\MasterMessageType.cs"
-			],
-			[
-				"slidesho",
-				"Slideshow\\SlideshowController.cs"
-			],
-			[
-				"videoplayer",
-				"ControlScene\\VideoPlayer.cs"
-			],
-			[
-				"slideshowc",
-				"Slideshow\\SlideshowController.cs"
-			],
-			[
-				"slideshow",
-				"Slideshow\\SlideshowController.cs"
 			]
 		],
 		"width": 0.0
