@@ -15,6 +15,7 @@ TagManager:
   - Particle/GridParticle
   - Particles
   - Manager/ParticleManager
+  - Manager/CollectibleController
   layers:
   - Default
   - TransparentFX

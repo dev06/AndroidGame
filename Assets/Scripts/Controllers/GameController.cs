@@ -12,6 +12,7 @@ public class GameController : MonoBehaviour {
 
 	public LevelGenerator levelGenerator;
 	public PoolManager poolManager;
+	public CollectibleController collectibleController;
 	public GameInput gameInput;
 	public Direction facingDirection;
 
@@ -42,6 +43,8 @@ public class GameController : MonoBehaviour {
 		poolManager = GetComponent<PoolManager>();
 		gameInput = GetComponent<GameInput>();
 		canvasManager = GameObject.FindWithTag("Manager/CanvasManager").GetComponent<CanvasManager>();
+		collectibleController = GameObject.FindWithTag("Manager/CollectibleController").GetComponent<CollectibleController>();
+
 		gameInput.gameController = this;
 		gameState = GameState.DEBUG;
 
@@ -57,7 +60,7 @@ public class GameController : MonoBehaviour {
 			gameInput.RegisterSwipe();
 			if (Input.GetMouseButtonDown(1))
 			{
-				SpawnItem();
+				collectibleController.SpawnCollectible(20);
 			}
 		}
 	}
@@ -98,10 +101,7 @@ public class GameController : MonoBehaviour {
 		_item.transform.localScale = scale;
 		Vector3 _itemPos =  new Vector3(_pathWidth + _item.transform.localScale.x / 2.0f * Constants.PixelToUnit, Random.Range(0f, .32f), 0);
 		_item.transform.localPosition = _itemPos;
-
 	}
-
-
 }
 
 public enum Direction

@@ -51,21 +51,23 @@ public class Player : MonoBehaviour {
 						StartCoroutine("Restart");
 					}
 				}
-				if (_gameController.facingDirection == Direction.NORTH || _gameController.facingDirection == Direction.SOUTH) {
-					_particleEffect.position = new Vector3(_currentWall.transform.position.x, 0 , 0);
-				} else {
-					_particleEffect.position = new Vector3(0, _currentWall.transform.position.y, 0);
+
+				if (_gameController.dead == false)
+				{
+					if (_gameController.facingDirection == Direction.NORTH || _gameController.facingDirection == Direction.SOUTH) {
+						_particleEffect.position = new Vector3(_currentWall.transform.position.x, 0 , 0);
+					} else {
+						_particleEffect.position = new Vector3(0, _currentWall.transform.position.y, 0);
+					}
+				} else
+				{
+					_particleEffect.gameObject.SetActive(false);
 				}
 			}
 		}
 		if (_gameController.autoPlay == false)
 		{
 			transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 0, zRotation), Time.deltaTime * 20.4f);
-		} else {
-			if (_gameController.wallObjects.transform.childCount > 0)
-			{
-
-			}
 		}
 
 		if (_gameController.autoPlay)
@@ -104,16 +106,13 @@ public class Player : MonoBehaviour {
 	{
 		if (col.gameObject.tag == "Path")
 		{
-			//_sprite.color = new Color(0, 1, 1, 1);
 			_hits++;
-
 		}
 
 
 		start = true;
 		colll = col;
 
-		//	Debug.Log(_gameController.facingDirection);
 
 
 	}
