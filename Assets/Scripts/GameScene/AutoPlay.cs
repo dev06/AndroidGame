@@ -7,50 +7,49 @@ public class AutoPlay : MonoBehaviour {
 	private GameController _gameController;
 	private Player _player;
 	private static int _directionIndex;
+	private Transform _particleEffect;
+	private GameObject _currentObject;
+
 	void Start ()
 	{
 		_gameController = GameObject.FindWithTag("GameController").GetComponent<GameController>();
 		_player = transform.parent.GetComponent<Player>();
+		_particleEffect = _player.gameObject.transform.FindChild("ParticleEffect");
 	}
 
 	void Update ()
 	{
-		// if (autoPlayID == AutoPlayID.Colliders)
-		// {
-		// 	if (_gameController.autoPlay)
-		// 	{
-		// 		if (_directionIndex < 0)
-		// 		{
-		// 			_directionIndex = Constants.directions.Length - 1;
-		// 		} else if (_directionIndex > Constants.directions.Length - 1)
-		// 		{
-		// 			_directionIndex = 0;
-		// 		}
 
-		// 		_gameController.facingDirection = Constants.directions[_directionIndex];
-		// 	}
-		// }
+		if (_gameController.dead == false)
+		{
+			if (_currentObject != null)
+			{
+				if (_gameController.facingDirection == Direction.NORTH || _gameController.facingDirection == Direction.SOUTH) {
+					_particleEffect.position = new Vector3(_currentObject.transform.position.x, 0 , 0);
+				} else {
+					_particleEffect.position = new Vector3(0, _currentObject.transform.position.y, 0);
+				}
+			}
+
+			_particleEffect.GetChild(0).gameObject.SetActive(_currentObject != null);
+
+		} else
+		{
+			_particleEffect.gameObject.SetActive(false);
+		}
+
 	}
 
-	void OnTriggerEnter2D(Collider2D col)
+	void OnTriggerStay2D(Collider2D col)
 	{
-		// if (autoPlayID == AutoPlayID.Colliders)
-		// {
-		// 	if (_gameController.autoPlay)
-		// 	{
-		// 		if (col.gameObject.tag == "Path")
-		// 		{
-		// 			if (gameObject.name == "Right" )
-		// 			{
-		// 				_directionIndex =  _directionIndex +  1 ;
-		// 			} else if (gameObject.name == "Left")
-		// 			{
-		// 				_directionIndex =  _directionIndex -  1 ;
+		if (autoPlayID == AutoPlayID.Colliders)
+		{
+			if (col.gameObject.tag == "Path")
+			{
+				_currentObject = col.gameObject;
 
-		// 			}
-		// 		}
-		// 	}
-		// }
+			}
+		}
 	}
 
 	void OnDisable()
