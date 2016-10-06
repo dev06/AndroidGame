@@ -43,7 +43,7 @@ public class GameResources
 	public static GameObject Path_resource = Resources.Load("Prefabs/prefabs_path/path") as GameObject;
 	public static GameObject Player_resource = Resources.Load("Prefabs/prefabs_character/character") as GameObject;
 	public static GameObject GridParticle_resource = Resources.Load("Prefabs/prefabs_particles/prefabs_grid_particle/GridParticle") as GameObject;
-	public static GameObject Item_resource = Resources.Load("Prefabs/prefabs_item/Item") as GameObject;
+	public static GameObject Square_resource = Resources.Load("Prefabs/prefabs_item/Square") as GameObject;
 
 
 }

@@ -15,7 +15,7 @@ public class CollectibleController : MonoBehaviour {
 		float yOffset = 0 ;
 		for (int i = 0; i < amount; i++)
 		{
-			GameObject _item = Instantiate(GameResources.Item_resource, Vector3.zero, Quaternion.identity) as GameObject;
+			GameObject _item = Instantiate(GameResources.Square_resource, Vector3.zero, Quaternion.identity) as GameObject;
 			Transform _lastPath = _gameController.wallObjects.transform.GetChild(_gameController.wallObjects.transform.childCount - 1).transform.GetChild(0).transform;
 			_item.transform.parent = _lastPath.transform.parent.transform;
 			float _pathWidth = _lastPath.parent.transform.localScale.x;

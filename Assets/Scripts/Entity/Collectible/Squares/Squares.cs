@@ -9,7 +9,14 @@ public class Squares : Collectible {
 	}
 
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+	{
 
+	}
+
+
+	void OnTriggerEnter2D(Collider2D col)
+	{
+		Destroy(gameObject);
 	}
 }

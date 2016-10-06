@@ -92,7 +92,7 @@ public class GameController : MonoBehaviour {
 
 	public void SpawnItem()
 	{
-		GameObject _item = Instantiate(GameResources.Item_resource, Vector3.zero, Quaternion.identity) as GameObject;
+		GameObject _item = Instantiate(GameResources.Square_resource, Vector3.zero, Quaternion.identity) as GameObject;
 		Transform _lastPath = wallObjects.transform.GetChild(wallObjects.transform.childCount - 1).transform.GetChild(0).transform;
 		_item.transform.parent = _lastPath.transform.parent.transform;
 		float _pathWidth = _lastPath.parent.transform.localScale.x;
