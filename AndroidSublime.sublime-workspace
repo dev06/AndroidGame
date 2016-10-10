@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"_p",
+				"_particleEffect"
+			],
+			[
 				"_j",
 				"_jitterRadius"
 			],
@@ -77,10 +81,6 @@
 			],
 			[
 				"_par",
-				"_particleList"
-			],
-			[
-				"_p",
 				"_particleList"
 			],
 			[
@@ -569,17 +569,21 @@
 	],
 	"file_history":
 	[
-		"/E/Unity/Projects/AndroidGame/Assets/Scripts/Controllers/GameController.cs",
 		"/E/Unity/Projects/AndroidGame/Assets/Scripts/Entity/Player/Player.cs",
+		"/E/Unity/Projects/AndroidGame/Assets/Scripts/GameScene/AutoPlay.cs",
+		"/E/Unity/Projects/AndroidGame/Assets/Scripts/Controllers/GameController.cs",
+		"/E/Unity/Projects/AndroidGame/Assets/Scripts/Controllers/CollectibleController.cs",
+		"/E/Unity/Projects/AndroidGame/Assets/Scripts/Constants/Constants.cs",
+		"/E/Unity/Projects/AndroidGame/Assets/Scripts/GameScene/PoolManager.cs",
+		"/E/Unity/Projects/AndroidGame/Assets/Scripts/Entity/Collectible/Collectible.cs",
+		"/E/Unity/Projects/AndroidGame/Assets/Scripts/Entity/Collectible/Squares/Squares.cs",
+		"/E/Unity/Projects/AudioSpectrum/Assets/Scripts/Spectrum.cs",
 		"/E/Unity/Projects/AndroidGame/Assets/Scripts/Input/GameInput.cs",
 		"/E/Unity/Projects/AndroidGame/Assets/Scripts/Entity/Path/Path.cs",
 		"/E/Unity/Projects/AndroidGame/Assets/Scripts/Camera/CameraController.cs",
 		"/E/Unity/Projects/AndroidGame/Assets/Scripts/Event/EventManager.cs",
 		"/E/Unity/Projects/AndroidGame/Assets/Scripts/GameScene/LevelGenerator.cs",
-		"/E/Unity/Projects/AndroidGame/Assets/Scripts/GameScene/PoolManager.cs",
 		"/E/Unity/Projects/AndroidGame/Assets/Scripts/Misc/Objects/DummyPath.cs",
-		"/E/Unity/Projects/AndroidGame/Assets/Scripts/Constants/Constants.cs",
-		"/E/Unity/Projects/AndroidGame/Assets/Scripts/GameScene/AutoPlay.cs",
 		"/E/Unity/Projects/AndroidGame/Assets/Scripts/dummy.cs",
 		"/E/Unity/Projects/AndroidGame/Assets/Scripts/Misc/Objects/dummy.cs",
 		"/C/Users/Devan/Documents/The Last Tree/The Last Tree_Alpha1.0_Pre-Alpha 1.0/Assets/Scripts/Player/PlayerBase.cs",
@@ -692,15 +696,11 @@
 		"/C/Users/Devan/Documents/UnityProjects/test/Assets/A.cs",
 		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/Button/RetryButton.cs",
 		"/C/Users/Devan/Documents/UnityProjects/test/Assets/VayLaserPack/Scripts/Laser Scripts/ParticleManager.cs",
-		"/C/Users/Devan/Documents/UnityProjects/test/Assets/VayLaserPack/Scripts/Laser Scripts/LaserParticleManager.cs",
-		"/C/Users/Devan/Downloads/Textbook.pdf",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Particles/Effect.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/ControllerConfiguration.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/ButtonEventHandler.cs"
+		"/C/Users/Devan/Documents/UnityProjects/test/Assets/VayLaserPack/Scripts/Laser Scripts/LaserParticleManager.cs"
 	],
 	"find":
 	{
-		"height": 60.0
+		"height": 42.0
 	},
 	"find_in_files":
 	{
@@ -728,6 +728,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"Item_resource",
+			"particle",
 			"\n\t",
 			"\t\n",
 			"localScale",
@@ -853,9 +855,7 @@
 			"TurnOffButton",
 			"OnValueChange",
 			"Wait",
-			"Debug.Loger",
-			"CLIENT_MSG5",
-			"OpenFolderDialog"
+			"Debug.Loger"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -863,6 +863,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"Square_resource",
 			"intValue",
 			"_inventoryContainer_prefab",
 			" ",
@@ -949,8 +950,28 @@
 		"selected_items":
 		[
 			[
+				"cons",
+				"Constants\\Constants.cs"
+			],
+			[
+				"consta",
+				"Constants\\Constants.cs"
+			],
+			[
+				"poolm",
+				"GameScene\\PoolManager.cs"
+			],
+			[
+				"squ",
+				"Entity\\Collectible\\Squares\\Squares.cs"
+			],
+			[
 				"gamecon",
 				"Controllers\\GameController.cs"
+			],
+			[
+				"player",
+				"Entity\\Player\\Player.cs"
 			],
 			[
 				"gameinput",
@@ -987,14 +1008,6 @@
 			[
 				"game",
 				"Controllers\\GameController.cs"
-			],
-			[
-				"cons",
-				"Constants\\Constants.cs"
-			],
-			[
-				"player",
-				"Entity\\Player\\Player.cs"
 			],
 			[
 				"gam",
@@ -1357,10 +1370,6 @@
 				"ControllerTestScene\\ServerPlayerController.cs"
 			],
 			[
-				"consta",
-				"Constants.cs"
-			],
-			[
 				"speechcontroller",
 				"ClientScene\\SpeechController.cs"
 			],
@@ -1451,14 +1460,6 @@
 			[
 				"servernet",
 				"Network\\ServerNetworkManager.cs"
-			],
-			[
-				"clientsce",
-				"ClientScene\\ClientSceneManager.cs"
-			],
-			[
-				"serverpalyer",
-				"ControllerTestScene\\ServerPlayerController.cs"
 			]
 		],
 		"width": 0.0
@@ -1471,7 +1472,7 @@
 		[
 			[
 				"",
-				"E:\\Unity\\KSU\\NetworkingSolution\\KSU_NETWORK_SOLUTION\\KSU_SUBLIME.sublime-project"
+				"E:\\Unity\\Projects\\CSE_Game1\\CSE_GAME\\CSE_SUBLIME.sublime-workspace"
 			],
 			[
 				"android",
@@ -1512,7 +1513,7 @@
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 271.0,
 	"status_bar_visible": false,
 	"template_settings":
