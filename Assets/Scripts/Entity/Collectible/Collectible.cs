@@ -7,6 +7,11 @@ public class Collectible : MonoBehaviour {
 
 	void Start ()
 	{
+		Init();
+	}
+
+	protected void Init()
+	{
 		_gameController = GameObject.FindWithTag("GameController").GetComponent<GameController>();
 	}
 

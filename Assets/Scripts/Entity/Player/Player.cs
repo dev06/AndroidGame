@@ -16,8 +16,10 @@ public class Player : MonoBehaviour {
 	private Transform _particleEffect;
 	private int _hits;
 	private bool _swiped;
-	private float bb;
 	private float vel;
+	private float _deathThresHoldTimer;
+	private bool _startDeathTimer;
+
 
 	void Start ()
 	{
@@ -30,25 +32,29 @@ public class Player : MonoBehaviour {
 
 	void Update ()
 	{
+		CheckIfDead();
 
+		if (_gameController.autoPlay == false)
+		{
+			transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 0, zRotation), Time.deltaTime * 20.4f);
+		}
+
+	}
+
+	private void CheckIfDead()
+	{
 		if (_gameController.gameState == GameState.GAME)
 		{
 			if (_currentWall != null)
 			{
 				if (_hits <= 0)
 				{
-					_sprite.color = new Color(1, 0, 0, 1);
+
 					if (_gameController.endGameUponDeath)
 					{
-						if (EventManager.OnDeath != null)
-						{
-							EventManager.OnDeath();
 
-						}
+						_startDeathTimer = true;
 
-						_gameController.dead = true;
-
-						StartCoroutine("Restart");
 					}
 				}
 
@@ -65,40 +71,32 @@ public class Player : MonoBehaviour {
 				}
 			}
 		}
-		if (_gameController.autoPlay == false)
+
+
+		if (_startDeathTimer)
 		{
-			transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 0, zRotation), Time.deltaTime * 20.4f);
+			_deathThresHoldTimer += Time.deltaTime;
 		}
 
-		if (_gameController.autoPlay)
+		if (_deathThresHoldTimer > .1f)
 		{
-			if (start)
-			{
-				timer += Time.deltaTime;
-			}
+			_sprite.color = new Color(1, 0, 0, 1);
+			Die();
+			_startDeathTimer = false;
+			_deathThresHoldTimer = 0;
+		}
+	}
 
-			if (timer > .012f)
-			{
-				if (colll.gameObject  != null)
-				{
-					Turn(colll);
-					timer = 0;
-					start = false;
-				}
-			}
+	private void Die()
+	{
+		if (EventManager.OnDeath != null)
+		{
+			EventManager.OnDeath();
 
-			if (index < 0)
-			{
-				index = Constants.directions.Length - 1;
-			} else if (index > Constants.directions.Length - 1)
-			{
-				index = 0;
-			}
-
-			_gameController.facingDirection = Constants.directions[index];
 		}
 
-
+		_gameController.dead = true;
+		StartCoroutine("Restart");
 	}
 
 
@@ -107,67 +105,8 @@ public class Player : MonoBehaviour {
 		if (col.gameObject.tag == "Path")
 		{
 			_hits++;
-		}
-
-
-		start = true;
-		colll = col;
-
-
-
-	}
-	int index;
-	bool start;
-	float timer;
-	Collider2D colll;
-
-	void Turn(Collider2D col)
-	{
-		Transform _nextWall = _gameController.wallObjects.transform.GetChild(1).transform;
-		if (_nextWall.gameObject == col.gameObject)
-		{
-			transform.rotation = _nextWall.transform.rotation;
-			float _nextRot = _nextWall.eulerAngles.z;
-			float _currRot = _currentWall.transform.eulerAngles.z;
-
-			if (_currRot == 0)
-			{
-				if (_nextRot == 90)
-				{
-					index--;
-				} else if (_nextRot == 270)
-				{
-					index++;
-				}
-			} else if (_currRot == 90)
-			{
-				if (_nextRot == 180)
-				{
-					index--;
-				} else if (_nextRot == 0)
-				{
-					index++;
-				}
-			}
-			else if (_currRot == 270)
-			{
-				if (_nextRot == 180)
-				{
-					index++;
-				} else if (_nextRot == 0)
-				{
-					index--;
-				}
-			} else if (_currRot == 180)
-			{
-				if (_nextRot == 270)
-				{
-					index--;
-				} else if (_nextRot == 90)
-				{
-					index++;
-				}
-			}
+			_startDeathTimer = false;
+			_deathThresHoldTimer = 0;
 		}
 	}
 
@@ -178,10 +117,20 @@ public class Player : MonoBehaviour {
 		{
 			_exitObject = col.gameObject;
 			_hits--;
-			if (_exitObject == _gameController.wallObjects.transform.GetChild(0).gameObject)
-			{
 
-				_gameController.poolManager.PoolObject(col.gameObject, _gameController.wallObjects.transform.GetChild(_gameController.wallObjects.transform.childCount - 1).gameObject);
+			if (_gameController.poolManager.pathReserve == null)
+			{
+				if (_exitObject == _gameController.wallObjects.transform.GetChild(0).gameObject)
+				{
+					_gameController.poolManager.pathReserve = col.gameObject;
+				}
+			} else
+			{
+				if (_exitObject == _gameController.wallObjects.transform.GetChild(1).gameObject)
+				{
+					_gameController.poolManager.PoolPath(_gameController.poolManager.pathReserve, _gameController.wallObjects.transform.GetChild(_gameController.wallObjects.transform.childCount - 1).gameObject);
+					_gameController.poolManager.pathReserve = col.gameObject;
+				}
 			}
 		}
 	}
@@ -198,7 +147,6 @@ public class Player : MonoBehaviour {
 	{
 		_zRotationAmp = 10.0f;
 		_bob = 0;
-		bb = 0;
 	}
 
 	IEnumerator Restart()

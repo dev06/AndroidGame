@@ -58,10 +58,7 @@ public class GameController : MonoBehaviour {
 		{
 			UpdateFacingDirection();
 			gameInput.RegisterSwipe();
-			if (Input.GetMouseButtonDown(1))
-			{
-				collectibleController.SpawnCollectible(20);
-			}
+
 		}
 	}
 

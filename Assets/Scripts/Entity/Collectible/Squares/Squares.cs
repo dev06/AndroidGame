@@ -5,18 +5,12 @@ public class Squares : Collectible {
 
 	// Use this for initialization
 	void Start () {
-
+		Init();
 	}
 
 	// Update is called once per frame
 	void Update ()
 	{
 
-	}
-
-
-	void OnTriggerEnter2D(Collider2D col)
-	{
-		Destroy(gameObject);
 	}
 }

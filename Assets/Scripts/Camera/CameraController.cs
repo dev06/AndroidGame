@@ -17,7 +17,7 @@ public class CameraController : MonoBehaviour {
 		_gameController = GameObject.FindWithTag("GameController").GetComponent<GameController>();
 		_jitterVel = Vector3.zero;
 		_camInitLocalPos = transform.localPosition;
-		_jitterRadius = 0.05f;
+		_jitterRadius = 0.035f;
 		EventManager.OnDeath += OnPlayerDeath;
 	}
 
