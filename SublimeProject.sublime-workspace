@@ -4,56 +4,100 @@
 		"selected_items":
 		[
 			[
-				"_path",
-				"_pathHeight"
-			],
-			[
-				"Event",
-				"EventManager.OnDoubleTap"
-			],
-			[
-				"Evne",
-				"EventManager.OnDoubleTap"
-			],
-			[
-				"_doub",
-				"_doubleTapped"
-			],
-			[
 				"Game",
-				"GameGesture"
+				"GameObject"
 			],
 			[
-				"_fi",
-				"_difference"
+				"GAme",
+				"GameObject"
 			],
 			[
-				"Ges",
-				"Gesture.LEFT_SWIPE"
+				"_hover",
+				"_hoverContainerText"
 			],
 			[
-				"GEs",
-				"Gesture.RIGHT_SWIPE"
+				"Hover",
+				"HoverContainer"
 			],
 			[
-				"_ap",
-				"_pathAnimation"
+				"nav",
+				"navMesh_wayPoints.Count"
 			],
 			[
-				"Time",
-				"Time.deltaTime"
+				"NavMes",
+				"NavMeshController"
 			],
 			[
-				"_wall",
-				"_wallSpeed"
+				"_leanfor",
+				"_leanForwrdAcc"
 			],
 			[
-				"_swi",
-				"_swipeCounter"
+				"_lean",
+				"_leanStrafeAcc"
 			],
 			[
-				"_di",
-				"_directionIndex"
+				"_str",
+				"_strafeInput"
+			],
+			[
+				"_leanst",
+				"_leanStrafeVel"
+			],
+			[
+				"_lea",
+				"_leanStrafeAcc"
+			],
+			[
+				"_lookho",
+				"_lookHorizontalVel"
+			],
+			[
+				"CameraLook",
+				"CameraLookSpeed"
+			],
+			[
+				"_look",
+				"_lookHorizontalInput"
+			],
+			[
+				"CameraLoo",
+				"CameraLookSpeed"
+			],
+			[
+				"_lo",
+				"_lookHorizontalInput"
+			],
+			[
+				"Quater",
+				"Quaternion"
+			],
+			[
+				"_straf",
+				"_strafeVel"
+			],
+			[
+				"Particel",
+				"Particle"
+			],
+			[
+				"Resour",
+				"Resources.Load\t*(path)"
+			],
+			[
+				"EventManager",
+				"EventManager.OnQuickItemChange"
+			],
+			[
+				"quick",
+				"quickItemSlots"
+			],
+			[
+				"_bul",
+				"_blueBullet"
+			],
+			[
+				"numpl",
+				"numPlayers"
 			],
 			[
 				"Getc",
@@ -148,10 +192,6 @@
 				"networkMessage"
 			],
 			[
-				"quick",
-				"quickItemSlots"
-			],
-			[
 				"isO",
 				"isOfType"
 			],
@@ -226,10 +266,6 @@
 			[
 				"_sloim",
 				"_slotImage"
-			],
-			[
-				"Hover",
-				"HoverSprite"
 			],
 			[
 				"_slo",
@@ -396,6 +432,10 @@
 				"_rotationFreqNumber"
 			],
 			[
+				"_wall",
+				"_wallObjects.transform"
+			],
+			[
 				"gameObj",
 				"gameObject.name"
 			],
@@ -474,46 +514,6 @@
 			[
 				"InputButton",
 				"InputButton.Left"
-			],
-			[
-				"_re",
-				"_rectTransform.localScale"
-			],
-			[
-				"_pro",
-				"_profileTwoTransform"
-			],
-			[
-				"Camera",
-				"CameraMoveSpeed"
-			],
-			[
-				"Transform",
-				"TransformDirection"
-			],
-			[
-				"tranform",
-				"transform.forward"
-			],
-			[
-				"tra",
-				"transform"
-			],
-			[
-				"_fil",
-				"_fillImage.color"
-			],
-			[
-				"_he",
-				"_HealthText"
-			],
-			[
-				"_hea",
-				"_heathQuadMaterial"
-			],
-			[
-				"GetC",
-				"GetComponent"
 			]
 		]
 	},
@@ -563,76 +563,106 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
-	"expanded_folders":
-	[
-		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts"
-	],
 	"file_history":
 	[
-		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Controllers/GameController.cs",
-		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Entity/Player/Player.cs",
-		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/GameScene/AutoPlay.cs",
-		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/GameController.cs",
-		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Camera/CameraController.cs",
-		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Input/GameInput.cs",
-		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Event/EventManager.cs",
-		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/GameController.cs",
-		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Entity/Path/Path.cs",
-		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/Network/GameNetworkManager.cs",
-		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/GameScene/PoolManager.cs",
-		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Constants/Constants.cs",
-		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/GameScene/LevelGenerator.cs",
-		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Constants.cs",
-		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Animation/G_Animation.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/Container/ContainerController.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/ControllerConfiguration.cs",
-		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Standard Assets/Effects/ImageEffects/Scripts/ColorCorrectionRamp.cs",
-		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Standard Assets/Effects/ImageEffects/Shaders/_BloomAndFlares/Blend.shader",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Player/CameraController.cs",
-		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Entity/Wall.cs",
-		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Entity/Player.cs",
-		"/C/Program Files (x86)/Steam/steamapps/common/Unturned/Bundles/Animals/Reindeer/Reindeer.dat",
-		"/C/Program Files (x86)/Steam/steamapps/common/Unturned/Bundles/Animals/Wolf/Wolf.dat",
-		"/C/Program Files (x86)/Steam/steamapps/common/Unturned/Bundles/Animals/Wolf/English.dat",
-		"/C/Program Files (x86)/Steam/steamapps/common/Unturned/Bundles/Effects/General/Firemode/Firemode.dat",
-		"/C/Program Files (x86)/Steam/steamapps/common/Unturned/Bundles/Effects/Explosions/Bomb_2/Bomb_2.dat",
-		"/C/Program Files (x86)/Steam/steamapps/common/Unturned/Bundles/Effects/Explosions/Bomb_1/Bomb_1.dat",
-		"/C/Program Files (x86)/Steam/steamapps/common/Unturned/Bundles/Effects/Explosions/Bomb_0/Bomb_0.dat",
-		"/C/Program Files (x86)/Steam/steamapps/common/Unturned/Bundles/Objects/Small/Furniture/Candle_0/English.dat",
-		"/C/Program Files (x86)/Steam/steamapps/common/Unturned/Bundles/Objects/Small/Furniture/Candle_0/Candle_0.dat",
-		"/C/Program Files (x86)/Steam/steamapps/common/Unturned/Bundles/Items/Barrels/Ranger_Suppressor/Ranger_Suppressor.dat",
-		"/C/Program Files (x86)/Steam/steamapps/common/Unturned/Bundles/Items/Barrels/Military_Suppressor/Military_Suppressor.dat",
-		"/C/Program Files (x86)/Steam/steamapps/common/Unturned/Bundles/Items/Barrels/Military_Suppressor/English.dat",
-		"/C/Program Files (x86)/Steam/steamapps/common/Unturned/Bundles/Items/Barrels/Bow_Barrel/Bow_Barrel.dat",
-		"/C/Program Files (x86)/Steam/steamapps/common/Unturned/Bundles/Items/Barrels/Bow_Barrel/English.dat",
-		"/C/Program Files (x86)/Steam/steamapps/common/Cities_Skylines/Files/Mods/UnlockAll/Source/UnlockAll.cs",
-		"/C/Program Files (x86)/Steam/steamapps/common/Cities_Skylines/Files/Mods/UnlimitedMoney/Source/UnlimitedMoney.cs",
-		"/C/Program Files (x86)/Steam/steamapps/common/Cities_Skylines/Files/Mods/NewMod/Source/NewMod.cs",
-		"/C/Program Files (x86)/Steam/steamapps/common/Cities_Skylines/Files/Mods/HardMode/Source/HardMode.cs",
-		"/C/Program Files (x86)/Steam/steamapps/common/Unturned/Worlds/Singleplayer_0/Players/76561198080064841_0/Tutorial/Player/Anim.dat",
-		"/C/Program Files (x86)/Steam/steamapps/common/Unturned/Extras/Destruction/Environment/Flags.dat",
-		"/C/Program Files (x86)/Steam/steamapps/common/Unturned/Bundles/Objects/Large/Roads/Bridge_Line_0/Bridge_Line_0.dat",
-		"/C/Program Files (x86)/Steam/steamapps/common/Unturned/Bundles/Objects/Large/Roads/Bridge_Line_0/English.dat",
-		"/C/Program Files (x86)/Steam/steamapps/common/Unturned/Maps/Russia/Spawns/Animals.dat",
-		"/C/Program Files (x86)/Steam/steamapps/common/Unturned/Maps/Russia/Spawns/Jars.dat",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/CSE_SUBLIME.sublime-project",
+		"/D/UnityProjects/Projects/App_Scripting/Assets/Scripts/GameController.cs",
+		"/D/UnityProjects/Projects/App_Scripting/Assets/Scripts/Entity/Buff/BuffManager.cs",
+		"/D/UnityProjects/Projects/App_Scripting/Assets/Scripts/Entity/Buff/ProjectilePenetration/ProjectilePenetration.cs",
+		"/D/UnityProjects/Projects/AndroidGame/Assets/Scripts/Entity/Collectible/Squares/Squares.cs",
+		"/D/UnityProjects/Projects/App_Scripting/Assets/Scripts/Constants.cs",
+		"/D/UnityProjects/Projects/App_Scripting/Assets/Scripts/Entity/EntityItem.cs",
+		"/D/UnityProjects/Projects/App_Scripting/Assets/Scripts/UI/Inventory/Item.cs",
+		"/D/UnityProjects/Projects/App_Scripting/Assets/Scripts/Entity/Buff/ImmortalityBuff/ImmortalityBuff.cs",
+		"/D/UnityProjects/Projects/App_Scripting/Assets/Scripts/Entity/Buff/BlastBuff/BlastBuff.cs",
+		"/D/UnityProjects/Projects/App_Scripting/Assets/Scripts/Entity/Buff/SpeedBuff/SpeedBuff.cs",
+		"/D/UnityProjects/Projects/App_Scripting/Assets/Scripts/UI/Inventory/InventorySlot.cs",
+		"/D/UnityProjects/Projects/App_Scripting/Assets/Scripts/UI/Inventory/InventoryManager.cs",
+		"/D/UnityProjects/Projects/App_Scripting/Assets/Scripts/Particles/Effect.cs",
+		"/D/UnityProjects/Projects/App_Scripting/Assets/Scripts/Entity/Buff/TeleportBuff/TeleportBuff.cs",
 		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/GameController.cs",
-		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/Network/OverridenNetworkDiscovery.cs",
+		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Entity/EntityItem.cs",
+		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Entity/Projectile/ProjectileManager.cs",
+		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Entity/Buff/BuffManager.cs",
+		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Entity/Buff/SpeedBuff/SpeedBuff.cs",
+		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Constants.cs",
+		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Entity/Buff/Buff.cs",
+		"/C/Users/Devan/Documents/UnityProjects/MyoArmBand/Assets/Myo Samples/Scripts/ColorBoxByPose.cs",
+		"/C/Program Files (x86)/Steam/steamapps/common/Unturned/Extras/Destruction/English.dat",
+		"/C/Program Files (x86)/Steam/steamapps/common/Unturned/Extras/Destruction/Editor/Camera.dat",
+		"/C/Program Files (x86)/Steam/steamapps/common/Unturned/Bundles/NPCs/Vendors/Invention_Store/English.dat",
+		"/C/Program Files (x86)/Steam/steamapps/common/Unturned/Bundles/NPCs/Dialogues/Chief/Chief_Police_Doughnuts_Accepted/English.dat",
+		"/C/Program Files (x86)/Steam/steamapps/common/Unturned/Bundles/NPCs/Dialogues/Chief/Chief_Secret/Asset.dat",
+		"/C/Program Files (x86)/Steam/steamapps/common/Unturned/Bundles/NPCs/Dialogues/Chief/Chief_Secret/English.dat",
+		"/C/Program Files (x86)/Steam/steamapps/common/Unturned/Bundles/NPCs/Characters/Chef_Sous/Asset.dat",
+		"/C/Program Files (x86)/Steam/steamapps/common/Unturned/Bundles/NPCs/Characters/Chef_Sous/English.dat",
+		"/C/Program Files (x86)/Steam/steamapps/common/Unturned/Bundles/Vehicles/Humvee_Desert/Humvee_Desert.dat",
+		"/C/Program Files (x86)/Steam/steamapps/common/Unturned/Bundles/Vehicles/Sedan_Green/English.dat",
+		"/C/Program Files (x86)/Steam/steamapps/common/Unturned/Bundles/Vehicles/Sedan_Green/Sedan_Green.dat",
+		"/C/Program Files (x86)/Steam/steamapps/common/Unturned/Worlds/Singleplayer_0/Players/76561198080064841_0/Yukon/Player/Life.dat",
+		"/C/Program Files (x86)/Steam/steamapps/common/Unturned/Worlds/Singleplayer_0/Players/76561198080064841_0/Yukon/Player/Skills.dat",
+		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Entity/Projectile/Projectile.cs",
+		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Player/CameraController.cs",
+		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Entity/Buff/SpeedBuff.cs",
+		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/Inventory/Item.cs",
+		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/Button/MenuButton.cs",
+		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/ButtonEventHandler.cs",
+		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/Inventory/InventoryManager.cs",
+		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/Entity/NetworkScale.cs",
+		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Entity/Friendly/Droid.cs",
+		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Entity/Enemy/enemy_one/EnemyOne.cs",
+		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingExample/Assets/Player.cs",
 		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/UI/Button/ConnectionButton.cs",
+		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Controller/NavMesh/NavMeshController.cs",
+		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Entity/Mob.cs",
+		"/E/Unity/Projects/CSE_Game1/CSE_GAME/Assets/Scripts/GameController.cs",
+		"/E/Unity/Projects/CSE_Game1/CSE_GAME/Assets/Scripts/Entity/Projectile/ProjectileManager.cs",
+		"/E/Unity/Projects/CSE_Game1/CSE_GAME/Assets/Scripts/Entity/Enemy/enemy_one/EnemyOne.cs",
+		"/E/Unity/Projects/CSE_Game1/CSE_GAME/Assets/Scripts/Entity/Mob.cs",
+		"/E/Unity/Projects/CSE_Game1/CSE_GAME/Assets/Scripts/Player/CameraController.cs",
+		"/E/Unity/Projects/CSE_Game1/CSE_GAME/Assets/Scripts/Player/PlayerController.cs",
+		"/E/Unity/Projects/CSE_Game1/CSE_GAME/Assets/Scripts/UI/Inventory/Item.cs",
+		"/E/Unity/Projects/CSE_Game1/CSE_GAME/Assets/Scripts/Entity/EntityItem.cs",
+		"/E/Unity/Projects/CSE_Game1/CSE_GAME/Assets/Scripts/UI/Inventory/InventorySlot.cs",
+		"/E/Unity/Projects/CSE_Game1/CSE_GAME/Assets/VayLaserPack/Scripts/Laser Scripts/ParticleManager.cs",
+		"/E/Unity/Projects/CSE_Game1/CSE_GAME/Assets/VayLaserPack/Scripts/Laser Scripts/LaserParticleManager.cs",
+		"/E/Unity/Projects/CSE_Game1/CSE_GAME/Assets/Scripts/Entity/Bot.cs",
+		"/E/Unity/Projects/CSE_Game1/CSE_GAME/Assets/Scripts/UI/Container/Container.cs",
+		"/E/Unity/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/GameController.cs",
+		"/E/Unity/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/Network/NetworkMessageSender.cs",
+		"/E/Unity/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/Network/NetworkMessageReceiver.cs",
+		"/E/Unity/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/Network/NetworkConnectionManager.cs",
+		"/E/Unity/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/GameScene/GameSceneController.cs",
+		"/E/Unity/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/Network/OverridenNetworkDiscovery.cs",
+		"/E/Unity/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/UI/Button/ConnectionButton.cs",
+		"/E/Unity/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/UI/Button/Button.cs",
+		"/C/Users/Devan/Desktop/broadcast (2)/broadcast/Assets/NetworkDiscovery.cs",
+		"/C/Users/Devan/Desktop/New Unity Project/Assets/Scripts/Player/PlayerShooting.cs",
+		"/C/Users/Devan/Desktop/New Unity Project/Assets/_CompletedAssets/Scripts/Helpers/BeautyShot.cs",
+		"/C/Users/Devan/Desktop/New Unity Project/Assets/_CompletedAssets/Scripts/Enemy/EnemyAttack.cs",
+		"/C/Users/Devan/Desktop/New Unity Project/Assets/_CompletedAssets/Scripts/Camera/CameraFollow.cs",
+		"/C/Users/Devan/AppData/Local/Temp/Rar$DIa0.656/NetworkDiscovery.cs",
+		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/GameController.cs",
+		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/CSE_SUBLIME.sublime-project",
+		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/Network/OverridenNetworkDiscovery.cs",
 		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/Network/NetworkConnectionManager.cs",
 		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/Network/NetworkMessageReceiver.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/Inventory/InventoryManager.cs",
 		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/Inventory/InventorySlot.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/Inventory/Item.cs",
 		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/Container/InventoryContainer.cs",
 		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/GameScene/GameSceneController.cs",
 		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/Container/Container.cs",
 		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/Network/NetworkMessageSender.cs",
+		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/Network/GameNetworkManager.cs",
 		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/UI/Button/Button.cs",
 		"/C/Users/Devan/AppData/Roaming/Sublime Text 3/Packages/User/SublimeAStyleFormatter.sublime-settings",
 		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/Network/NetMessage.cs",
 		"/C/Users/Devan/AppData/Roaming/Sublime Text 3/Packages/SublimeAStyleFormatter/SublimeAStyleFormatter.sublime-settings",
 		"/C/Users/Devan/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Input/GameInput.cs",
+		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/GameController.cs",
+		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Constants.cs",
+		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Entity/Wall.cs",
+		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Entity/Player.cs",
+		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/GameScene/LevelGenerator.cs",
 		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Library/metadata/06/06604c8d1a7370f4b9c353b1c0ab8c80",
 		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Library/metadata/59/59c1bded2f75b9d44b2fc6c4e459edd4",
 		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Library/metadata/92/923593dc578bde349bad66a94c65a23a",
@@ -644,9 +674,8 @@
 		"/C/Users/Devan/AppData/Local/Temp/Rar$DIa0.945/Master.cs",
 		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/Network/Packet.cs",
 		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/Inventory/ToolTip.cs",
+		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/Container/ContainerController.cs",
 		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/Event/EventManager.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Entity/EntityItem.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Constants.cs",
 		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/Button/InventorySlot.cs",
 		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/AutoPlay.cs",
 		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/songList",
@@ -663,44 +692,11 @@
 		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/Network/ClientNetworkManager.cs",
 		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/Network/ServerNetworkManager.cs",
 		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Wall.cs",
-		"/C/Users/Devan/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
-		"/C/Users/Devan/AppData/Roaming/Sublime Text 3/Packages/User/UnityC#.sublime-settings",
-		"/C/Users/Devan/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
-		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/README.md",
-		"/C/Users/Devan/Documents/Gov/chapter1.txt",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/Button/MenuButton.cs",
-		"/C/Users/Devan/Downloads/Textbook (1).pdf",
-		"/C/Users/Devan/Documents/UnityProjects/test/Assets/A.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/Button/RetryButton.cs",
-		"/C/Users/Devan/Documents/UnityProjects/test/Assets/VayLaserPack/Scripts/Laser Scripts/ParticleManager.cs",
-		"/C/Users/Devan/Documents/UnityProjects/test/Assets/VayLaserPack/Scripts/Laser Scripts/LaserParticleManager.cs",
-		"/C/Users/Devan/Downloads/Textbook.pdf",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Particles/Effect.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/ButtonEventHandler.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Entity/Mob.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Entity/Projectile.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/Button/CustomRotationButton.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/Button/CustomKeyButton.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/Button/ControllerProfileButton.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Player/PlayerController.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Entity/Bot.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Entity/LargeProjectile.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Entity/SmallProjectile.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Entity/BotArm.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Temp/Compiled-Standard.shader",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/CameraController.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/Health.cs",
-		"/C/Users/Devan/Documents/Unity/Projects/CSE_Game1/.gitignore.txt",
-		"/C/Users/Devan/Documents/Unity/Projects/CSE_Game1/README.md",
-		"/C/Users/Devan/Desktop/CGDD3103_Project_1/Assets/Scripts/CameraController.cs",
-		"/C/Users/Devan/Desktop/CGDD3103_Project_1/Assets/Scripts/Constants.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/PlayerController.cs",
-		"/C/Users/Devan/Documents/UnityProjects/CSEGame1/.gitignore.txt",
-		"/C/Users/Devan/Documents/Unity/Projects/.gitignore.txt"
+		"/C/Users/Devan/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap"
 	],
 	"find":
 	{
-		"height": 30.0
+		"height": 52.0
 	},
 	"find_in_files":
 	{
@@ -728,8 +724,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"WallResource",
-			"DestroyWall",
+			"ShiftItem",
+			"useitem",
+			"move",
+			"}\n",
+			"effect",
+			"shootp",
 			"ActivateChild",
 			"OnInventoryUnActive",
 			"AddToQuickItem",
@@ -851,11 +851,7 @@
 			"ResetCamera",
 			"tab",
 			"COMPLETE",
-			"        \n",
-			"region",
-			"REGION",
-			"MODEL_PATH",
-			"DELETE LIN"
+			"        \n"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -863,7 +859,6 @@
 		"regex": false,
 		"replace_history":
 		[
-			"Path_resource",
 			"intValue",
 			"_inventoryContainer_prefab",
 			" ",
@@ -879,7 +874,7 @@
 		"show_context": false,
 		"use_buffer2": true,
 		"whole_word": false,
-		"wrap": false
+		"wrap": true
 	},
 	"groups":
 	[
@@ -891,7 +886,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 26.0
+		"height": 95.0
 	},
 	"input":
 	{
@@ -937,7 +932,7 @@
 		"height": 0.0
 	},
 	"pinned_build_system": "",
-	"project": "Android_SUBLIME.sublime-project",
+	"project": "SublimeProject.sublime-project",
 	"replace":
 	{
 		"height": 50.0
@@ -950,72 +945,172 @@
 		"selected_items":
 		[
 			[
-				"game",
-				"Controllers\\GameController.cs"
+				"imom",
+				"Entity\\Buff\\ImmortalityBuff\\ImmortalityBuff.cs"
 			],
 			[
-				"auto",
-				"GameScene\\AutoPlay.cs"
+				"enit",
+				"Entity\\EntityItem.cs"
 			],
 			[
-				"player",
-				"Entity\\Player\\Player.cs"
+				"buffm",
+				"Entity\\Buff\\BuffManager.cs"
 			],
 			[
-				"event",
-				"Event\\EventManager.cs"
+				"item",
+				"UI\\Inventory\\Item.cs"
 			],
 			[
-				"gaminput",
-				"Input\\GameInput.cs"
+				"invento",
+				"UI\\Inventory\\InventoryManager.cs"
 			],
 			[
-				"gamecon",
-				"Controllers\\GameController.cs"
+				"entity",
+				"Entity\\EntityItem.cs"
 			],
 			[
-				"gameinput",
-				"Input\\GameInput.cs"
-			],
-			[
-				"cona",
-				"Constants\\Constants.cs"
-			],
-			[
-				"poo",
-				"GameScene\\PoolManager.cs"
-			],
-			[
-				"poolm",
-				"GameScene\\PoolManager.cs"
-			],
-			[
-				"path",
-				"Entity\\Path\\Path.cs"
-			],
-			[
-				"eventm",
-				"Event\\EventManager.cs"
-			],
-			[
-				"",
-				"Entity\\Path\\Path.cs"
-			],
-			[
-				"constant",
+				"co",
 				"Constants.cs"
 			],
 			[
-				"levelt",
-				"GameScene\\LevelGenerator.cs"
+				"telepor",
+				"Entity\\Buff\\TeleportBuff\\TeleportBuff.cs"
 			],
 			[
-				"wall",
-				"Entity\\Wall.cs"
+				"immor",
+				"Entity\\Buff\\ImmortalityBuff\\ImmortalityBuff.cs"
+			],
+			[
+				"tepor",
+				"Entity\\Buff\\TeleportBuff\\TeleportBuff.cs"
+			],
+			[
+				"spee",
+				"Entity\\Buff\\SpeedBuff\\SpeedBuff.cs"
+			],
+			[
+				"game",
+				"GameController.cs"
+			],
+			[
+				"proj",
+				"Entity\\Projectile\\ProjectileManager.cs"
+			],
+			[
+				"projec",
+				"Entity\\Projectile\\Projectile.cs"
+			],
+			[
+				"camera",
+				"Player\\CameraController.cs"
+			],
+			[
+				"buff",
+				"Entity\\Buff\\Buff.cs"
+			],
+			[
+				"con",
+				"Constants.cs"
+			],
+			[
+				"entityit",
+				"Entity\\EntityItem.cs"
+			],
+			[
+				"enitty",
+				"Entity\\EntityItem.cs"
+			],
+			[
+				"gamec",
+				"GameController.cs"
+			],
+			[
+				"butt",
+				"UI\\ButtonEventHandler.cs"
+			],
+			[
+				"droid",
+				"Entity\\Friendly\\Droid.cs"
+			],
+			[
+				"nav",
+				"Controller\\NavMesh\\NavMeshController.cs"
+			],
+			[
+				"enem",
+				"Entity\\Enemy\\enemy_one\\EnemyOne.cs"
+			],
+			[
+				"player",
+				"Player\\PlayerController.cs"
+			],
+			[
+				"bot",
+				"Entity\\Bot.cs"
+			],
+			[
+				"cama",
+				"Player\\CameraController.cs"
 			],
 			[
 				"cons",
 				"Constants.cs"
+			],
+			[
+				"conats",
+				"UI\\Container\\Container.cs"
+			],
+			[
+				"inventoryslo",
+				"UI\\Inventory\\InventorySlot.cs"
+			],
+			[
+				"event",
+				"UI\\Event\\EventManager.cs"
+			],
+			[
+				"inventory",
+				"UI\\Inventory\\InventoryManager.cs"
+			],
+			[
+				"mob",
+				"Entity\\Mob.cs"
+			],
+			[
+				"invent",
+				"UI\\Inventory\\InventoryManager.cs"
+			],
+			[
+				"inventoryman",
+				"UI\\Inventory\\InventoryManager.cs"
+			],
+			[
+				"pr",
+				"Entity\\Projectile\\ProjectileManager.cs"
+			],
+			[
+				"button",
+				"UI\\Button\\Button.cs"
+			],
+			[
+				"games",
+				"GameScene\\GameSceneController.cs"
+			],
+			[
+				"conne",
+				"UI\\Button\\ConnectionButton.cs"
+			],
+			[
+				"network",
+				"Network\\NetworkConnectionManager.cs"
+			],
+			[
+				"gamecont",
+				"GameController.cs"
+			],
+			[
+				"gamecon",
+				"CSE_GAME1\\Assets\\Scripts\\GameController.cs"
 			],
 			[
 				"messge",
@@ -1034,27 +1129,11 @@
 				"KSU_NETWORK_SOLUTION\\Assets\\Scripts\\Network\\NetworkConnectionManager.cs"
 			],
 			[
-				"item",
-				"CSE_GAME1\\Assets\\Scripts\\UI\\Inventory\\Item.cs"
-			],
-			[
-				"inventoryslo",
-				"CSE_GAME1\\Assets\\Scripts\\UI\\Inventory\\InventorySlot.cs"
-			],
-			[
 				"inventotrys",
 				"CSE_GAME1\\Assets\\Scripts\\UI\\Inventory\\InventorySlot.cs"
 			],
 			[
-				"inventoryman",
-				"CSE_GAME1\\Assets\\Scripts\\UI\\Inventory\\InventoryManager.cs"
-			],
-			[
 				"networkcon",
-				"KSU_NETWORK_SOLUTION\\Assets\\Scripts\\Network\\NetworkConnectionManager.cs"
-			],
-			[
-				"network",
 				"KSU_NETWORK_SOLUTION\\Assets\\Scripts\\Network\\NetworkConnectionManager.cs"
 			],
 			[
@@ -1064,10 +1143,6 @@
 			[
 				"networkme",
 				"KSU_NETWORK_SOLUTION\\Assets\\Scripts\\Network\\NetworkMessageReceiver.cs"
-			],
-			[
-				"button",
-				"KSU_NETWORK_SOLUTION\\Assets\\Scripts\\UI\\Button\\Button.cs"
 			],
 			[
 				"netowkr",
@@ -1098,16 +1173,16 @@
 				"CSE_GAME1\\Assets\\Scripts\\UI\\Container\\ContainerController.cs"
 			],
 			[
-				"inventory",
-				"CSE_GAME1\\Assets\\Scripts\\UI\\Container\\InventoryContainer.cs"
+				"",
+				"CSE_GAME1\\Assets\\Scripts\\UI\\Inventory\\InventorySlot.cs"
 			],
 			[
 				"tooltip",
 				"CSE_GAME1\\Assets\\Scripts\\UI\\Inventory\\ToolTip.cs"
 			],
 			[
-				"con",
-				"AndroidGame\\Assets\\Scripts\\Constants.cs"
+				"gameinput",
+				"AndroidGame\\Assets\\Scripts\\Input\\GameInput.cs"
 			],
 			[
 				"autopl",
@@ -1118,8 +1193,16 @@
 				"AndroidGame\\Assets\\Scripts\\GameScene\\LevelGenerator.cs"
 			],
 			[
+				"wall",
+				"AndroidGame\\Assets\\Scripts\\Entity\\Wall.cs"
+			],
+			[
 				"wal",
 				"AndroidGame\\Assets\\Resources\\Prefabs\\Wall.prefab"
+			],
+			[
+				"auto",
+				"AndroidGame\\Assets\\Scripts\\AutoPlay.cs"
 			],
 			[
 				"butoon",
@@ -1150,24 +1233,12 @@
 				"UI\\Button\\CustomKeyButton.cs"
 			],
 			[
-				"butt",
-				"UI\\ButtonEventHandler.cs"
-			],
-			[
 				"controllerp",
 				"UI\\Button\\ControllerProfileButton.cs"
 			],
 			[
 				"but",
 				"UI\\ButtonEventHandler.cs"
-			],
-			[
-				"mob",
-				"Entity\\Mob.cs"
-			],
-			[
-				"bot",
-				"Entity\\Bot.cs"
 			],
 			[
 				"proje",
@@ -1188,10 +1259,6 @@
 			[
 				"controlcon",
 				"UI\\ControllerConfiguration.cs"
-			],
-			[
-				"camera",
-				"Player\\CameraController.cs"
 			],
 			[
 				"smal",
@@ -1234,10 +1301,6 @@
 				"Player\\PlayerController.cs"
 			],
 			[
-				"games",
-				"GameController.cs"
-			],
-			[
 				"heal",
 				"UI\\Health.cs"
 			],
@@ -1247,10 +1310,6 @@
 			],
 			[
 				"enitytm",
-				"GameScene\\Entity\\EntityMovementHandler.cs"
-			],
-			[
-				"enit",
 				"GameScene\\Entity\\EntityMovementHandler.cs"
 			],
 			[
@@ -1396,70 +1455,6 @@
 			[
 				"playercontorller",
 				"ControllerTestScene\\PlayerController.cs"
-			],
-			[
-				"servernet",
-				"Network\\ServerNetworkManager.cs"
-			],
-			[
-				"clientsce",
-				"ClientScene\\ClientSceneManager.cs"
-			],
-			[
-				"serverpalyer",
-				"ControllerTestScene\\ServerPlayerController.cs"
-			],
-			[
-				"clientnter",
-				"Network\\ClientNetworkManager.cs"
-			],
-			[
-				"serverp",
-				"ControllerTestScene\\ServerPlayerController.cs"
-			],
-			[
-				"slide",
-				"Slideshow\\SlideshowController.cs"
-			],
-			[
-				"maserte",
-				"Network\\MasterMessageType.cs"
-			],
-			[
-				"clientnetwork",
-				"Network\\ClientNetworkManager.cs"
-			],
-			[
-				"speech",
-				"ClientScene\\SpeechController.cs"
-			],
-			[
-				"servernetwo",
-				"Network\\ServerNetworkManager.cs"
-			],
-			[
-				"constants",
-				"Constants.cs"
-			],
-			[
-				"serverplay",
-				"ControllerTestScene\\ServerPlayerController.cs"
-			],
-			[
-				"session",
-				"SessionManager.cs"
-			],
-			[
-				"serverplayerc",
-				"ControllerTestScene\\ServerPlayerController.cs"
-			],
-			[
-				"masterme",
-				"Network\\MasterMessageType.cs"
-			],
-			[
-				"slidesho",
-				"Slideshow\\SlideshowController.cs"
 			]
 		],
 		"width": 0.0
@@ -1472,21 +1467,21 @@
 		[
 			[
 				"",
-				"C:\\Users\\Devan\\Documents\\UnityProjects\\CSE_GAME1\\CSE_SUBLIME.sublime-workspace"
+				"E:\\Unity\\Projects\\AndroidGame\\AndroidSublime.sublime-project"
+			],
+			[
+				"android",
+				"C:\\Users\\Devan\\Documents\\UnityProjects\\AndroidGame\\Android_SUBLIME.sublime-project"
 			]
 		],
 		"width": 475.0
 	},
 	"select_symbol":
 	{
-		"height": 79.0,
-		"last_filter": "gamecon",
+		"height": 239.0,
+		"last_filter": "game",
 		"selected_items":
 		[
-			[
-				"gamecon",
-				"GameController"
-			],
 			[
 				"game",
 				"GameController"
@@ -1513,8 +1508,8 @@
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": true,
-	"side_bar_width": 271.0,
+	"side_bar_visible": false,
+	"side_bar_width": 603.0,
 	"status_bar_visible": false,
 	"template_settings":
 	{
