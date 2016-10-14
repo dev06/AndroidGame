@@ -5,6 +5,7 @@
 		[
 			[
 <<<<<<< HEAD
+<<<<<<< HEAD
 				"_p",
 				"_particleEffect"
 =======
@@ -51,6 +52,10 @@
 				"_dea",
 				"_deathThresHoldTimer"
 >>>>>>> LocalBranch
+=======
+				"_p",
+				"_particleEffect"
+>>>>>>> 0888bbe0b5d0a7c98baebc52d6605f6c98931251
 			],
 			[
 				"_j",
@@ -584,6 +589,7 @@
 	"file_history":
 	[
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 		"/C/Users/Devan/Documents/UnityProjects/AudioSpectrum/Assets/Scripts/Spectrum.cs",
 		"/C/Users/Devan/Documents/UnityProjects/AudioSpectrum/Assets/Standard Assets/Effects/ImageEffects/Scripts/VignetteAndChromaticAberration.cs",
@@ -601,6 +607,8 @@
 		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Camera/CameraController.cs",
 		"/E/Unity/Projects/AndroidGame/Assets/Scripts/Controllers/GameController.cs",
 >>>>>>> LocalBranch
+=======
+>>>>>>> 0888bbe0b5d0a7c98baebc52d6605f6c98931251
 		"/E/Unity/Projects/AndroidGame/Assets/Scripts/Entity/Player/Player.cs",
 		"/E/Unity/Projects/AndroidGame/Assets/Scripts/GameScene/AutoPlay.cs",
 		"/E/Unity/Projects/AndroidGame/Assets/Scripts/Controllers/GameController.cs",
@@ -729,6 +737,7 @@
 		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/Button/RetryButton.cs",
 		"/C/Users/Devan/Documents/UnityProjects/test/Assets/VayLaserPack/Scripts/Laser Scripts/ParticleManager.cs",
 		"/C/Users/Devan/Documents/UnityProjects/test/Assets/VayLaserPack/Scripts/Laser Scripts/LaserParticleManager.cs"
+<<<<<<< HEAD
 	],
 	"find":
 	{
@@ -740,6 +749,12 @@
 	{
 		"height": 52.0
 >>>>>>> LocalBranch
+=======
+	],
+	"find":
+	{
+		"height": 42.0
+>>>>>>> 0888bbe0b5d0a7c98baebc52d6605f6c98931251
 	},
 	"find_in_files":
 	{
@@ -770,6 +785,7 @@
 		"find_history":
 		[
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"Item_resource",
 			"particle",
 =======
@@ -783,6 +799,10 @@
 			"bb",
 			"turn",
 >>>>>>> LocalBranch
+=======
+			"Item_resource",
+			"particle",
+>>>>>>> 0888bbe0b5d0a7c98baebc52d6605f6c98931251
 			"\n\t",
 			"\t\n",
 			"localScale",
@@ -910,9 +930,12 @@
 			"OnValueChange",
 			"Wait",
 			"Debug.Loger"
+<<<<<<< HEAD
 =======
 			"SendToggleMovementMessageToClient"
 >>>>>>> LocalBranch
+=======
+>>>>>>> 0888bbe0b5d0a7c98baebc52d6605f6c98931251
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -921,12 +944,16 @@
 		"replace_history":
 		[
 <<<<<<< HEAD
+<<<<<<< HEAD
 			"Square_resource",
 =======
 			"collectible_direction",
 			"collectible_amount",
 			"_lastHinge",
 >>>>>>> LocalBranch
+=======
+			"Square_resource",
+>>>>>>> 0888bbe0b5d0a7c98baebc52d6605f6c98931251
 			"intValue",
 			"_inventoryContainer_prefab",
 			" ",
@@ -1046,6 +1073,9 @@
 				"cons",
 				"Constants\\Constants.cs"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0888bbe0b5d0a7c98baebc52d6605f6c98931251
 			],
 			[
 				"consta",
@@ -1123,6 +1153,7 @@
 			],
 			[
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 				"gameinput",
 				"Input\\GameInput.cs"
@@ -1145,6 +1176,8 @@
 			],
 			[
 >>>>>>> LocalBranch
+=======
+>>>>>>> 0888bbe0b5d0a7c98baebc52d6605f6c98931251
 				"gam",
 				"Controllers\\GameController.cs"
 			],
@@ -1592,8 +1625,11 @@
 			[
 				"servernet",
 				"Network\\ServerNetworkManager.cs"
+<<<<<<< HEAD
 =======
 >>>>>>> LocalBranch
+=======
+>>>>>>> 0888bbe0b5d0a7c98baebc52d6605f6c98931251
 			]
 		],
 		"width": 0.0
