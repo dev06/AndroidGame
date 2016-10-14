@@ -4,6 +4,7 @@
 		"selected_items":
 		[
 			[
+<<<<<<< HEAD
 				"color",
 				"color_two"
 			],
@@ -46,6 +47,10 @@
 			[
 				"_dea",
 				"_deathThresHoldTimer"
+=======
+				"_p",
+				"_particleEffect"
+>>>>>>> 0888bbe0b5d0a7c98baebc52d6605f6c98931251
 			],
 			[
 				"_j",
@@ -578,6 +583,7 @@
 	],
 	"file_history":
 	[
+<<<<<<< HEAD
 		"/C/Users/Devan/Documents/UnityProjects/AudioSpectrum/Assets/Scripts/Spectrum.cs",
 		"/C/Users/Devan/Documents/UnityProjects/AudioSpectrum/Assets/Standard Assets/Effects/ImageEffects/Scripts/VignetteAndChromaticAberration.cs",
 		"/C/Users/Devan/Documents/UnityProjects/AudioSpectrum/Assets/Standard Assets/Effects/ImageEffects/Scripts/MotionBlur.cs",
@@ -593,16 +599,23 @@
 		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Entity/Player/Player.cs",
 		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Camera/CameraController.cs",
 		"/E/Unity/Projects/AndroidGame/Assets/Scripts/Controllers/GameController.cs",
+=======
+>>>>>>> 0888bbe0b5d0a7c98baebc52d6605f6c98931251
 		"/E/Unity/Projects/AndroidGame/Assets/Scripts/Entity/Player/Player.cs",
+		"/E/Unity/Projects/AndroidGame/Assets/Scripts/GameScene/AutoPlay.cs",
+		"/E/Unity/Projects/AndroidGame/Assets/Scripts/Controllers/GameController.cs",
+		"/E/Unity/Projects/AndroidGame/Assets/Scripts/Controllers/CollectibleController.cs",
+		"/E/Unity/Projects/AndroidGame/Assets/Scripts/Constants/Constants.cs",
+		"/E/Unity/Projects/AndroidGame/Assets/Scripts/GameScene/PoolManager.cs",
+		"/E/Unity/Projects/AndroidGame/Assets/Scripts/Entity/Collectible/Collectible.cs",
+		"/E/Unity/Projects/AndroidGame/Assets/Scripts/Entity/Collectible/Squares/Squares.cs",
+		"/E/Unity/Projects/AudioSpectrum/Assets/Scripts/Spectrum.cs",
 		"/E/Unity/Projects/AndroidGame/Assets/Scripts/Input/GameInput.cs",
 		"/E/Unity/Projects/AndroidGame/Assets/Scripts/Entity/Path/Path.cs",
 		"/E/Unity/Projects/AndroidGame/Assets/Scripts/Camera/CameraController.cs",
 		"/E/Unity/Projects/AndroidGame/Assets/Scripts/Event/EventManager.cs",
 		"/E/Unity/Projects/AndroidGame/Assets/Scripts/GameScene/LevelGenerator.cs",
-		"/E/Unity/Projects/AndroidGame/Assets/Scripts/GameScene/PoolManager.cs",
 		"/E/Unity/Projects/AndroidGame/Assets/Scripts/Misc/Objects/DummyPath.cs",
-		"/E/Unity/Projects/AndroidGame/Assets/Scripts/Constants/Constants.cs",
-		"/E/Unity/Projects/AndroidGame/Assets/Scripts/GameScene/AutoPlay.cs",
 		"/E/Unity/Projects/AndroidGame/Assets/Scripts/dummy.cs",
 		"/E/Unity/Projects/AndroidGame/Assets/Scripts/Misc/Objects/dummy.cs",
 		"/C/Users/Devan/Documents/The Last Tree/The Last Tree_Alpha1.0_Pre-Alpha 1.0/Assets/Scripts/Player/PlayerBase.cs",
@@ -705,11 +718,28 @@
 		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/Network/ServerNetworkManager.cs",
 		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Wall.cs",
 		"/C/Users/Devan/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
+<<<<<<< HEAD
 		"/C/Users/Devan/AppData/Roaming/Sublime Text 3/Packages/User/UnityC#.sublime-settings"
 	],
 	"find":
 	{
 		"height": 52.0
+=======
+		"/C/Users/Devan/AppData/Roaming/Sublime Text 3/Packages/User/UnityC#.sublime-settings",
+		"/C/Users/Devan/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/README.md",
+		"/C/Users/Devan/Documents/Gov/chapter1.txt",
+		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/Button/MenuButton.cs",
+		"/C/Users/Devan/Downloads/Textbook (1).pdf",
+		"/C/Users/Devan/Documents/UnityProjects/test/Assets/A.cs",
+		"/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/UI/Button/RetryButton.cs",
+		"/C/Users/Devan/Documents/UnityProjects/test/Assets/VayLaserPack/Scripts/Laser Scripts/ParticleManager.cs",
+		"/C/Users/Devan/Documents/UnityProjects/test/Assets/VayLaserPack/Scripts/Laser Scripts/LaserParticleManager.cs"
+	],
+	"find":
+	{
+		"height": 42.0
+>>>>>>> 0888bbe0b5d0a7c98baebc52d6605f6c98931251
 	},
 	"find_in_files":
 	{
@@ -739,6 +769,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+<<<<<<< HEAD
 			"amount",
 			"collectibleDirection",
 			"collectibleAmount",
@@ -748,6 +779,10 @@
 			"deathca",
 			"bb",
 			"turn",
+=======
+			"Item_resource",
+			"particle",
+>>>>>>> 0888bbe0b5d0a7c98baebc52d6605f6c98931251
 			"\n\t",
 			"\t\n",
 			"localScale",
@@ -866,7 +901,18 @@
 			"PlayerPrefs.GetString(\"ToggleMovement\")",
 			"ToggleMovement",
 			"PlayerPrefs.DeleteKey",
+<<<<<<< HEAD
 			"SendToggleMovementMessageToClient"
+=======
+			"SendToggleMovementMessageToClient",
+			"Debug.Log",
+			"_canMove",
+			"ToggleMoveMnet",
+			"TurnOffButton",
+			"OnValueChange",
+			"Wait",
+			"Debug.Loger"
+>>>>>>> 0888bbe0b5d0a7c98baebc52d6605f6c98931251
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -874,9 +920,13 @@
 		"regex": false,
 		"replace_history":
 		[
+<<<<<<< HEAD
 			"collectible_direction",
 			"collectible_amount",
 			"_lastHinge",
+=======
+			"Square_resource",
+>>>>>>> 0888bbe0b5d0a7c98baebc52d6605f6c98931251
 			"intValue",
 			"_inventoryContainer_prefab",
 			" ",
@@ -995,10 +1045,37 @@
 			[
 				"cons",
 				"Constants\\Constants.cs"
+<<<<<<< HEAD
 			],
 			[
 				"buton",
 				"UI\\Button\\ButtonEventHandler.cs"
+=======
+			],
+			[
+				"consta",
+				"Constants\\Constants.cs"
+			],
+			[
+				"poolm",
+				"GameScene\\PoolManager.cs"
+			],
+			[
+				"squ",
+				"Entity\\Collectible\\Squares\\Squares.cs"
+			],
+			[
+				"gamecon",
+				"Controllers\\GameController.cs"
+			],
+			[
+				"player",
+				"Entity\\Player\\Player.cs"
+			],
+			[
+				"gameinput",
+				"Input\\GameInput.cs"
+>>>>>>> 0888bbe0b5d0a7c98baebc52d6605f6c98931251
 			],
 			[
 				"collec",
@@ -1045,6 +1122,7 @@
 				"Controllers\\GameController.cs"
 			],
 			[
+<<<<<<< HEAD
 				"gameinput",
 				"Input\\GameInput.cs"
 			],
@@ -1065,6 +1143,8 @@
 				"Controllers\\GameController.cs"
 			],
 			[
+=======
+>>>>>>> 0888bbe0b5d0a7c98baebc52d6605f6c98931251
 				"gam",
 				"Controllers\\GameController.cs"
 			],
@@ -1421,10 +1501,6 @@
 				"ControllerTestScene\\ServerPlayerController.cs"
 			],
 			[
-				"consta",
-				"Constants.cs"
-			],
-			[
 				"speechcontroller",
 				"ClientScene\\SpeechController.cs"
 			],
@@ -1503,6 +1579,21 @@
 			[
 				"head",
 				"HeadTracker.cs"
+<<<<<<< HEAD
+=======
+			],
+			[
+				"audioma",
+				"AudioManager.cs"
+			],
+			[
+				"playercontorller",
+				"ControllerTestScene\\PlayerController.cs"
+			],
+			[
+				"servernet",
+				"Network\\ServerNetworkManager.cs"
+>>>>>>> 0888bbe0b5d0a7c98baebc52d6605f6c98931251
 			]
 		],
 		"width": 0.0
@@ -1515,7 +1606,7 @@
 		[
 			[
 				"",
-				"E:\\Unity\\KSU\\NetworkingSolution\\KSU_NETWORK_SOLUTION\\KSU_SUBLIME.sublime-project"
+				"E:\\Unity\\Projects\\CSE_Game1\\CSE_GAME\\CSE_SUBLIME.sublime-workspace"
 			],
 			[
 				"android",
