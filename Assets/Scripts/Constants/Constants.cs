@@ -7,7 +7,7 @@ public class Constants
 	public static float PixelToUnit = .32f;
 
 	// lEVEL GENERATION FIELDS
-
+	public static int InitWallGenerationSize = 7;
 	public static float WallSpeed = 30f;//26.5F;
 	public static float WallWidth = .75f;
 	public static float RotationFrequency = 1f;
@@ -44,6 +44,7 @@ public class GameResources
 	public static GameObject Player_resource = Resources.Load("Prefabs/prefabs_character/character") as GameObject;
 	public static GameObject GridParticle_resource = Resources.Load("Prefabs/prefabs_particles/prefabs_grid_particle/GridParticle") as GameObject;
 	public static GameObject Square_resource = Resources.Load("Prefabs/prefabs_item/Square") as GameObject;
+	public static GameObject Diamond_resource = Resources.Load("Prefabs/prefabs_item/item_diamond/Diamond") as GameObject;
 
 
 }

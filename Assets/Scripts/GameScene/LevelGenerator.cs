@@ -24,9 +24,11 @@ public class LevelGenerator : MonoBehaviour {
 	void Start()
 	{
 		Init();
-
 	}
 
+	/// <summary>
+	/// Inits all the components and fields.
+	/// </summary>
 	private void Init()
 	{
 		_gameController = GameObject.FindWithTag("GameController").GetComponent<GameController>();
@@ -41,6 +43,10 @@ public class LevelGenerator : MonoBehaviour {
 		_wallWidth = Constants.WallWidth;
 	}
 
+	/// <summary>
+	/// Creates the path prefabs
+	/// </summary>
+	/// <param name="value"></param>
 	public void GenerateEmptyGameObjects(int value)
 	{
 		if (_activeWalls < Constants.MaxWallsAtTime)
@@ -61,12 +67,16 @@ public class LevelGenerator : MonoBehaviour {
 
 	}
 
+	/// <summary>
+	/// Modifies the scale and rotation for the "current" object in respect to the "previous"
+	/// </summary>
+	/// <param name="_object"></param>
+	/// <param name="_previousObject"></param>
 	public void ModifyTransformForObjects(GameObject _object, GameObject _previousObject)
 	{
 		float _height = Random.Range(_minHeight, _maxHeight);
 		float _rotationFreqNumber = Random.Range(0.0f, 1.1f);
 		float _rotationDirection = (Random.Range(0, 2) == 0) ? -90 : 90;
-
 
 		if (_previousObject != null)
 		{
@@ -83,8 +93,25 @@ public class LevelGenerator : MonoBehaviour {
 			_object.transform.localScale = new Vector2(_wallWidth, Constants.InitWallSize);
 		}
 
+		_object.GetComponent<Path>().collectible_verticalOffset = 0;
+
+
+		for (int i = 0; i < _object.transform.childCount; i++)
+		{
+			if (_object.transform.GetChild(i).gameObject.tag.Contains("Collectible"))
+			{
+				_gameController.collectibleController.ModifyCollectibleTransform(_object.transform.GetChild(i).gameObject, _object);
+			}
+		}
+
 
 	}
+
+	/// <summary>
+	/// Lerps the path rotation to the specified rotation.
+	/// </summary>
+	/// <param name="_currentWall"></param>
+	/// <param name="targetRotation"></param>
 	private void RotateWall(GameObject _currentWall, float targetRotation)
 	{
 		// -90 == right
@@ -116,7 +143,11 @@ public class LevelGenerator : MonoBehaviour {
 			}
 		}
 	}
-
+	/// <summary>
+	/// Applies the offset the path
+	/// </summary>
+	/// <param name="_currentWall"></param>
+	/// <param name="_lastWallTransform"></param>
 	public void PositionWall(GameObject _currentWall, GameObject _lastWallTransform)
 	{
 

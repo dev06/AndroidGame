@@ -1,14 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using System.Collections.Generic;
 public class Path : MonoBehaviour
 {
 
 	public GameObject previousWall;
+	public float collectible_verticalOffset;
+	public int collectible_amount;
+	public int collectible_direction;
 	public Vector3 offsetedPosition;
 	public bool isCurrentlyPaused;
-	private Vector3 _movementDirection;
+
 	private GameController _gameController;
+	private Vector3 _movementDirection;
 	private GameObject _wallObjects;
 	private SpriteRenderer _spriteRenderer;
 	private Animation _pathAnimation;
@@ -33,6 +37,13 @@ public class Path : MonoBehaviour
 		_pathAnimation = GetComponent<Animation>();
 		EventManager.OnSwipe += Pause;
 		EventManager.OnDeath += OnPlayerDeath;
+		collectible_amount = 4;
+		collectible_direction = 1;
+
+		if (Random.Range(0, 2) == 0)
+		{
+			_gameController.collectibleController.GenerateCollectible(gameObject, collectible_amount);
+		}
 	}
 
 

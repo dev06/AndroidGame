@@ -3,9 +3,12 @@ using System.Collections;
 
 public class PoolManager : MonoBehaviour {
 
+
 	private GameController _gameController;
 	private LevelGenerator _levelGenerator;
 	private GameObject _wallObjects;
+	public GameObject pathReserve;
+
 
 	void Start ()
 	{
@@ -28,9 +31,9 @@ public class PoolManager : MonoBehaviour {
 	}
 
 
-	public void PoolObject(GameObject current, GameObject previous)
-	{
 
+	public void PoolPath(GameObject current, GameObject previous)
+	{
 		if (EventManager.OnPooled != null)
 		{
 			EventManager.OnPooled();
@@ -43,4 +46,6 @@ public class PoolManager : MonoBehaviour {
 
 		}
 	}
+
+
 }

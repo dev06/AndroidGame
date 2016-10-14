@@ -11,7 +11,7 @@ GameObject:
   - 198: {fileID: 19847372}
   - 199: {fileID: 19925770}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: TriangleParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ GameObject:
   - 198: {fileID: 19886972}
   - 199: {fileID: 19919616}
   m_Layer: 0
-  m_Name: Particle System (1)
+  m_Name: SquareParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -167,8 +167,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 150944}
   m_LocalRotation: {x: -0.000000115202326, y: -0.7071068, z: 0.7071067, w: -0.00000011520231}
-  m_LocalPosition: {x: 0, y: 0.254, z: 0.419}
-  m_LocalScale: {x: 0.51000017, y: 0.51000017, z: 0.51000017}
+  m_LocalPosition: {x: 0, y: 0.275, z: 0.419}
+  m_LocalScale: {x: 0.51000017, y: 0.51000017, z: 0.5076095}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 180}
   m_Children: []
   m_Father: {fileID: 442568}

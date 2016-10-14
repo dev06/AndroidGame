@@ -22,7 +22,7 @@ public class ButtonEventHandler : MonoBehaviour, IPointerClickHandler {
 	{
 		_gameController.canvasManager.ActivateCanvas(CanvasID.DEBUG, false);
 
-		_gameController.levelGenerator.GenerateEmptyGameObjects(3);
+		_gameController.levelGenerator.GenerateEmptyGameObjects(Constants.InitWallGenerationSize);
 
 		StartCoroutine("StateChange");
 	}

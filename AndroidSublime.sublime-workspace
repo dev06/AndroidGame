@@ -4,8 +4,53 @@
 		"selected_items":
 		[
 			[
+<<<<<<< HEAD
+				"color",
+				"color_two"
+			],
+			[
+				"colro",
+				"color_one"
+			],
+			[
+				"Vec",
+				"Vector2"
+			],
+			[
+				"Mod",
+				"ModifyTransformForObjects"
+			],
+			[
+				"_pare",
+				"_parentObject"
+			],
+			[
+				"collecti",
+				"collectibleDirection"
+			],
+			[
+				"colle",
+				"collectibleAmount"
+			],
+			[
+				"_p",
+				"_pathHeight"
+			],
+			[
+				"_las",
+				"_lastPath"
+			],
+			[
+				"Game",
+				"GameObject"
+			],
+			[
+				"_dea",
+				"_deathThresHoldTimer"
+=======
 				"_p",
 				"_particleEffect"
+>>>>>>> 0888bbe0b5d0a7c98baebc52d6605f6c98931251
 			],
 			[
 				"_j",
@@ -344,10 +389,6 @@
 				"RectTransform"
 			],
 			[
-				"Vec",
-				"Vector3"
-			],
-			[
 				"Upd",
 				"UpdateToolTipInfo"
 			],
@@ -406,10 +447,6 @@
 			[
 				"IPOinter",
 				"IPointerExitHandler"
-			],
-			[
-				"Mod",
-				"ModifyTransformForObjects(_clone"
 			],
 			[
 				"_pr",
@@ -482,43 +519,20 @@
 			[
 				"Gam",
 				"GameController"
-			],
-			[
-				"Game",
-				"GameController"
-			],
-			[
-				"Gen",
-				"GenerateWallOnTimer"
-			],
-			[
-				"Gener",
-				"GenerateWallOnTimer"
-			],
-			[
-				"_obj",
-				"_object.transform.rotation"
-			],
-			[
-				"_rotatio",
-				"_rotationDirection"
-			],
-			[
-				"_pre",
-				"_previousObjectRotation"
-			],
-			[
-				"_rp",
-				"_previousObject.transform"
-			],
-			[
-				"prv",
-				"previousWall.transform"
 			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Entity/Friendly/Droid.cs",
+			"settings":
+			{
+				"buffer_size": 2849,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -565,10 +579,28 @@
 	},
 	"expanded_folders":
 	[
-		"/E/Unity/Projects/AndroidGame/Assets/Scripts"
+		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts"
 	],
 	"file_history":
 	[
+<<<<<<< HEAD
+		"/C/Users/Devan/Documents/UnityProjects/AudioSpectrum/Assets/Scripts/Spectrum.cs",
+		"/C/Users/Devan/Documents/UnityProjects/AudioSpectrum/Assets/Standard Assets/Effects/ImageEffects/Scripts/VignetteAndChromaticAberration.cs",
+		"/C/Users/Devan/Documents/UnityProjects/AudioSpectrum/Assets/Standard Assets/Effects/ImageEffects/Scripts/MotionBlur.cs",
+		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Entity/Path/Path.cs",
+		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Controllers/CollectibleController.cs",
+		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Controllers/GameController.cs",
+		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/GameScene/PoolManager.cs",
+		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/GameScene/LevelGenerator.cs",
+		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Constants/Constants.cs",
+		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/UI/Button/ButtonEventHandler.cs",
+		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Entity/Collectible/Collectible.cs",
+		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Entity/Collectible/Squares/Squares.cs",
+		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Entity/Player/Player.cs",
+		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Camera/CameraController.cs",
+		"/E/Unity/Projects/AndroidGame/Assets/Scripts/Controllers/GameController.cs",
+=======
+>>>>>>> 0888bbe0b5d0a7c98baebc52d6605f6c98931251
 		"/E/Unity/Projects/AndroidGame/Assets/Scripts/Entity/Player/Player.cs",
 		"/E/Unity/Projects/AndroidGame/Assets/Scripts/GameScene/AutoPlay.cs",
 		"/E/Unity/Projects/AndroidGame/Assets/Scripts/Controllers/GameController.cs",
@@ -654,7 +686,6 @@
 		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Constants.cs",
 		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Entity/Wall.cs",
 		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Entity/Player.cs",
-		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/GameScene/LevelGenerator.cs",
 		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Library/metadata/06/06604c8d1a7370f4b9c353b1c0ab8c80",
 		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Library/metadata/59/59c1bded2f75b9d44b2fc6c4e459edd4",
 		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Library/metadata/92/923593dc578bde349bad66a94c65a23a",
@@ -687,6 +718,13 @@
 		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/Network/ServerNetworkManager.cs",
 		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Wall.cs",
 		"/C/Users/Devan/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
+<<<<<<< HEAD
+		"/C/Users/Devan/AppData/Roaming/Sublime Text 3/Packages/User/UnityC#.sublime-settings"
+	],
+	"find":
+	{
+		"height": 52.0
+=======
 		"/C/Users/Devan/AppData/Roaming/Sublime Text 3/Packages/User/UnityC#.sublime-settings",
 		"/C/Users/Devan/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
 		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/README.md",
@@ -701,12 +739,15 @@
 	"find":
 	{
 		"height": 42.0
+>>>>>>> 0888bbe0b5d0a7c98baebc52d6605f6c98931251
 	},
 	"find_in_files":
 	{
 		"height": 260.0,
 		"where_history":
 		[
+			"",
+			"<current file>",
 			"",
 			"<current file>",
 			"",
@@ -728,8 +769,20 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+<<<<<<< HEAD
+			"amount",
+			"collectibleDirection",
+			"collectibleAmount",
+			"_lastPath",
+			"SpawnCollectible",
+			"Die",
+			"deathca",
+			"bb",
+			"turn",
+=======
 			"Item_resource",
 			"particle",
+>>>>>>> 0888bbe0b5d0a7c98baebc52d6605f6c98931251
 			"\n\t",
 			"\t\n",
 			"localScale",
@@ -848,6 +901,9 @@
 			"PlayerPrefs.GetString(\"ToggleMovement\")",
 			"ToggleMovement",
 			"PlayerPrefs.DeleteKey",
+<<<<<<< HEAD
+			"SendToggleMovementMessageToClient"
+=======
 			"SendToggleMovementMessageToClient",
 			"Debug.Log",
 			"_canMove",
@@ -856,6 +912,7 @@
 			"OnValueChange",
 			"Wait",
 			"Debug.Loger"
+>>>>>>> 0888bbe0b5d0a7c98baebc52d6605f6c98931251
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -863,7 +920,13 @@
 		"regex": false,
 		"replace_history":
 		[
+<<<<<<< HEAD
+			"collectible_direction",
+			"collectible_amount",
+			"_lastHinge",
+=======
 			"Square_resource",
+>>>>>>> 0888bbe0b5d0a7c98baebc52d6605f6c98931251
 			"intValue",
 			"_inventoryContainer_prefab",
 			" ",
@@ -884,14 +947,44 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/C/Users/Devan/Documents/UnityProjects/CSE_GAME1/Assets/Scripts/Entity/Friendly/Droid.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2849,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								166,
+								166
+							]
+						],
+						"settings":
+						{
+							"side_bar_folders_auto_load_folder": 1,
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 28.0
+		"height": 26.0
 	},
 	"input":
 	{
@@ -940,7 +1033,7 @@
 	"project": "AndroidSublime.sublime-project",
 	"replace":
 	{
-		"height": 52.0
+		"height": 50.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -952,6 +1045,12 @@
 			[
 				"cons",
 				"Constants\\Constants.cs"
+<<<<<<< HEAD
+			],
+			[
+				"buton",
+				"UI\\Button\\ButtonEventHandler.cs"
+=======
 			],
 			[
 				"consta",
@@ -976,14 +1075,56 @@
 			[
 				"gameinput",
 				"Input\\GameInput.cs"
+>>>>>>> 0888bbe0b5d0a7c98baebc52d6605f6c98931251
+			],
+			[
+				"collec",
+				"Controllers\\CollectibleController.cs"
+			],
+			[
+				"pool",
+				"GameScene\\PoolManager.cs"
+			],
+			[
+				"button",
+				"UI\\Button\\ButtonEventHandler.cs"
+			],
+			[
+				"path",
+				"Entity\\Path\\Path.cs"
+			],
+			[
+				"collect",
+				"Controllers\\CollectibleController.cs"
+			],
+			[
+				"levelg",
+				"GameScene\\LevelGenerator.cs"
 			],
 			[
 				"camera",
 				"Camera\\CameraController.cs"
 			],
 			[
-				"path",
-				"Entity\\Path\\Path.cs"
+				"c",
+				"Constants\\Constants.cs"
+			],
+			[
+				"lvel",
+				"GameScene\\LevelGenerator.cs"
+			],
+			[
+				"player",
+				"Entity\\Player\\Player.cs"
+			],
+			[
+				"gamecon",
+				"Controllers\\GameController.cs"
+			],
+			[
+<<<<<<< HEAD
+				"gameinput",
+				"Input\\GameInput.cs"
 			],
 			[
 				"event",
@@ -994,14 +1135,6 @@
 				"Misc\\Objects\\DummyPath.cs"
 			],
 			[
-				"levelg",
-				"GameScene\\LevelGenerator.cs"
-			],
-			[
-				"pool",
-				"GameScene\\PoolManager.cs"
-			],
-			[
 				"palyer",
 				"Entity\\Player\\Player.cs"
 			],
@@ -1010,6 +1143,8 @@
 				"Controllers\\GameController.cs"
 			],
 			[
+=======
+>>>>>>> 0888bbe0b5d0a7c98baebc52d6605f6c98931251
 				"gam",
 				"Controllers\\GameController.cs"
 			],
@@ -1024,10 +1159,6 @@
 			[
 				"const",
 				"Constants\\Constants.cs"
-			],
-			[
-				"button",
-				"UI\\Button\\ButtonEventHandler.cs"
 			],
 			[
 				"auto",
@@ -1448,6 +1579,8 @@
 			[
 				"head",
 				"HeadTracker.cs"
+<<<<<<< HEAD
+=======
 			],
 			[
 				"audioma",
@@ -1460,6 +1593,7 @@
 			[
 				"servernet",
 				"Network\\ServerNetworkManager.cs"
+>>>>>>> 0888bbe0b5d0a7c98baebc52d6605f6c98931251
 			]
 		],
 		"width": 0.0
@@ -1483,8 +1617,8 @@
 	},
 	"select_symbol":
 	{
-		"height": 239.0,
-		"last_filter": "game",
+		"height": 469.0,
+		"last_filter": "",
 		"selected_items":
 		[
 			[
