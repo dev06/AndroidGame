@@ -4,7 +4,7 @@ using System.Collections;
 using UnityEngine.UI;
 public class GameController : MonoBehaviour {
 
-
+	public static GameController Instance;
 	public static float direction;
 	public static float timer;
 	public static bool timerBool;
@@ -36,6 +36,14 @@ public class GameController : MonoBehaviour {
 
 	private void Init()
 	{
+		if (Instance != null)
+		{
+			Destroy(gameObject);
+		} else {
+			DontDestroyOnLoad(gameObject);
+			Instance = this;
+		}
+
 		InitPlayer();
 		wallObjects = GameObject.FindWithTag("WallObjects");
 		player = GameObject.FindWithTag("Entity/Player");

@@ -9,8 +9,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 422606}
   - 212: {fileID: 21254488}
-  - 114: {fileID: 11479632}
   - 61: {fileID: 6158492}
+  - 114: {fileID: 11497520}
   m_Layer: 0
   m_Name: Diamond
   m_TagString: Collectible/Diamond
@@ -24,10 +24,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 167438}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.008726536, y: 0, z: 0, w: 0.9999619}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 1, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -40,12 +40,12 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 0.64, y: 0.64}
---- !u!114 &11479632
+--- !u!114 &11497520
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -53,9 +53,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 167438}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ec120f0f914c6142ad43d3e2fd6c53b, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ee556d420b8c63419073a3b86614802, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _gameItem: 0
 --- !u!212 &21254488
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -8,8 +8,8 @@ public class Path : MonoBehaviour
 	public float collectible_verticalOffset;
 	public int collectible_amount;
 	public int collectible_direction;
-	public Vector3 offsetedPosition;
 	public bool isCurrentlyPaused;
+	public Vector3 offsetedPosition;
 
 	private GameController _gameController;
 	private Vector3 _movementDirection;
@@ -28,6 +28,17 @@ public class Path : MonoBehaviour
 	private float _poolTimer;
 	private float _maxPoolTimer;
 	private float _wallSpeedVel;
+
+	// void OnEnable()
+	// {
+	// 	EventManager.OnModifyTransform += OnModifyTransform;
+	// }
+	// void OnDisable()
+	// {
+	// 	EventManager.OnModifyTransform -= OnModifyTransform;
+	// }
+
+
 	void Start ()
 	{
 		_gameController = GameObject.FindWithTag("GameController").GetComponent<GameController>();
@@ -37,14 +48,18 @@ public class Path : MonoBehaviour
 		_pathAnimation = GetComponent<Animation>();
 		EventManager.OnSwipe += Pause;
 		EventManager.OnDeath += OnPlayerDeath;
-		collectible_amount = 4;
-		collectible_direction = 1;
+		collectible_amount = 10;
+		collectible_direction = (Random.Range(0, 2) == 0) ? -1 : 1;
 
-		if (Random.Range(0, 2) == 0)
-		{
-			_gameController.collectibleController.GenerateCollectible(gameObject, collectible_amount);
-		}
+
+		GameController.Instance.collectibleController.GenerateCollectible(gameObject, collectible_amount);
+
 	}
+
+	// private void OnModifyTransform()
+	// {
+	// 	collectible_direction = (Random.Range(0, 2) == 0) ? -1 : 1;
+	// }
 
 
 	void Update ()
@@ -112,11 +127,6 @@ public class Path : MonoBehaviour
 			_enteredWall = entered;
 		}
 		_spriteRenderer.color = (entered) ? new Color(0, 1, 0, 1) : new Color(1, 1, 1, 1);
-	}
-
-	public void Animate()
-	{
-		G_Animation.Play(_pathAnimation, _pathAnimation.clip.name, 1, 1);
 	}
 
 	private void ResetUponPool()

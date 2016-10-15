@@ -22,6 +22,10 @@ public class EventManager : MonoBehaviour {
 	public static Death OnDeath;
 
 
+	public delegate void CollectibleTransformModified();
+	public static CollectibleTransformModified OnModifyTransform;
+
+
 
 
 }

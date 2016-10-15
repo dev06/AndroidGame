@@ -563,8 +563,14 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/D/UnityProjects/Projects/AndroidGame/Assets/Scripts"
+	],
 	"file_history":
 	[
+		"/D/UnityProjects/Projects/AndroidGame/Assets/Scripts/Controllers/CollectibleController.cs",
+		"/D/UnityProjects/Projects/AndroidGame/Assets/Scripts/Controllers/GameController.cs",
 		"/D/UnityProjects/Projects/App_Scripting/Assets/Scripts/GameController.cs",
 		"/D/UnityProjects/Projects/App_Scripting/Assets/Scripts/Entity/Buff/BuffManager.cs",
 		"/D/UnityProjects/Projects/App_Scripting/Assets/Scripts/Entity/Buff/ProjectilePenetration/ProjectilePenetration.cs",
@@ -690,9 +696,7 @@
 		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/UI/Button/ButtonEventHandler.cs",
 		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/UI/ButtonEventHandler.cs",
 		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/Network/ClientNetworkManager.cs",
-		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/Network/ServerNetworkManager.cs",
-		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Scripts/Wall.cs",
-		"/C/Users/Devan/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap"
+		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/Network/ServerNetworkManager.cs"
 	],
 	"find":
 	{
@@ -945,6 +949,14 @@
 		"selected_items":
 		[
 			[
+				"collec",
+				"Controllers\\CollectibleController.cs"
+			],
+			[
+				"game",
+				"Controllers\\GameController.cs"
+			],
+			[
 				"imom",
 				"Entity\\Buff\\ImmortalityBuff\\ImmortalityBuff.cs"
 			],
@@ -987,10 +999,6 @@
 			[
 				"spee",
 				"Entity\\Buff\\SpeedBuff\\SpeedBuff.cs"
-			],
-			[
-				"game",
-				"GameController.cs"
 			],
 			[
 				"proj",
@@ -1451,10 +1459,6 @@
 			[
 				"audioma",
 				"AudioManager.cs"
-			],
-			[
-				"playercontorller",
-				"ControllerTestScene\\PlayerController.cs"
 			]
 		],
 		"width": 0.0
@@ -1508,7 +1512,7 @@
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 603.0,
 	"status_bar_visible": false,
 	"template_settings":
