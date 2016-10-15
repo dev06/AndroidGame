@@ -404,10 +404,6 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 422606, guid: 21baab2fa1e89aa4683c3bef2a7efaa2, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 21baab2fa1e89aa4683c3bef2a7efaa2, type: 2}
   m_IsPrefabParent: 0
@@ -2389,7 +2385,7 @@ MonoBehaviour:
   player: {fileID: 0}
   cameraTransform: {fileID: 0}
   autoPlay: 0
-  move: 1
+  move: 0
   dead: 0
   gameState: 0
   canvasManager: {fileID: 0}
