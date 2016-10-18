@@ -3,13 +3,11 @@ using System.Collections;
 
 public class Diamond : Collectible {
 
-	// Use this for initialization
 	void Start ()
 	{
 		Init();
 	}
 
-	// Update is called once per frame
 	void Update () {
 
 	}
@@ -29,6 +27,9 @@ public class Diamond : Collectible {
 
 	public override void OnModifyTransform()
 	{
-		SetActive(true);
+		if (_parentObject != GameController.Instance.wallObjects.transform.GetChild(0).gameObject)
+		{
+			SetActive(true);
+		}
 	}
 }

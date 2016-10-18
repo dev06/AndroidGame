@@ -44,18 +44,14 @@ public class CollectibleController : MonoBehaviour {
 
 		// direction is use to flip the collectibles on different side of the path.
 		int direction = _parentTransform.GetComponent<Path>().collectible_direction;
-		float _itemPosX = (direction * _pathWidth) + (direction * (_collectible.transform.localScale.x / 10.0f * Constants.PixelToUnit));
+		float _itemPosX = (direction * _pathWidth) + (direction * (_collectible.transform.localScale.x / 100.0f * Constants.PixelToUnit));
 		float _itemPosY = _parentTransform.GetComponent<Path>().collectible_verticalOffset - ((Constants.PixelToUnit / 2.0f) / _parentTransform.GetComponent<Path>().collectible_amount);
 
 		_itemPos =  new Vector3(_itemPosX, _itemPosY, 0);
 		_collectible.transform.localPosition = _itemPos;
 		_collectible.transform.localRotation = Quaternion.Euler(Vector3.zero);
 
-		if (EventManager.OnModifyTransform != null)
-		{
-			EventManager.OnModifyTransform();
-		}
-		//_collectible.transform.GetComponent<Collectible>().SetActive(true);
+		_collectible.GetComponent<Collectible>().SetParent(_parentObject);
 
 	}
 }

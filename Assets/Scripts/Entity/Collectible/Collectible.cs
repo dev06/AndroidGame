@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class Collectible : MonoBehaviour {
 
 	public GameItem _gameItem;
-
+	protected GameObject _parentObject; // The object that this collectibe is a child of.
 	protected GameController _gameController;
 	protected SpriteRenderer _collectibleSprite;
 
@@ -41,6 +41,11 @@ public class Collectible : MonoBehaviour {
 	public virtual void OnModifyTransform()
 	{
 
+	}
+
+	public virtual void SetParent(GameObject _parent)
+	{
+		_parentObject = _parent;
 	}
 
 	void OnDisable()

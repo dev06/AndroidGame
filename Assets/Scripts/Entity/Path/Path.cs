@@ -29,15 +29,6 @@ public class Path : MonoBehaviour
 	private float _maxPoolTimer;
 	private float _wallSpeedVel;
 
-	// void OnEnable()
-	// {
-	// 	EventManager.OnModifyTransform += OnModifyTransform;
-	// }
-	// void OnDisable()
-	// {
-	// 	EventManager.OnModifyTransform -= OnModifyTransform;
-	// }
-
 
 	void Start ()
 	{
@@ -48,19 +39,13 @@ public class Path : MonoBehaviour
 		_pathAnimation = GetComponent<Animation>();
 		EventManager.OnSwipe += Pause;
 		EventManager.OnDeath += OnPlayerDeath;
-		collectible_amount = 10;
+		collectible_amount = 4;
 		collectible_direction = (Random.Range(0, 2) == 0) ? -1 : 1;
 
 
 		GameController.Instance.collectibleController.GenerateCollectible(gameObject, collectible_amount);
 
 	}
-
-	// private void OnModifyTransform()
-	// {
-	// 	collectible_direction = (Random.Range(0, 2) == 0) ? -1 : 1;
-	// }
-
 
 	void Update ()
 	{
