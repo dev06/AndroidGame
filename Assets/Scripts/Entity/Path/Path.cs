@@ -39,11 +39,8 @@ public class Path : MonoBehaviour
 		_pathAnimation = GetComponent<Animation>();
 		EventManager.OnSwipe += Pause;
 		EventManager.OnDeath += OnPlayerDeath;
-		collectible_amount = 4;
-		collectible_direction = (Random.Range(0, 2) == 0) ? -1 : 1;
-
-
-		GameController.Instance.collectibleController.GenerateCollectible(gameObject, collectible_amount);
+		collectible_amount = Random.Range(0 , 2) == 0 ? 4 : 6;
+		GameController.Instance.collectibleController.GenerateCollectible(gameObject, collectible_amount, (Random.Range(0, 2) == 0) ? -1 : 1);
 
 	}
 

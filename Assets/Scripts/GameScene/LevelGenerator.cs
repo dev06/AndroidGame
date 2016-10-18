@@ -98,9 +98,10 @@ public class LevelGenerator : MonoBehaviour {
 
 		for (int i = 0; i < _object.transform.childCount; i++)
 		{
+			Collectible _collectible = _object.transform.GetChild(i).GetComponent<Collectible>();
 			if (_object.transform.GetChild(i).gameObject.tag.Contains("Collectible"))
 			{
-				_gameController.collectibleController.ModifyCollectibleTransform(_object.transform.GetChild(i).gameObject, _object);
+				_gameController.collectibleController.ModifyCollectibleTransform(_object.transform.GetChild(i).gameObject, _object, _collectible.GeneratingDirection);
 			}
 		}
 

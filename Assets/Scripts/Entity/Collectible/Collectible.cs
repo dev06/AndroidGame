@@ -5,6 +5,7 @@ public class Collectible : MonoBehaviour {
 
 	public GameItem _gameItem;
 	protected GameObject _parentObject; // The object that this collectibe is a child of.
+	protected int _generatingDirection; // -1 or 1 representing which side the collectible is on.
 	protected GameController _gameController;
 	protected SpriteRenderer _collectibleSprite;
 
@@ -46,6 +47,13 @@ public class Collectible : MonoBehaviour {
 	public virtual void SetParent(GameObject _parent)
 	{
 		_parentObject = _parent;
+	}
+
+
+	public int GeneratingDirection
+	{
+		get {return _generatingDirection; }
+		set {_generatingDirection = value; }
 	}
 
 	void OnDisable()
