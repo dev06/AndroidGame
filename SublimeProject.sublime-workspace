@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"_a",
+				"_acceleration.x"
+			],
+			[
 				"Game",
 				"GameObject"
 			],
@@ -510,15 +514,38 @@
 			[
 				"S",
 				"SERVANT"
-			],
-			[
-				"InputButton",
-				"InputButton.Left"
 			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "Assets/Scripts/Controllers/GameController.cs",
+			"settings":
+			{
+				"buffer_size": 3411,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Assets/Scripts/Input/GameInput.cs",
+			"settings":
+			{
+				"buffer_size": 4733,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Assets/Scripts/Entity/Player/Player.cs",
+			"settings":
+			{
+				"buffer_size": 3529,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -565,7 +592,7 @@
 	},
 	"expanded_folders":
 	[
-		"/D/UnityProjects/Projects/AndroidGame/Assets/Scripts"
+		"/E/Unity/Projects/AndroidGame/Assets/Scripts"
 	],
 	"file_history":
 	[
@@ -728,6 +755,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"direction",
 			"ShiftItem",
 			"useitem",
 			"move",
@@ -854,8 +882,7 @@
 			"WaitAndDisableImage",
 			"ResetCamera",
 			"tab",
-			"COMPLETE",
-			"        \n"
+			"COMPLETE"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -883,8 +910,99 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "Assets/Scripts/Controllers/GameController.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3411,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3324,
+								3333
+							]
+						],
+						"settings":
+						{
+							"side_bar_folders_auto_load_folder": 1,
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1197.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Assets/Scripts/Input/GameInput.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4733,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3586,
+								3586
+							]
+						],
+						"settings":
+						{
+							"side_bar_folders_auto_load_folder": 1,
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2812.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Assets/Scripts/Entity/Player/Player.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3529,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1517,
+								1517
+							]
+						],
+						"settings":
+						{
+							"side_bar_folders_auto_load_folder": 1,
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 570.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -949,12 +1067,24 @@
 		"selected_items":
 		[
 			[
-				"collec",
-				"Controllers\\CollectibleController.cs"
+				"player",
+				"Entity\\Player\\Player.cs"
+			],
+			[
+				"gaemcon",
+				"Controllers\\GameController.cs"
+			],
+			[
+				"gameinput",
+				"Input\\GameInput.cs"
 			],
 			[
 				"game",
 				"Controllers\\GameController.cs"
+			],
+			[
+				"collec",
+				"Controllers\\CollectibleController.cs"
 			],
 			[
 				"imom",
@@ -1047,10 +1177,6 @@
 			[
 				"enem",
 				"Entity\\Enemy\\enemy_one\\EnemyOne.cs"
-			],
-			[
-				"player",
-				"Player\\PlayerController.cs"
 			],
 			[
 				"bot",
@@ -1187,10 +1313,6 @@
 			[
 				"tooltip",
 				"CSE_GAME1\\Assets\\Scripts\\UI\\Inventory\\ToolTip.cs"
-			],
-			[
-				"gameinput",
-				"AndroidGame\\Assets\\Scripts\\Input\\GameInput.cs"
 			],
 			[
 				"autopl",
@@ -1455,10 +1577,6 @@
 			[
 				"head",
 				"HeadTracker.cs"
-			],
-			[
-				"audioma",
-				"AudioManager.cs"
 			]
 		],
 		"width": 0.0
@@ -1513,7 +1631,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 603.0,
+	"side_bar_width": 167.0,
 	"status_bar_visible": false,
 	"template_settings":
 	{

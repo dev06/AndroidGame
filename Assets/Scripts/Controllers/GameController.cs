@@ -66,6 +66,7 @@ public class GameController : MonoBehaviour {
 		{
 			UpdateFacingDirection();
 			gameInput.RegisterSwipe();
+			gameInput.RegisterAcceleration();
 
 		}
 	}

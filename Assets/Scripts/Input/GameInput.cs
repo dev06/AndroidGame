@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using UnityEngine.UI;
 public class GameInput : MonoBehaviour {
 
 	public GameController gameController;
@@ -115,12 +115,7 @@ public class GameInput : MonoBehaviour {
 					_directionIndex = 0;
 				}
 				_gameController.facingDirection = Constants.directions[_directionIndex];
-
-
-
 			}
-
-
 		}
 
 		if (EventManager.OnTap != null)
@@ -164,6 +159,34 @@ public class GameInput : MonoBehaviour {
 
 
 		}
+	}
+
+	public void RegisterAcceleration()
+	{
+		Vector3 _acceleration = Vector3.zero;
+		Vector3 _offsetPositon = Vector3.zero;
+		float _multiplier = 2.0f;
+		_acceleration.x = Input.acceleration.x;
+		_acceleration.x = Mathf.Round(_acceleration.x * 10f) / 10f;
+		Direction _direction = _gameController.facingDirection;
+		Transform _rightBound = _gameController.player.transform.FindChild("RightBound");
+		Transform _leftBound = _gameController.player.transform.FindChild("LeftBound");
+		Transform _center = _gameController.player.transform.FindChild("Center");
+
+		// if direciton is north
+		// if acc is +
+		// check the distance between the right bound and center
+		// that should be your multiplier
+		if (_direction == Direction.NORTH)
+		{
+
+
+			_offsetPositon.x = _acceleration.x * _multiplier;
+			_offsetPositon.y = _offsetPositon.z = 0;
+		}
+
+		_gameController.player.transform.position = _offsetPositon;
+		GameObject.Find("GameCanvas").transform.GetChild(0).gameObject.GetComponent<Text>().text = "" + _multiplier;
 	}
 
 	private void SwipeLeft()

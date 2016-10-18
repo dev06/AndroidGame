@@ -14,6 +14,7 @@ public class Player : MonoBehaviour {
 	private GameObject _enterObject, _exitObject;
 	private GameObject _currentWall;
 	private Transform _particleEffect;
+	private Transform _center;
 	private int _hits;
 	private bool _swiped;
 	private float vel;
@@ -26,6 +27,7 @@ public class Player : MonoBehaviour {
 		_sprite = GetComponent<SpriteRenderer>();
 		_gameController = GameObject.FindWithTag("GameController").GetComponent<GameController>();
 		_particleEffect = transform.FindChild("ParticleEffect");
+		_center = transform.FindChild("Center");
 		EventManager.OnSwipe += SetAmp;
 		_hits = 0;
 	}
@@ -62,8 +64,10 @@ public class Player : MonoBehaviour {
 				{
 					if (_gameController.facingDirection == Direction.NORTH || _gameController.facingDirection == Direction.SOUTH) {
 						_particleEffect.position = new Vector3(_currentWall.transform.position.x, 0 , 0);
+						_center.position = new Vector3(_currentWall.transform.position.x, 0, 0);
 					} else {
 						_particleEffect.position = new Vector3(0, _currentWall.transform.position.y, 0);
+						_center.position = new Vector3(0, _currentWall.transform.position.y, 0);
 					}
 				} else
 				{
