@@ -9,7 +9,6 @@ public class GameController : MonoBehaviour {
 	public static float timer;
 	public static bool timerBool;
 
-
 	public LevelGenerator levelGenerator;
 	public PoolManager poolManager;
 	public CollectibleController collectibleController;

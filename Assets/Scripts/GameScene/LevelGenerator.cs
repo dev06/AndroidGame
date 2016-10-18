@@ -95,7 +95,6 @@ public class LevelGenerator : MonoBehaviour {
 
 		_object.GetComponent<Path>().collectible_verticalOffset = 0;
 
-
 		for (int i = 0; i < _object.transform.childCount; i++)
 		{
 			Collectible _collectible = _object.transform.GetChild(i).GetComponent<Collectible>();

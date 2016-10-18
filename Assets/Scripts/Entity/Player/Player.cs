@@ -107,6 +107,7 @@ public class Player : MonoBehaviour {
 			_hits++;
 			_startDeathTimer = false;
 			_deathThresHoldTimer = 0;
+			_enterObject = col.gameObject;
 		}
 	}
 
@@ -128,7 +129,9 @@ public class Player : MonoBehaviour {
 			{
 				if (_exitObject == _gameController.wallObjects.transform.GetChild(1).gameObject)
 				{
-					_gameController.poolManager.PoolPath(_gameController.poolManager.pathReserve, _gameController.wallObjects.transform.GetChild(_gameController.wallObjects.transform.childCount - 1).gameObject);
+
+					GameObject _lastWall = _gameController.wallObjects.transform.GetChild(_gameController.wallObjects.transform.childCount - 1).gameObject;
+					_gameController.poolManager.PoolPath(_gameController.poolManager.pathReserve, _lastWall);
 					_gameController.poolManager.pathReserve = col.gameObject;
 					if (EventManager.OnModifyTransform != null)
 					{

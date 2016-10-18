@@ -36,7 +36,8 @@ public class CollectibleController : MonoBehaviour {
 
 		float _pathWidth = _parentTransform.localScale.x;
 		float _pathHeight = _parentTransform.localScale.y;
-		float _offset = (Constants.PixelToUnit / (_parentTransform.GetComponent<Path>().collectible_amount * 3));
+		int _amount = _parentTransform.GetComponent<Path>().collectible_amount;
+		float _offset = (Constants.PixelToUnit / (_amount * 2));
 		_parentTransform.GetComponent<Path>().collectible_verticalOffset += _offset;
 
 		Vector3 scale = new Vector3(1.0f, _pathWidth / _pathHeight, 1.0f);
@@ -46,7 +47,7 @@ public class CollectibleController : MonoBehaviour {
 		// direction is use to flip the collectibles on different side of the path.
 		int direction = _direction;
 		float _itemPosX = (direction * _pathWidth) + (direction * (_collectible.transform.localScale.x / 100.0f * Constants.PixelToUnit));
-		float _itemPosY = (_parentTransform.GetComponent<Path>().collectible_verticalOffset + (Constants.PixelToUnit / 2.0f)) - (_parentTransform.GetComponent<Path>().collectible_amount / 2.0f * _offset) - _offset ;
+		float _itemPosY = (_parentTransform.GetComponent<Path>().collectible_verticalOffset + (Constants.PixelToUnit / 2.0f)) - (_amount / 2.0f * _offset) - _offset ;
 		//float _itemPosY = _parentTransform.GetComponent<Path>().collectible_verticalOffset - ((Constants.PixelToUnit / 2.0f) / _parentTransform.GetComponent<Path>().collectible_amount);
 
 		_itemPos =  new Vector3(_itemPosX, _itemPosY, 0);
