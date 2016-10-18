@@ -4,12 +4,33 @@
 		"selected_items":
 		[
 			[
+<<<<<<< HEAD
 				"_a",
 				"_acceleration.x"
+=======
+				"On",
+				"OnModififyTransform"
+			],
+			[
+				"Col",
+				"CollectibleTransformModified"
+			],
+			[
+				"_",
+				"_collectibleSprite"
+			],
+			[
+				"In",
+				"Instantiate"
+>>>>>>> 59825f5c15e355dce4398d76bb687b9a6dbcb7c5
 			],
 			[
 				"Game",
-				"GameObject"
+				"GameController"
+			],
+			[
+				"_itmepos",
+				"_itemPosY"
 			],
 			[
 				"GAme",
@@ -498,6 +519,7 @@
 			[
 				"_ser",
 				"_servants.Length"
+<<<<<<< HEAD
 			],
 			[
 				"Conter",
@@ -514,6 +536,8 @@
 			[
 				"S",
 				"SERVANT"
+=======
+>>>>>>> 59825f5c15e355dce4398d76bb687b9a6dbcb7c5
 			]
 		]
 	},
@@ -596,12 +620,19 @@
 	],
 	"file_history":
 	[
-		"/D/UnityProjects/Projects/AndroidGame/Assets/Scripts/Controllers/CollectibleController.cs",
 		"/D/UnityProjects/Projects/AndroidGame/Assets/Scripts/Controllers/GameController.cs",
+		"/D/UnityProjects/KSU/Network/KSU_NETWORK_SOLUTION/Assets/Scripts/ButtonID.cs",
+		"/D/UnityProjects/Projects/AndroidGame/Assets/Scripts/Entity/Path/Path.cs",
+		"/D/UnityProjects/Projects/AndroidGame/Assets/Scripts/Controllers/CollectibleController.cs",
+		"/D/UnityProjects/Projects/AndroidGame/Assets/Scripts/Input/GameInput.cs",
+		"/D/UnityProjects/Projects/AndroidGame/Assets/Scripts/GameScene/LevelGenerator.cs",
+		"/D/UnityProjects/Projects/AndroidGame/Assets/Scripts/Entity/Collectible/Diamond/Diamond.cs",
+		"/D/UnityProjects/Projects/AndroidGame/Assets/Scripts/Entity/Collectible/Collectible.cs",
+		"/D/UnityProjects/Projects/AndroidGame/Assets/Scripts/Event/EventManager.cs",
+		"/D/UnityProjects/Projects/AndroidGame/Assets/Scripts/Entity/Collectible/Squares/Squares.cs",
 		"/D/UnityProjects/Projects/App_Scripting/Assets/Scripts/GameController.cs",
 		"/D/UnityProjects/Projects/App_Scripting/Assets/Scripts/Entity/Buff/BuffManager.cs",
 		"/D/UnityProjects/Projects/App_Scripting/Assets/Scripts/Entity/Buff/ProjectilePenetration/ProjectilePenetration.cs",
-		"/D/UnityProjects/Projects/AndroidGame/Assets/Scripts/Entity/Collectible/Squares/Squares.cs",
 		"/D/UnityProjects/Projects/App_Scripting/Assets/Scripts/Constants.cs",
 		"/D/UnityProjects/Projects/App_Scripting/Assets/Scripts/Entity/EntityItem.cs",
 		"/D/UnityProjects/Projects/App_Scripting/Assets/Scripts/UI/Inventory/Item.cs",
@@ -716,18 +747,11 @@
 		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Assets/Resources/Prefabs/Wall.prefab",
 		"/C/Git/FOPSMobile/FearOfPublicSpeaking5.3.4/Assets/Scripts/Network/ServerNetworkManager.cs",
 		"/C/Git/FOPSMobile/FearOfPublicSpeaking5.3.4/Assets/Scripts/StartScene/StartSceneManager.cs",
-		"/C/Git/FOPSMobile/FearOfPublicSpeaking5.3.4/Assets/Scripts/Network/ClientNetworkManager.cs",
-		"/C/Users/Devan/Documents/UnityProjects/AndroidGame/Library/metadata/bd/bd70d448b18cfbc46af26466f752332c",
-		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/ButtonID.cs",
-		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/Network/NetworkManager.cs",
-		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/UI/Button/ButtonEventHandler.cs",
-		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/UI/ButtonEventHandler.cs",
-		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/Network/ClientNetworkManager.cs",
-		"/C/Users/Devan/Documents/UnityProjects/KSU/NetworkingSolution/KSU_NETWORK_SOLUTION/Assets/Scripts/Network/ServerNetworkManager.cs"
+		"/C/Git/FOPSMobile/FearOfPublicSpeaking5.3.4/Assets/Scripts/Network/ClientNetworkManager.cs"
 	],
 	"find":
 	{
-		"height": 52.0
+		"height": 97.0
 	},
 	"find_in_files":
 	{
@@ -755,7 +779,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+<<<<<<< HEAD
 			"direction",
+=======
+			"Animate",
+			"GenerateCollectible",
+			"SpawnCollectible",
+>>>>>>> 59825f5c15e355dce4398d76bb687b9a6dbcb7c5
 			"ShiftItem",
 			"useitem",
 			"move",
@@ -880,9 +910,13 @@
 			"CLIENT_MSG5",
 			"OpenFolderDialog",
 			"WaitAndDisableImage",
+<<<<<<< HEAD
 			"ResetCamera",
 			"tab",
 			"COMPLETE"
+=======
+			"ResetCamera"
+>>>>>>> 59825f5c15e355dce4398d76bb687b9a6dbcb7c5
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1067,6 +1101,7 @@
 		"selected_items":
 		[
 			[
+<<<<<<< HEAD
 				"player",
 				"Entity\\Player\\Player.cs"
 			],
@@ -1077,6 +1112,34 @@
 			[
 				"gameinput",
 				"Input\\GameInput.cs"
+=======
+				"gameinput",
+				"Input\\GameInput.cs"
+			],
+			[
+				"level",
+				"GameScene\\LevelGenerator.cs"
+			],
+			[
+				"even",
+				"Event\\EventManager.cs"
+			],
+			[
+				"event",
+				"Event\\EventManager.cs"
+			],
+			[
+				"collectible",
+				"Entity\\Collectible\\Collectible.cs"
+			],
+			[
+				"path",
+				"Entity\\Path\\Path.cs"
+			],
+			[
+				"collecti",
+				"Controllers\\CollectibleController.cs"
+>>>>>>> 59825f5c15e355dce4398d76bb687b9a6dbcb7c5
 			],
 			[
 				"game",
@@ -1199,10 +1262,6 @@
 				"UI\\Inventory\\InventorySlot.cs"
 			],
 			[
-				"event",
-				"UI\\Event\\EventManager.cs"
-			],
-			[
 				"inventory",
 				"UI\\Inventory\\InventoryManager.cs"
 			],
@@ -1317,10 +1376,6 @@
 			[
 				"autopl",
 				"AndroidGame\\Assets\\Scripts\\AutoPlay.cs"
-			],
-			[
-				"level",
-				"AndroidGame\\Assets\\Scripts\\GameScene\\LevelGenerator.cs"
 			],
 			[
 				"wall",
@@ -1565,6 +1620,7 @@
 			[
 				"audiomn",
 				"AudioManager.cs"
+<<<<<<< HEAD
 			],
 			[
 				"controlmen",
@@ -1577,6 +1633,8 @@
 			[
 				"head",
 				"HeadTracker.cs"
+=======
+>>>>>>> 59825f5c15e355dce4398d76bb687b9a6dbcb7c5
 			]
 		],
 		"width": 0.0
