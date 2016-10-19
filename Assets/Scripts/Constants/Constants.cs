@@ -7,7 +7,7 @@ public class Constants
 	public static float PixelToUnit = .32f;
 
 	// lEVEL GENERATION FIELDS
-	public static int InitWallGenerationSize = 7;
+	public static int InitWallGenerationSize = 2;
 	public static float WallSpeed = 30f;//26.5F;
 	public static float WallWidth = .75f;
 	public static float RotationFrequency = 1f;

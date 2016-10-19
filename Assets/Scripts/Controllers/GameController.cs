@@ -66,6 +66,11 @@ public class GameController : MonoBehaviour {
 			UpdateFacingDirection();
 			gameInput.RegisterSwipe();
 		}
+
+		if (Input.GetMouseButtonDown(1))
+		{
+			levelGenerator.GenerateDeadEnd(2);
+		}
 	}
 
 	public void InitPlayer()

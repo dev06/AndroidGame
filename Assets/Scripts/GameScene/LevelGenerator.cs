@@ -67,6 +67,26 @@ public class LevelGenerator : MonoBehaviour {
 
 	}
 
+	public void GenerateDeadEnd(int value)
+	{
+		if (_activeWalls < Constants.MaxWallsAtTime)
+		{
+			for (int i = 0; i < value; i++)
+			{
+				_wallObjects.transform.position = _player.transform.position;
+				GameObject _clone = Instantiate(_pathResource, -Vector2.up * 4.0f, Quaternion.identity) as GameObject;
+				_clone.name = "Path" + _clone.GetHashCode();
+				_clone.tag = "Path";
+				_clone.transform.parent = _wallObjects.transform;
+				GameObject _lastClone = (_wallObjects.transform.childCount > 1) ? _wallObjects.transform.GetChild(_wallObjects.transform.childCount - 2).gameObject : null;
+				_clone.GetComponent<Path>().previousWall = (_lastClone != null ) ? _lastClone : null;
+				ModifyTransformForObjects(_clone, _lastClone, new Vector3(i * 3 , -i, 0));
+			}
+			_activeWalls += value;
+		}
+
+	}
+
 	/// <summary>
 	/// Modifies the scale and rotation for the "current" object in respect to the "previous"
 	/// </summary>
@@ -74,39 +94,83 @@ public class LevelGenerator : MonoBehaviour {
 	/// <param name="_previousObject"></param>
 	public void ModifyTransformForObjects(GameObject _object, GameObject _previousObject)
 	{
+		// _object = current path being modified
+		// _previous = path before _object or the last path in the collection
 		float _height = Random.Range(_minHeight, _maxHeight);
 		float _rotationFreqNumber = Random.Range(0.0f, 1.1f);
 		float _rotationDirection = (Random.Range(0, 2) == 0) ? -90 : 90;
 
 		if (_previousObject != null)
 		{
+			// setting localscale and rotation
 			_object.transform.localScale = new Vector2(_wallWidth, _height);
 			_object.transform.rotation = _previousObject.transform.rotation;
+			//rotating if true
 			if (_rotationFreq > _rotationFreqNumber)
 			{
 				RotateWall(_object, _rotationDirection);
 			}
+			//setting current path position to the hinge of the previous object
 			_object.transform.position = _previousObject.transform.GetChild(0).transform.position;
+			//positioning the wall
 			PositionWall(_object, _previousObject);
 		} else
 		{
 			_object.transform.localScale = new Vector2(_wallWidth, Constants.InitWallSize);
 		}
 
-		_object.GetComponent<Path>().collectible_verticalOffset = 0;
+		Path _path_c =	_object.GetComponent<Path>();
+		_path_c.collectible_verticalOffset = 0;
+		_path_c.collectible_direction =  (Random.Range(0, 2) == 0) ? -1 : 1;
 
 		for (int i = 0; i < _object.transform.childCount; i++)
 		{
 			Collectible _collectible = _object.transform.GetChild(i).GetComponent<Collectible>();
 			if (_object.transform.GetChild(i).gameObject.tag.Contains("Collectible"))
 			{
-				_gameController.collectibleController.ModifyCollectibleTransform(_object.transform.GetChild(i).gameObject, _object, _collectible.GeneratingDirection);
+				int _direction = _object.GetComponent<Path>().collectible_direction;
+				_gameController.collectibleController.ModifyCollectibleTransform(_object.transform.GetChild(i).gameObject, _object, _direction);
 			}
 		}
+	}
 
-		_object.GetComponent<Path>().collectible_direction =  (Random.Range(0, 2) == 0) ? -1 : 1;
 
+	public void ModifyTransformForObjects(GameObject _object, GameObject _previousObject, Vector3 _offset)
+	{
+		// _object = current path being modified
+		// _previous = path before _object or the last path in the collection
+		float _height = Random.Range(_minHeight, _maxHeight);
+		float _rotationFreqNumber = Random.Range(0.0f, 1.1f);
+		float _rotationDirection = (Random.Range(0, 2) == 0) ? -90 : 90;
 
+		if (_previousObject != null)
+		{
+			// setting localscale and rotation
+			_object.transform.localScale = new Vector2(_wallWidth, _height);
+			_object.transform.rotation = _previousObject.transform.rotation;
+
+			//setting current path position to the hinge of the previous object
+			_object.transform.position = _previousObject.transform.GetChild(0).transform.position + _offset;
+			//positioning the wall
+			PositionWall(_object, _previousObject);
+		} else
+		{
+			_object.transform.localScale = new Vector2(_wallWidth, Constants.InitWallSize);
+		}
+
+		Path _path_c =	_object.GetComponent<Path>();
+		_path_c.collectible_verticalOffset = 0;
+		_path_c.collectible_direction =  (Random.Range(0, 2) == 0) ? -1 : 1;
+
+		for (int i = 0; i < _object.transform.childCount; i++)
+		{
+			Collectible _collectible = _object.transform.GetChild(i).GetComponent<Collectible>();
+			if (_object.transform.GetChild(i).gameObject.tag.Contains("Collectible"))
+			{
+				int _direction = _object.GetComponent<Path>().collectible_direction;
+				_gameController.collectibleController.ModifyCollectibleTransform(_object.transform.GetChild(i).gameObject, _object, _direction);
+			}
+		}
 	}
 
 	/// <summary>
